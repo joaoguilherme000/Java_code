@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        
+        System.out.println("\n" +"Exercicio");
+        
+        int numeros1 = 100;
+        
+        if (numeros1 <= 200){
+            System.out.println(numeros1);
+            numeros1 ++;
+            
+        }else{
+        
+        }
+        
+        /*2 - crie um programa que exiba na tela os numeros
+        de 100 ate 0 ; */
+        
+        System.out.println("\n" +"Exercicio 2");
+        
+        int numeros2 = 100;
+        while (numeros2 > 0){
+            System.out.println(numeros2);
+            numeros2 --;    
+        }
+        
+        System.out.println(numeros2);
+        
+        /*3 - receba a idade de n alunos e forneça a média*/
+        
+        System.out.println("\n" +"Exercicio 3");
+        
+        int idade =1,soma = 0,quant =0;
+        
+        double media = 0;  
+        
+        while (idade != 0){
+            System.out.println("Fale uma idade ou 0 para sair");
+            idade = grava.nextInt();
+            soma = soma + idade;
+            quant++;
+        }
+        quant --;
+        media = soma / quant;
+        
+        
+        /*4 - receba  via teclado quantas vezes a mensagem
+        "Isso é um teste deve aparecer na tela "*/
+        
+        System.out.println("\n" +"Exercicio 4");
+        
+        System.out.println("Quantas vezes a mensagem vai aparecer");
+        
+        int quantidade = grava.nextInt();
+        
+        while (quantidade >= 1){
+            System.out.println("Isso é um teste." +quantidade);
+            quantidade --;
+        }
+        
+    }  
+}

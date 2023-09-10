@@ -1,0 +1,498 @@
+public class Main {
+
+    public static void main(String[] args) {
+        import java.util.Scanner
+        /* AULA 8 LISTA 1 PDF*/
+        
+        //1. Leia um número e exiba seu sucessor.
+        
+        System.out.println("Exercicio 1");
+        
+        Scanner grava = new Scanner(System.in);
+        
+        System.out.println("FALE UM NUMERO: ");
+        int ant = grava.nextInt();
+        
+        ant++;
+        System.out.println("SUCESSOR: " +ant);
+    
+    //------------------------------------------------------------
+        
+    /*2. Calcular a média final (usando a ponderação da UFRN) dadas as notas das 3 provas e
+        produzir uma saída com a média e a situação do aluno de acordo com o seguinte critério:
+        média >= 7, aprovado; 5 < média < 7, recuperação; média < 5, reprovado.*/
+        
+        System.out.println("\n" +"Exercicio 2");
+        
+        System.out.println("QUAL SUA NOTA DO PRIMEIRO BIMESTRE ?");
+        double nota1 = grava.nextDouble();
+        
+        System.out.println("AGORA DO SEGUNDO ?");
+        double nota2 = grava.nextDouble();
+        
+        System.out.println("E DO TERCEIRO ?");
+        double nota3 = grava.nextDouble();
+        
+        double nota_media = (nota + nota2 + nota3) / 3;
+        
+        if(nota_media < 1){
+            
+         System.out.println("O valor é: " + nota_media);
+         System.out.println("PP");
+         
+        }else if(valor < 4) {
+            
+         System.out.println("O valor é: " + nota_media);
+         System.out.println("RECUPERAÇÃO");
+         
+        }else if(nota_media < 7){
+            
+         System.out.println("O valor é: " +nota_media);
+         System.out.println("PARABENS");
+         
+        }else if (nota_media < 10){
+            
+            System.out.println("O valor é: " +nota_media);
+            System.out.println("GENIO");
+        }else{
+            
+            System.out.println("Valor invalido tente denovo");
+        }
+        
+    //------------------------------------------------------------
+        /*3. Calcular a quantidade dinheiro gasta por um fumante. Dados: o número de anos que ele
+        fuma, o no de cigarros fumados por dia e o preço de uma carteira.*/
+        
+        System.out.println("\n" +"Exercicio 3");
+        
+        System.out.println("QUANTO ANOS FUMA?");
+        int tempo_fumando = grava.nextInt();
+        
+        System.out.println("QUANTAS CARTELAS DE CIGARRO FUMA POR DIA?");
+        double cartela_dia = grava.nextDouble();
+        
+        System.out.println("QUAL PREÇO DE UMA CARTELA?");
+        double preco_cig = grava.nextDouble();
+        
+        double din_gasto = ((tempo_fumando * 365) * (cartela_dia * preco_cig));
+        
+        System.out.println("VOCE GASTOU: " +din_gasto);
+        
+        //------------------------------------------------------------
+        /*4. Ler dois números inteiros, x e y, e imprimir o quociente e o resto da divisão inteira entre
+        eles.*/
+        
+        System.out.println("\n" +"Exercicio 4");
+        
+        System.out.println("FALE UM NUMERO");
+        int 4_x = grava.nextInt();
+        
+        System.out.println("FALE OUTRO");
+        int 4_y = grava.nextInt();
+        
+        int 4_result = x / y;
+        
+        int 4_resto = a % b;
+        
+        System.out.println("RESTO" +4_resto +"QUOCIENTE" +4_result);
+        
+        //------------------------------------------------------------
+        /*5. Que informe a área e o volume de um cilindro.*/
+        
+        System.out.println("\n" +"Exercicio 5");
+        
+        System.out.println("INFORME O RAIO DO CILINDRO");
+        double 5_raio = grava.nextDouble();
+        
+        System.out.println("INFORME A ALTURA");
+        double 5_altura = grava.nextDouble();
+        
+        double 5_volume = Math.PI *Math.pow(raio, 2) * altura;
+        
+        double 5_area = 2 * Math.PI * raio * (raio + altura);
+        
+        System.out.println("O VOLUME DO CILINDRO É: " + 5_volume);
+        System.out.println("A AREA DO CILINDRO É: " + 5_area);
+        
+        //------------------------------------------------------------
+        /*6. Para ler dois valores reais do teclado, calcular e imprimir na tela:
+        a) A soma destes valores 
+        b) O produto deles
+        c) O quociente entre eles */
+        
+        System.out.println("\n" +"Exercicio 6");
+        
+        System.out.println("INFORME UM VALOR");
+        double 6_valor1 = grava.nextDouble();
+        
+        System.out.println("INFORME OUTRO");
+        double 6_valor2 = grava.nextDouble();
+        
+        double 6_a = 6_valor1 + 6_valor2;
+        
+        double 6_b = 6_valor1 / 6_valor2;
+        
+        double 6_c = 6_valor1 / 6_valor2;
+        
+        System.out.println("A SOMA: " + 6_a);
+        System.out.println("O PRODUTO: " + 6_b);
+        System.out.println("O QUOCIENTE: " + 6_c);
+        
+        //------------------------------------------------------------
+        /*7. Para ler 3 números reais do teclado e verificar se o primeiro é maior que a soma dos
+            outros dois.*/
+        
+        System.out.println("\n" +"Exercicio 7");
+        
+        System.out.println("INFORME UM VALOR");
+        double 7_valor1 = grava.nextDouble();
+        
+        System.out.println("INFORME OUTRO");
+        double 7_valor2 = grava.nextDouble();
+        
+        System.out.println("INFORME OUTRO");
+        double 7_valor3 = grava.nextDouble();
+        
+        double 7_junta = 7_valor2 + 7_valor3;
+        
+        if(7_valor1 < 7_junta){
+            
+         System.out.println("O valor é: " + 7_valor);
+         System.out.println("ELE É MENOR QUE " +7_junta);
+         
+        }else{
+            System.out.println("O valor é: " + 7_valor);
+            System.out.println("ELE É MAIOR QUE " +7_junta);
+        }
+        
+        //------------------------------------------------------------
+        /*8. Leia a razão de uma PA (Progressão Aritmética) e o seu  primeiro e último termos e
+             informe a soma dos elementos dessa PA.*/
+        
+        System.out.println("\n" +"Exercicio 8");
+        
+        System.out.println("PRIMEIRO NUMERO");
+        int 8_primeiro = grava.nextInt();
+        
+        System.out.println("QUAL A RAZAO");
+        int 8_razao = grava.nextInt();
+        
+        System.out.println("quantidade");
+        int 8_quant = grava.nextInt();
+        
+        int 8_temp = 8_primeiro + (8_quant -1 ) * 8_razao;
+        
+        System.out.println("resultado" +8_temp);
+        
+        //------------------------------------------------------------
+        /*9. Ler um nome do teclado e ver se é igual ao seu nome.    Imprimir conforme o caso: “NOME
+             CORRETO” ou “NOME INCORRETO”.*/
+        
+        System.out.println("\n" +"Exercicio 9");
+        
+        System.out.println("O MEU E joao");
+        String 9_joao = "joao";
+        System.out.println("FALE SEU NOME");
+        String 9_nome = grava.nextline();
+        
+        if(9_nome == 9_joao){
+            
+         System.out.println("NOME IGUAL QUE LEGAL ");
+         
+        }else{
+            System.out.println("NOME DIFERENTE " +9_nome);
+        }
+        
+        //------------------------------------------------------------
+        /*10. Ler 2 números inteiros do teclado (A e B), verificar e imprimir qual deles é o maior, ou a
+            mensagem “A=B” caso sejam iguais.*/
+        
+        System.out.println("\n" +"Exercicio 10");
+        
+        System.out.println("DIGITE UM NUMERO");
+        int 10_A = grava.nextInt();
+        
+        System.out.println("DIGITE OUTRO");
+        int 10_B = grava.nextInt();
+        
+        if(10_A < 10_B){
+         System.out.println("A < B " +10_A +"<" +10_B);
+         
+        }else if(10_A > 10_B){
+            System.out.println("A > B " +10_A +">" +10_B);
+            
+        }else{
+            System.out.println("A=B ");
+        }
+        //------------------------------------------------------------
+        /*11. Que gere o preço de um carro ao consumidor e os valores pagos pelo imposto e pelo lucro do distribuidor, sabendo o custo de fábrica do carro e que são pagos: a) de imposto: 45% sobre o custo do carro; b) de lucro do distribuidor: 12% sobre o custo do carro.*/
+        
+        System.out.println("\n" +"Exercicio 11");
+        
+        System.out.println("qual valor do carro?");
+        double 11_valor_inicial = grava.nextDouble();
+        
+        double 11_imposto = 11_valor_inicial * 0.42;
+        double 11_lucro = 11_valor_inicial * 0.12;
+        
+        double 11_valorFinal1 = 11_valor_inicial + 11_lucro;
+        double 11_valorFinal2 = 11_valor_inicial + 11_imposto;
+        
+        System.out.println("resultado: " +11_valorFinal2);
+        
+        //------------------------------------------------------------
+        /*12. Leia a velocidade máxima permitida em uma avenida e a velocidade com que o motorista
+        estava dirigindo nela e calcule a multa que uma pessoa vai receber, sabendo que são
+        pagos: a) 50 reais se o motorista estiver ultrapassar em até 10km/h a velocidade permitida
+        (ex.: velocidade máxima: 50km/h; motorista a 60km/h ou a 56km/h); b) 100 reais, se o
+        motorista ultrapassar de 11 a 30 km/h a velocidade permitida. c) 200 reais, se estiver
+        acima de 31km/h da velocidade permitida.*/
+        
+        System.out.println("\n" +"Exercicio 12");
+        
+        System.out.println("Velocidade da pista: ");
+        int 12_velocidade_maxima = grava.nextInt();
+        
+        System.out.println("Velocidade do motorista");
+        int 12_velocidade_motorista = grava.nextInt();
+        
+        int 12_diferenca = 12_velocidade_motorista - 12_velocidade_maxima;
+        
+        if (12_diferenca >= 1 && 12_diferenca <= 10) {
+            System.out.println("50 reais");
+            
+        } else if (12_diferenca > 11 && 12_velocidade_motorista <= 30) {
+            System.out.println("100 reais");
+            
+        } else if (12_diferenca > 31) {
+            System.out.println("200 reais");
+            
+        } else {
+            System.out.println("Sem multa");
+        }
+        
+        //------------------------------------------------------------
+        /*13. Sabendo que latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de
+        cada um desses componentes para se obter uma certa quantidade de latão (requerida pelo
+        usuário).*/
+        
+        System.out.println("\n" +"Exercicio 13");
+        
+        System.out.println("Qual quantidade de cobre");
+        double 13_cobre = grava.nextDouble();
+        
+        System.out.println("Qual quantidade de zinco");
+        double 13_zinco = grava.nextDouble();
+        
+        double 13_latao = 13_zinco + 13_cobre;
+        
+        System.out.println("70% do" +13_latao +"latao tem: " +13_cobre +"cobre");
+        System.out.println("30% do" +13_latao +"latao tem: " +13_zinco +"zinco");
+        
+        //ou 
+        
+        System.out.println("Qual quantidade de latao");
+        double 13_latao = grava.nextDouble();
+        
+        double 13_cobre = 13_latao * 0.70;
+        double 13_zinco = 13_latao * 0.30;
+        
+        System.out.println("quantidade de cobre:" +13_cobre);
+        System.out.println("quantidade de zinco:" +13_zinco);
+        
+        //------------------------------------------------------------
+        /*14. Ler 2 números inteiros do teclado. Se o segundo for diferente de zero, calcular e imprimir
+        o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: “DIVISÃO
+        POR ZERO”.*/
+        
+        System.out.println("\n" +"Exercicio 14");
+        
+        System.out.println("INFORME UM VALOR");
+        int 14_valor1 = grava.nextInt();
+        
+        System.out.println("INFORME OUTRO");
+        int 14_valor2 = grava.nextInt();
+        
+        if (14_valor2 != 0) {
+            int 14_quociente = 14_valor1 / 14_valor2;
+            System.out.println(14_quociente);
+        
+        } else {
+            System.out.println("Divisao por zero");
+        }
+        
+        //------------------------------------------------------------
+        /*15. Ler três valores e determinar o maior dentre eles.*/
+        
+        System.out.println("\n" +"Exercicio 15");
+        
+        System.out.println("INFORME UM VALOR");
+        double 15_valor1 = grava.nextDouble();
+        
+        System.out.println("INFORME OUTRO");
+        double 15_valor2 = grava.nextDouble();
+        
+        System.out.println("De novo");
+        double 15_valor3 = grava.nextDouble();
+        
+        if (15_valor1 > 15_valor2 && 15_valor1 > 15_valor3) {
+            System.out.println("Primeiro valor é o maior " +15_valor1 "os outros:" +15_valor2 +" e " +15_valor3);
+            
+        }else if(15_valor2 > 15_valor1 && 15_valor2 > 15_valor3){
+            System.out.println("Segundo valor é o maior " +15_valor2 "os outros:" +15_valor1 +" e " +15_valor3);
+        
+        }else if(15_valor3 > 15_valor1 && 15_valor3 > 15_valor2){
+            System.out.println("Terceiro valor é o maior " +15_valor3 "os outros:" +15_valor1 +" e " +15_valor2);
+
+        } else {
+            System.out.println("Os valores são iguais ou não puderam ser comparados de forma clara.");
+        }
+        
+        //------------------------------------------------------------
+        /*16. Ler três valores e colocá-los em ordem crescente.*/
+        
+        System.out.println("\n" +"Exercicio 16");
+        
+        System.out.println("INFORME UM VALOR");
+        double 16_valor1 = grava.nextDouble();
+        
+        System.out.println("INFORME OUTRO");
+        double 16_valor2 = grava.nextDouble();
+        
+        System.out.println("De novo");
+        double 16_valor3 = grava.nextDouble();
+        
+        if (16_valor1 > 16_valor2 && 16_valor1 > 16_valor3) {
+            if (16_valor2 > 16_valor3 ){
+                System.out.println("ordem crescente: " +15_valor1 " " +15_valor2 +" " +15_valor3);
+            }
+            else {
+                System.out.println("ordem crescente: " +15_valor1 " " +15_valor3 +" " +15_valor2);
+            }
+        }else if(16_valor2 > 16_valor1 && 16_valor2 > 16_valor3){
+            if (16_valor1 > 16_valor3 ){
+                System.out.println("ordem crescente: " +16_valor2 " " +16_valor1 +" " +16_valor3);
+            }
+            else {
+                System.out.println("ordem crescente: " +16_valor2 " " +15_valor3 +" " +16_valor1);
+            }
+        
+        }else if(16_valor3 > 16_valor1 && 16_valor3 > 16_valor2){
+            if (16_valor1 > 16_valor2 ){
+                System.out.println("ordem crescente: " +16_valor3 " " +16_valor1 +" " +16_valor2);
+            }
+            else {
+                System.out.println("ordem crescente: " +16_valor3 " " +16_valor2 +" " +16_valor1);
+            }
+
+        } else {
+            System.out.println("Valores são iguais ou invalidos.");
+        }
+        
+        //------------------------------------------------------------
+        /*17. Ler os três coeficientes de uma equação de segundo grau e determinar suas raízes.*/
+        
+        System.out.println("\n" +"Exercicio 17");
+        
+        System.out.println("INFORME UM VALOR");
+        int 17_a = grava.nextInt();
+        
+        System.out.println("INFORME OUTRO");
+        int 17_b = grava.nextInt();
+        
+        System.out.println("De novo");
+        int 17_c = grava.nextInt();
+        
+        double delta = (17_b * 17_b) - (4 * 17_a * 17_c);
+        
+        if (delta > 0) {
+            double x1 = (-17_b + Math.sqrt(delta)) / (2 * 17_a);
+            double x2 = (-17_b - Math.sqrt(delta)) / (2 * 17_a);
+            System.out.println("As raízes são x1 = " + x1 + " e x2 = " + x2);
+        } else if (delta == 0) {
+            double x = -17_b / (2 * 17_a);
+            System.out.println("A raiz dupla é x = " + x);
+        } else {
+            System.out.println("Nao tem raizes reais.");
+        }
+        //------------------------------------------------------------
+        /*18. Ler três valores do teclado e dizer se eles formam um triângulo. Caso afirmativo, dizer seu
+        tipo (equilátero, isósceles ou escaleno).*/
+        
+        System.out.println("\n" +"Exercicio 18");
+        
+        System.out.println("INFORME UM VALOR");
+        int 18_lado1 = grava.nextInt();
+        
+        System.out.println("INFORME OUTRO");
+        int 18_lado2 = grava.nextInt();
+        
+        System.out.println("De novo");
+        int 18_lado3 = grava.nextInt();
+        
+        int 18_junto1 = 18_lado2 + 18_lado3;
+        int 18_junto2 = 18_lado1 + 18_lado3;
+        int 18_junto3 = 18_lado1 + 18_lado2;
+        //junto pra ficar melhor.
+        
+        if (18_junto1 > 18_lado1 && 18_junto2 > 18_lado2 && 18_junto3 > 18_lado3) {
+            if (18_lado1 == 18_lado2 && 18_lado2 == 18_lado3) {
+                System.out.println("EQUILATERO");
+            }else if(18_lado2 == 18_lado3 || 18_lado1 == 18_lado2 || 18_lado1 == 18_lado3){
+                System.out.println("ISOCELES");
+            }else {
+                System.out.println("ESCALENO");
+            }
+        }else {
+            System.out.println("NAO FORMA UM TRIANGULO");
+        }
+        
+        //------------------------------------------------------------
+        /*19. Ler 4 números inteiros e calcular a soma dos que forem par.*/
+        
+        System.out.println("\n" +"Exercicio 19");
+        
+        System.out.println("INFORME UM VALOR");
+        int 19_valor1 = grava.nextInt();
+        
+        System.out.println("INFORME OUTRO");
+        int 19_valor2 = grava.nextInt();
+        
+        System.out.println("De novo");
+        int 19_valor3 = grava.nextInt();
+        
+        System.out.println("Agora o ultimo");
+        int 19_valor4 = grava.nextInt();
+        
+        int somar = 0;
+        
+        if (19_valor1 % 2 == 0) {
+            somar += 19_valor1;
+        }
+        if (19_valor2 % 2 == 0) {
+            somar += 19_valor2;
+        }
+        if (19_valor3 % 2 == 0) {
+            somar += 19_valor3;
+        }
+        if (19_valor4 % 2 == 0) {
+            somar += 19_valor4;
+        }
+        
+        System.out.println("A soma: " +somar);
+        //------------------------------------------------------------
+        /*20. Que informe se um dado ano é ou não bissexto. Obs: um ano é bissexto se ele for divisível
+        por 400 ou se ele for divisível por 4 e não por 100.*/
+        
+        System.out.println("\n" +"Exercicio 20");
+        
+        System.out.println("fale o ano: ");
+        int 20_ano = grava.nextInt();
+        
+        if (ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0)) {
+            System.out.println("O ano " + ano + " é bissexto.");
+        } else {
+            System.out.println("O ano " + ano + " não é bissexto.");
+        }
+    }
+}

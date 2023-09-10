@@ -1,0 +1,110 @@
+1 ) Crie um CLASSE com o nome Teste1 
+que armazene as notas de primeiro ,segundo e terceiro 
+bimestre e de como resultado a seguinte informação :
+
+
+O Aluno (nome) teve como média a nota (média)
+
+
+
+2) Crie uma classe que armazene um determinado 
+valor em reais e como resultado mostre
+
+
+10%  de (valor) é (resultado)
+
+
+3)Crie uma CLASSE que armazene 2 valores 
+e de como resultado : 
+
+(A)+(b)= (C)
+(A)*(b)=(c)
+(A)/(b)= (c)
+(A)-(b)= (c)
+
+
+4) Crie uma CLASSE e mostre na tela a tabuada referente ao numero 5 
+
+Exemplo :
+5 x 1 = 5
+5 x 2 = 10
+.
+.
+5 x 10 = 50
+
+
+
+
+
+
+
+package main;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        /*1 ) Crie um CLASSE com o nome Teste1 
+        que armazene as notas de primeiro ,segundo e terceiro 
+        bimestre e de como resultado a seguinte informação :*/
+        
+        System.out.println("\n Exercicio 1 \n ");
+        
+        String nome_aluno = "José";
+        int primeiro_bimestre = 7;
+        int segundo_bimestre = 5;
+        int terceiro_bimestre = 6;
+	
+        double media = primeiro_bimestre + segundo_bimestre + terceiro_bimestre;
+        System.out.println("O Aluno " + nome_aluno + " teve como média a nota = " + media / 3);
+        
+        /*2) Crie uma classe que armazene um determinado 
+        valor em reais e como resultado mostre */
+        
+        System.out.println("\n Exercicio 2 \n ");
+        
+        int valor = 345;
+        double desconto = valor * 0.10;
+        System.out.println("10%  de " + valor + " é resultado de " + desconto);
+        
+        /*3)Crie uma CLASSE que armazene 2 valores 
+        e de como resultado :*/
+        System.out.println("\n Exercicio 3 \n");
+        
+        int n1 = 3;
+        int n2 = 6;
+        
+        System.out.println("Adição " + (n1 + n2));
+        System.out.println("multiplicação " + (n1 * n2));
+        System.out.println("divisão " + (n1 / n2));
+        System.out.println("subtração " + (n1 - n2));
+        
+        /*4) Crie uma CLASSE e mostre na tela a tabuada referente ao numero 5 */
+        System.out.println("\n Exercicio 4 \n");
+        
+        int referente= 5;
+        int cont = 1;
+        
+        System.out.println("5 x 1 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 2 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 3 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 4 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 5 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 6 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 7 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 8 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 9 = " + referente * cont);
+        cont ++;
+        System.out.println("5 x 10 = " + referente * cont);
+        
+    }
+    
+}

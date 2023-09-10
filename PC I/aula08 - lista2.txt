@@ -1,0 +1,211 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        //1.  Imprima todos os números de 150 a 300;
+
+        System.out.println("\n Exercicio 1");
+        
+        int temp1 = 150;
+        while (temp1 <= 300){
+            System.out.println(temp1);
+            temp1 ++;
+        }
+        //3. Imprima todos os múltiplos de 3, entre 1 e 100;
+        System.out.println("\n Exercicio 3");
+        
+        int temp3 = 3;
+        while (temp3 <= 100){
+            System.out.println(temp3);
+            temp3 += 3;
+        }
+        //4. Solicite ao usuário 3 números e ordene do menor para o maior;
+        System.out.println("\n Exercicio 4");
+        
+        System.out.println("Digite um numero");
+        int val1 = grava.nextInt();
+        
+        System.out.println("Digite outro");
+        int val2 = grava.nextInt();
+        
+        System.out.println("e mais outro");
+        int val3 = grava.nextInt();
+        
+        if(val1 < val2 && val1 < val3){
+            System.out.println(val1 +" < " +val2 +" e " +val1 +" < " +val3);
+            if (val2 < val3){
+                System.out.println(+val2 +" < " +val3);
+                
+                System.out.println("Então ");
+                System.out.println(val1);
+                System.out.println(val2);
+                System.out.println(val3);
+            }
+            else {
+                System.out.println(+val3 +" < " +val2);
+                
+                System.out.println("Então ");
+                System.out.println(val1);
+                System.out.println(val3);
+                System.out.println(val2);
+            }
+         
+        }else if(val2 < val1 && val2 < val3){
+            System.out.println(val2 +" < " +val1 +" e " +val2 +" < " +val3);
+            if (val1 < val3){
+                System.out.println( +val1 +" < " +val3);
+                System.out.println("Então ");
+                System.out.println(val2);
+                System.out.println(val1);
+                System.out.println(val3);
+                
+            }
+            else {
+                System.out.println("C Menor que A " +val3 +"<" +val1);
+                System.out.println("Então ");
+                System.out.println(val2);
+                System.out.println(val3);
+                System.out.println(val1);
+            }
+        }else if(val3 < val1 && val3 < val2){
+            System.out.println(val3 +" < " +val1 +" e " +val3 +" < " +val3);
+            if (val1 < val2){
+                System.out.println( +val1 +" < " +val2);
+                System.out.println("Então ");
+                System.out.println(val3);
+                System.out.println(val1);
+                System.out.println(val2);
+            }else{
+            
+            }
+        }
+        
+        
+        //5. Imprimir os múltiplos de 7 menores que 200.
+        System.out.println("\n Exercicio 5");
+        
+        int temp5 = 7;
+        while (temp5 <= 200){
+            System.out.println(temp5);
+            temp5 += 7;
+        }
+        
+        //8. Calcular a média de idade de 10 alunos de uma turma qualquer. 
+        System.out.println("Exercicio 6");
+        
+        int quantidade = 1;
+        
+        while (quantidade <= 10){
+            System.out.println("Qual a idade do aluno 1");
+            int aluno1 = grava.nextInt();
+            quantidade ++;
+        }
+    }   
+}
+
+
+
+
+
+
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        
+        //4. Solicite ao usuário 3 números e ordene do menor para o maior;
+        System.out.println("\n Exercicio 4");
+        
+        System.out.println("Digite um numero");
+        int val1 = grava.nextInt();
+        
+        System.out.println("Digite outro");
+        int val2 = grava.nextInt();
+        
+        System.out.println("e mais outro");
+        int val3 = grava.nextInt();
+        
+        int sair = 9999999;
+        
+        while(val1 < val2 && val1 < val3){
+            System.out.println(val1 +" < " +val2 +" e " +val1 +" < " +val3);
+            
+            while (val2 < val3){
+                System.out.println(+val2 +" < " +val3);
+                
+                System.out.println("Então ");
+                System.out.println(val1);
+                System.out.println(val2);
+                System.out.println(val3);
+                val2 = sair;
+            }
+            val1 = sair;
+        }
+        while(val1 < val2 && val1 < val3){
+            System.out.println(val1 +" < " +val2 +" e " +val1 +" < " +val3);
+            while (val3 < val2){
+                System.out.println(+val3 +" < " +val2);
+                
+                System.out.println("ccccccccccccc ");
+                System.out.println(val1);
+                System.out.println(val3);
+                System.out.println(val2);
+                val3 = sair;
+            }
+            val1 = sair;
+        }
+        while(val2 < val1 && val2 < val3){
+            System.out.println(val2 +" < " +val1 +" e " +val2 +" < " +val3);
+            while (val1 < val3){
+                System.out.println( +val1 +" < " +val3);
+                System.out.println("ddddddddddddd ");
+                System.out.println(val2);
+                System.out.println(val1);
+                System.out.println(val3);
+                val1 = sair; 
+            }
+            val2 = sair;
+        }
+            
+        while(val2 < val1 && val2 < val3){
+            System.out.println(val2 +" < " +val1 +" e " +val2 +" < " +val3);
+            while (val3 < val1){
+                System.out.println( val3 +" < " +val1);
+                System.out.println("eeeeeeeeeeeeeee ");
+                System.out.println(val2);
+                System.out.println(val3);
+                System.out.println(val1);
+                val3 = sair; 
+            }
+            val2 = sair;
+        }
+        while(val3 < val1 && val3 < val2){
+            System.out.println(val3 +" < " +val1 +" e " +val3 +" < " +val2);
+            while (val2 < val1){
+                System.out.println(val1 +" > " +val2);
+                System.out.println("Então ");
+                System.out.println(val3);
+                System.out.println(val2);
+                System.out.println(val1);
+                val2 = sair;
+            }
+            val3 = sair;
+        }
+        
+        while(val3 < val1 && val3 < val2){
+            System.out.println(val3 +" < " +val1 +" e " +val3 +" < " +val2);
+            while (val1 < val2){
+                System.out.println(val1 +" < " +val2);
+                System.out.println("Então ");
+                System.out.println(val3);
+                System.out.println(val1);
+                System.out.println(val2);
+                val1 = sair;
+            }
+            val3 = sair;
+        }
+    }   
+}

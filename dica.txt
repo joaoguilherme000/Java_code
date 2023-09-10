@@ -1,0 +1,10 @@
+classe possui propriedades (a que eu posso mexer é publica e a privada não pode) {}
+
+função varias funções
+
+if va >= 1  &&  va <=10
+	    ou
+
+o e considera o intervalo então = 1 2 3 4 5 até 10
+
+e ou só considera 1 ou 10

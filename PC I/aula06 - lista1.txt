@@ -1,0 +1,111 @@
+import java.util.Scanner
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* CRIE UM fluxograma QUE SIMULE O FUNCIONAMENTO DE UM CADASTRO DE CLIENTE MENU
+        1 - inclusao  
+        Dados a serem cadastrados  
+        numero do cpf 
+        numero do rg
+        2 - alteracao -> "Registro alterado com sucesso"
+        3 - exclusao -> "Registro excluido com sucesso"
+        4 - sair -> "Saindo do sistema" */
+        
+        System.out.println("Exercicio 1");
+        
+        Scanner grava = new Scanner(System.in);
+        
+        System.out.println("Qual opção você quer? ");
+        int valor = grava.nextInt();
+        
+        if(valor == 1){
+         System.out.println("O valor é: " + valor);
+         
+         System.out.println("Digite seu cpf:");
+         double cpf = grava.nextDouble();
+         
+         System.out.println("Digite seu rg:");
+         double rg = grava.nextDouble();
+         
+         System.out.println("\n" +"Seu cpf:" +cpf);
+         System.out.println("Seu rg:" +rg);
+         
+        }else if(valor == 2) {
+            
+         System.out.println("O valor é: " + valor +" - alteracao");
+         System.out.println("Registro alterado com sucesso");
+         
+        }else if(valor == 3){
+            
+         System.out.println("O valor é: " + valor +" - exclusao");
+         System.out.println("Registro excluido com sucesso");
+         
+        }else if (valor == 4){
+            System.out.println("Registro excluido com sucesso");
+        }else{
+            System.out.println("Valor invalido tente denovo");
+        }
+        
+        /*2 -CRIE UM Fluxograma QUE TENHA 3 OPÇÕES DE MENU
+        1 - VEJA A MENSAGEM
+        2 - TIRE 10% DO VALOR DESEJADO
+        3 - SAIR
+        */
+        
+        System.out.println("\n" +"Exercicio 2");
+        
+        System.out.println("Qual opção você quer? ");
+        int opcao = grava.nextInt();
+        
+        if(opcao == 1){
+         
+         System.out.println("MENSAGEM PADRÃO QUANDO A OPÇÃO FOR 1:");
+         
+        }else if(opcao == 2) {
+            
+         System.out.println("Digite um numero: " );
+         double temp = grava.nextDouble();
+         
+         double result = temp *0.10;
+         System.out.println("10% de: " +temp +" é = " +result);
+         
+        }else if(opcao == 3){
+         System.out.println("Saindo");
+         
+        }else{
+            System.out.println("Erro");
+        }
+        /*3 - Solicite a idade do jogador e retorne a informação equivalente.
+        CATEGORIAS
+        1 ATÉ 1O ANOS- INFANTIL
+        11 ATE 13 ANOS - INFANTO-JUVENIL
+        14 ATE 17 ANOS - PRE-ADOLESCENTE
+        ACIMA DE 18 - ADULTO
+        */
+        
+        System.out.println("\n" +"Exercicio 3");
+        
+        System.out.println(" Fale sua idade");
+        int idade = grava.nextInt();
+        
+        if(idade < 10){
+            
+         System.out.println("Categoria: infantil");
+         
+        }else if(idade < 13) {
+            
+         System.out.println("Categoria: infanto-juvenil");
+         
+        }else if(idade <17){
+            
+         System.out.println("Categoria: Pre-adolescente");
+         
+        }else if(idade > 18){
+            
+            System.out.println("Categoria: Adulto");
+        }else{
+            System.out.println("Idade invalida");
+        }
+    }
+ }

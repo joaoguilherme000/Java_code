@@ -1,0 +1,53 @@
+/* 13.  A conversão de graus Fahrenheit para centígrados é obtida por C = 5*(F-32)/9. Fazer um algoritmo que calcule e escreva uma tabela de graus centígrados em função de graus Fahrenheit, variando um a um de 50 a 150 graus Fahrenheit.  */
+
+public class ConversaoFahrenheit {
+    public static void main(String[] args) {
+        System.out.println("Fahrenheit  |  Celsius");
+        System.out.println("-----------------------");
+
+        for (int fahrenheit = 50; fahrenheit <= 150; fahrenheit++) {
+            double celsius = (5.0 / 9.0) * (fahrenheit - 32);
+            System.out.printf("%-10d |  %-10.2f%n", fahrenheit, celsius);
+        }
+    }
+}
+
+
+//-------------------------------------------------------------------------
+
+/*14.  Entrar com um nome, idade e sexo de 20 pessoas. Imprimir o nome se a pessoa for do sexo masculino e tiver mais de 21 anos */
+
+import java.util.Scanner;
+
+public class VerificarIdadeSexo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String[] nomes = new String[20];
+        int[] idades = new int[20];
+        char[] sexos = new char[20];
+        
+        for (int i = 0; i < 20; i++) {
+            System.out.println("Digite o nome da pessoa " + (i + 1) + ":");
+            nomes[i] = scanner.nextLine();
+            
+            System.out.println("Digite a idade da pessoa " + (i + 1) + ":");
+            idades[i] = Integer.parseInt(scanner.nextLine());
+            
+            System.out.println("Digite o sexo da pessoa " + (i + 1) + " (M para masculino, F para feminino):");
+            sexos[i] = scanner.nextLine().charAt(0);
+        }
+        
+        System.out.println("Pessoas do sexo masculino com mais de 21 anos:");
+        for (int i = 0; i < 20; i++) {
+            if (sexos[i] == 'M' && idades[i] > 21) {
+                System.out.println(nomes[i]);
+            }
+        }
+        
+        scanner.close();
+    }
+}
+
+// ------------------------------------------------------------------------
+
