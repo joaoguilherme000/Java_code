@@ -1,0 +1,97 @@
+/*Crie uma calculadora com as seguintes caracteristicas :
+
+* Deve existir uma classe chamada Principal 
+* Na classe principal será instanciada a classe segunda , com a função
+Menu
+* Esse Menu terá 4 botões com as seguintes operações : Soma /
+Multiplicação / Divisão / Diferença
+* Para cada Operação do menu deverá existir uma classe e uma função .
+
+Objetivo :  Receber 2 valores e mostrar o resultado , utilizando
+orientação a objeto*/
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Calculadora calculadora = new Calculadora();
+        calculadora.menu();
+    }
+}
+
+class Calculadora {
+    private double valor1;
+    private double valor2;
+    private Scanner scanner;
+
+    public Calculadora() {
+        scanner = new Scanner(System.in);
+    }
+
+    public void menu() {
+        int escolha;
+        do {
+            System.out.println("Escolha uma operacao:");
+            System.out.println("1. Soma");
+            System.out.println("2. Multiplicacao");
+            System.out.println("3. Divisao");
+            System.out.println("4. Diferenca");
+            System.out.println("0. Sair");
+            System.out.print("Digite o numero da operacao desejada: ");
+            escolha = scanner.nextInt();
+
+            if (escolha != 0) {
+                System.out.print("Digite o primeiro valor: ");
+                valor1 = scanner.nextDouble();
+                System.out.print("Digite o segundo valor: ");
+                valor2 = scanner.nextDouble();
+            }
+
+            switch (escolha) {
+                case 1:
+                    soma();
+                    break;
+                case 2:
+                    multiplicacao();
+                    break;
+                case 3:
+                    divisao();
+                    break;
+                case 4:
+                    diferenca();
+                    break;
+                case 0:
+                    System.out.println("Saindo da calculadora.");
+                    break;
+                default:
+                    System.out.println("Opcao invalida.");
+            }
+        } while (escolha != 0);
+
+        scanner.close();
+    }
+
+    public void soma() {
+        double resultado = valor1 + valor2;
+        System.out.println("Resultado da Soma: " + resultado);
+    }
+
+    public void multiplicacao() {
+        double resultado = valor1 * valor2;
+        System.out.println("Resultado da Multiplicacao: " + resultado);
+    }
+
+    public void divisao() {
+        if (valor2 != 0) {
+            double resultado = valor1 / valor2;
+            System.out.println("Resultado da Divisao: " + resultado);
+        } else {
+            System.out.println("Nao e possivel dividir por zero.");
+        }
+    }
+
+    public void diferenca() {
+        double resultado = valor1 - valor2;
+        System.out.println("Resultado da Diferenca: " + resultado);
+    }
+}
