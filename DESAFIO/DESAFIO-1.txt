@@ -88,3 +88,63 @@ public class OrdenacaoVetor {
         }
     }
 }
+// -----------------------------------------------------------------------------------
+
+/*CRIE  2 VETORES DE INTEIROS , SENDO QUE UM ARMAZENE CINCO POSIÇÕES PARES 
+E O OUTRO ARMAZENE 5 POSIÇÕES IMPARES  ,  E UM LOOP DE REPETIÇÃO  QUE SOLICITE
+AO USUÁRIO 20 NUMEROS . QUANDO UM OU OS DOIS VETORES ENCHEREM MOSTRE A MENSAGEM
+“VETOR CHEIO”*/
+
+import java.util.Scanner;
+
+public class VetorParesImpares {
+    public static void main(String[] args) {
+        // Crie dois vetores para armazenar numeros pares e impares
+        int[] pares = new int[5];
+        int[] impares = new int[5];
+        
+        // Crie um objeto Scanner para ler os numeros do usuario
+        Scanner scanner = new Scanner(System.in);
+        
+        int contadorPares = 0;
+        int contadorImpares = 0;
+        
+        // Solicite ao usuario 20 numeros
+        for (int i = 1; i <= 20; i++) {
+            System.out.print("Digite o numero " + i + ": ");
+            int numero = scanner.nextInt();
+            
+            if (numero % 2 == 0) {
+                // Numero par
+                if (contadorPares < 5) {
+                    pares[contadorPares] = numero;
+                    contadorPares++;
+                } else {
+                    System.out.println("VETOR DE PARES CHEIO");
+                }
+            } else {
+                // Numero impar
+                if (contadorImpares < 5) {
+                    impares[contadorImpares] = numero;
+                    contadorImpares++;
+                } else {
+                    System.out.println("VETOR DE IMPARES CHEIO");
+                }
+            }
+        }
+        
+        // Exiba os vetores de pares e impares
+        System.out.println("Vetor de Pares:");
+        for (int i = 0; i < contadorPares; i++) {
+            System.out.print(pares[i] + " ");
+        }
+        
+        System.out.println("\nVetor de impares:");
+        for (int i = 0; i < contadorImpares; i++) {
+            System.out.print(impares[i] + " ");
+        }
+        
+        // Fecha o Scanner
+        scanner.close();
+    }
+}
