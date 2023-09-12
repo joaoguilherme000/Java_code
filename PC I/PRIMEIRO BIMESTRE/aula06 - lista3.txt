@@ -1,0 +1,135 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Exercicio 1");
+        
+        Scanner grava = new Scanner(System.in);
+        
+        System.out.println("Velocidade permitida: ");
+        int pista = grava.nextInt();
+        
+        System.out.println("Velocidade do carro: ");
+        int carro = grava.nextInt();
+        
+        int diferenca = carro - pista;
+        
+        if (diferenca >= 1 && diferenca <= 10) {
+            System.out.println("multa de 80,00");
+            
+        } else if (diferenca >= 11 && diferenca <= 39) {
+            System.out.println("multa de 120,00");
+            
+        } else if (diferenca >= 40) {
+            System.out.println("MULTA DE 200,00");
+            
+        } else {
+            System.out.println("Sem multa");
+        }
+        
+        /*2 - Monte um quiz com 4 perguntas e pontuação final para as respostas certas.*/ 
+        
+        System.out.println("\n" +"Exercicio 2");
+        
+        Scanner scanner = new Scanner(System.in);
+        int pontuacao = 0;
+
+        System.out.println("Bem-vindo ao Quiz!");
+
+        // Pergunta 1
+        System.out.println("Pergunta 1: Qual planeta do sistema solar é conhecido como o Planeta Vermelho??");
+        System.out.println("Opções:");
+        System.out.println("1. Marte");
+        System.out.println("2. Júpiter");
+        System.out.println("3. Saturno");
+        
+        int resposta1 = scanner.nextInt();
+        
+        if (resposta1 == 1) {
+            pontuacao += 1;
+        }else{
+            System.out.println("Resposta errada");
+        }
+        
+        // Pergunta 2
+        System.out.println("Pergunta 2: Qual é a montanha mais alta do mundo??");
+        System.out.println("Opções:");
+        System.out.println("1. Monte Kilimanjaro");
+        System.out.println("2. Monte Fuji");
+        System.out.println("3. Monte Everest");
+        
+        int resposta2 = scanner.nextInt();
+        
+        if (resposta2 == 3) {
+            pontuacao += 1;
+        }else{
+            System.out.println("Resposta errada");
+        }
+
+        // Pergunta 3
+        System.out.println("Pergunta 3: Qual é o som que o cachorro faz?");
+        System.out.println("Opções:");
+        System.out.println("1. Miau");
+        System.out.println("2. Latido");
+        System.out.println("3. Rugido");
+        
+        int resposta3 = scanner.nextInt();
+        if (resposta3 == 2) {
+            pontuacao += 1;
+        }else{
+            System.out.println("Resposta errada");
+        }
+
+        // Pergunta 4
+        System.out.println("Pergunta 4: Qual é o país com mais títulos de Copa do Mundo?");
+        System.out.println("Opções:");
+        System.out.println("1. Itália");
+        System.out.println("2. Alemanha");
+        System.out.println("3. Brasil");
+        
+        int resposta4 = scanner.nextInt();
+        
+        if (resposta4 == 3) {
+            pontuacao += 1;
+        }else{
+            System.out.println("Resposta errada");
+        }
+
+        System.out.println("Pontuação final: " + pontuacao + " /4");
+        
+        /*3 - Informe a categoria de acordo com a idade informada.
+        CATEGORIAS
+        1 ATÉ 1O ANOS- INFANTIL
+        11 ATE 13 ANOS - INFANTO-JUVENIL
+        14 ATE 17 ANOS - PRE-ADOLESCENTE
+        ACIMA DE 18 - ADULTO*/
+        
+        System.out.println("\n" +"Exercicio 3");
+        
+        System.out.println(" Fale sua idade");
+        int idade = grava.nextInt();
+        
+        if(idade <= 10){
+            
+         System.out.println("Categoria: infantil");
+         
+        }else if(idade <= 13) {
+            
+         System.out.println("Categoria: infanto-juvenil");
+         
+        }else if(idade <= 17){
+            
+         System.out.println("Categoria: Pre-adolescente");
+         
+        }else if(idade >= 18){
+            System.out.println("Categoria: Adulto");
+        }else{
+            System.out.println("Idade invalida");
+        }
+        
+        scanner.close();
+
+    }
+}
