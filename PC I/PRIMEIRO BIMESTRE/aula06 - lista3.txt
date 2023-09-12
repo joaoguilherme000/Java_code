@@ -27,6 +27,8 @@ public class Main {
             
         } else if (diferenca >= 40) {
             System.out.println("multa de 200,00");
+        } else {
+            System.out.println("erro no sistema");
         }
         
         /*2 - Monte um quiz com 4 perguntas e pontuação final para as respostas certas.*/ 
