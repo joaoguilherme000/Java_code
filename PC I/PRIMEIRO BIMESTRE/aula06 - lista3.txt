@@ -16,14 +16,17 @@ public class Main {
         
         int diferenca = carro - pista;
         
-        if (diferenca >= 1 && diferenca <= 10) {
+        if (diferenca <= 0) {
+            System.out.println("parabens sem multa");
+            
+        } else if (diferenca >= 1 && diferenca <= 10) {
             System.out.println("multa de 80,00");
             
         } else if (diferenca >= 11 && diferenca <= 39) {
             System.out.println("multa de 120,00");
             
         } else if (diferenca >= 40) {
-            System.out.println("MULTA DE 200,00");
+            System.out.println("multa de 200,00");
             
         } else {
             System.out.println("Sem multa");
@@ -108,13 +111,16 @@ public class Main {
         
         System.out.println("\n" +"Exercicio 3");
         
-        System.out.println(" Fale sua idade");
+        System.out.println("Fale sua idade");
         int idade = grava.nextInt();
         
-        if(idade <= 10){
+        if(idade < 0){
             
-         System.out.println("Categoria: infantil");
+         System.out.println("Categoria: Nao nasceu");
          
+        }else if(idade <= 10){
+            System.out.println("Categoria: Infantil");
+            
         }else if(idade <= 13) {
             
          System.out.println("Categoria: infanto-juvenil");
@@ -125,6 +131,7 @@ public class Main {
          
         }else if(idade >= 18){
             System.out.println("Categoria: Adulto");
+            
         }else{
             System.out.println("Idade invalida");
         }
