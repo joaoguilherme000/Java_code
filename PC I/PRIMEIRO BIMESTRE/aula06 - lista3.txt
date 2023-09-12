@@ -5,15 +5,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Exercicio 1");
-
-        /*1 - SOLICITE AO USUÁRIO AS SEGUINTES INFORMAÇÕES :
-
-        - VELOCIDADE PERMITIDA NA VIA
-        - VELOCIDADE QUE O CARRO ESTA NO MOMENTO
-
-        SE VELOCIDADE ESTIVER ACIMA DE  10KM DO PERMITIDO , O SISTEMA DARA UM AVISO DE "MULTA DE 80,00"
-        SE A VELOCIDADE ESTIVER ACIMA  ENTRE 11KM E 39 KM , O SISTEMA DA UM AVISO DE "MULTA DE 120,00"
-        SE A VELOCIDADE FOR MAIOR OU IGUAL A 40 KM O SISTEMA DA UM AVISO DE "MULTA DE 200,00"*/
         
         Scanner grava = new Scanner(System.in);
         
@@ -25,17 +16,17 @@ public class Main {
         
         int diferenca = carro - pista;
         
-        if (diferenca >= 1 && diferenca <= 10) {
+        if (diferenca < 10) {
+            System.out.println("parabens sem multa");
+            
+        } else if (diferenca == 10) {
             System.out.println("multa de 80,00");
             
         } else if (diferenca >= 11 && diferenca <= 39) {
             System.out.println("multa de 120,00");
             
         } else if (diferenca >= 40) {
-            System.out.println("MULTA DE 200,00");
-            
-        } else {
-            System.out.println("Sem multa");
+            System.out.println("multa de 200,00");
         }
         
         /*2 - Monte um quiz com 4 perguntas e pontuação final para as respostas certas.*/ 
@@ -117,13 +108,16 @@ public class Main {
         
         System.out.println("\n" +"Exercicio 3");
         
-        System.out.println(" Fale sua idade");
+        System.out.println("Fale sua idade");
         int idade = grava.nextInt();
         
-        if(idade <= 10){
+        if(idade < 0){
             
-         System.out.println("Categoria: infantil");
+         System.out.println("Categoria: Nao nasceu");
          
+        }else if(idade <= 10){
+            System.out.println("Categoria: Infantil");
+            
         }else if(idade <= 13) {
             
          System.out.println("Categoria: infanto-juvenil");
@@ -134,6 +128,7 @@ public class Main {
          
         }else if(idade >= 18){
             System.out.println("Categoria: Adulto");
+            
         }else{
             System.out.println("Idade invalida");
         }
