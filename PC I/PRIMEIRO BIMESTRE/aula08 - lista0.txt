@@ -14,7 +14,7 @@ public class Main {
         int numeros1 = 100;
         
         while (numeros1 <= 200){
-            if (numeros1 % 2 == 1 ){
+            if (numeros1 % 2 != 0 ){
                 System.out.println(numeros1);
             }
             numeros1 ++;
