@@ -1,19 +1,21 @@
+package main;
+
 import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        // 1 - crie um programa que exiba na tela os numeros
+        // impares entre 100 e 200.
+        
         Scanner grava = new Scanner(System.in);
         
         System.out.println("\n" +"Exercicio");
         
         int numeros1 = 100;
         
-        if (numeros1 <= 200){
+        while (numeros1 <= 200){
             System.out.println(numeros1);
             numeros1 ++;
-            
-        }else{
-        
         }
         
         /*2 - crie um programa que exiba na tela os numeros
@@ -45,6 +47,8 @@ public class Main {
         }
         quant --;
         media = soma / quant;
+        
+        System.out.println(media);
         
         
         /*4 - receba  via teclado quantas vezes a mensagem
