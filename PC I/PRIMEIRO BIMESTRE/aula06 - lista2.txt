@@ -25,17 +25,19 @@ public class Main {
         
         int diferenca = carro - pista;
         
-        if (diferenca >= 1 && diferenca <= 10) {
+        if (diferenca < 10) {
+            System.out.println("parabens sem multa");
+            
+        } else if (diferenca == 10) {
             System.out.println("multa de 80,00");
             
         } else if (diferenca >= 11 && diferenca <= 39) {
             System.out.println("multa de 120,00");
             
-        } else if (diferenca > 40) {
-            System.out.println("MULTA DE 200,00");
-            
+        } else if (diferenca >= 40) {
+            System.out.println("multa de 200,00");
         } else {
-            System.out.println("Sem multa");
+            System.out.println("erro no sistema");
         }
         //----------------------------------------------
         /*2 -  SOLICITE AO USUARIO O VALOR DE SEU SALARIO , A SEGUIR EFETUE OS SEGUINTES DESCONTOS : 
