@@ -8,3 +8,5 @@ if va >= 1  &&  va <=10
 o e considera o intervalo então = 1 2 3 4 5 até 10
 
 e ou só considera 1 ou 10
+
+https://drive.google.com/drive/folders/1qLvEMPZpVE4Mph5NbVnpeeLpk3dz5o4h
