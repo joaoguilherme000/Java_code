@@ -1,6 +1,6 @@
-# Nome do Seu Projeto
+# Todos os codigos ate o final do ano
 
-Breve descrição do seu projeto.
+Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona mas nao esta certo
 
 [Inserir Badges Relevantes, se aplicável]
 
