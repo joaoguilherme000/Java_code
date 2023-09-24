@@ -4,16 +4,4 @@ Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona ma
 
 [Inserir Badges Relevantes, se aplicável]
 
-## Índice
-- [PC1](#PrimeiroBimestre)
-- [Exemplos de Uso](#exemplos-de-uso)
-- [Documentação](#documentação)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Autores](#autores)
-- [Histórico de Mudanças](#histórico-de-mudanças)
-- [Contato](#contato)
-
-## Instalação
-
-Forneça instruções claras sobre como instalar e configurar o seu projeto. Inclua comandos para instalação de dependências, se aplicável.
+![Java Badge](https://img.shields.io/open-vsx/dt/:namespace/:extension)
