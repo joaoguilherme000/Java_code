@@ -5,7 +5,7 @@ Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona ma
 [Inserir Badges Relevantes, se aplicável]
 
 ## Índice
-- [Instalação](#instalação)
+- [PC1](#PrimeiroBimestre)
 - [Exemplos de Uso](#exemplos-de-uso)
 - [Documentação](#documentação)
 - [Contribuição](#contribuição)
