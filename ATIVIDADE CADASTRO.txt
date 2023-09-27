@@ -1,0 +1,94 @@
+package main;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+/*1 - Cadastrar
+2 - Alterar
+3 -Consultar 
+4 - Excluir 
+0 - Sair
+
+Caso o usuário clique utilize a opção 1 , será solicitado que ele digite as seguintes informações 
+Nome , email , telefone , celular , RG.
+
+Caso o usuário clique na opção 2, será informado , qual dos campos ele deseja alterar : 
+1 -Nome , 2 -email , 3 - telefone , 4 - celular  , 5- RG.
+
+Caso o usuário clique na opção 3  aparecerão na tela as informações já cadastradas.
+
+Caso o usuário clique na opção 4  todos os campos serão esvaziados ou limpos.
+
+Caso o usuário clique na opção 0 o sistema será encerrado.
+
+Obs :  A entrega será feita de forma individual através de um arquivo TXT com o código do programa. Atividade poderá ser realizada em dupla,
+porém a entrega é individual. Código a ser entregue hoje (26/09/2023) até ás 22: 20hs*/
+
+public class Main {
+
+    public static void main(String[] args) {
+        String nome = "";
+        String email = "";
+        String telefone = "";
+        String celular = "";
+        String RG = "";
+
+        int menu = 1;
+
+        while (menu != 0) {
+            String entrada = JOptionPane.showInputDialog("Sistema de cadastro \n 1 - Cadastrar \n 2 - Alterar \n 3 - Consultar \n 4 - Excluir \n 0 - Sair \n");
+
+            int entradaSwitch = Integer.parseInt(entrada);
+
+            switch (entradaSwitch) {
+                case 1:
+                    nome = JOptionPane.showInputDialog("Digite seu nome");
+                    email = JOptionPane.showInputDialog("Digite seu email");
+                    telefone = JOptionPane.showInputDialog("Digite seu telefone");
+                    celular = JOptionPane.showInputDialog("Digite seu celular");
+                    RG = JOptionPane.showInputDialog("Digite seu RG");
+                    break;
+                case 2:
+                    String alterar = JOptionPane.showInputDialog("Qual deseja alterar? \n 1 - Nome \n 2 - Email \n 3 - Telefone \n 4 - Celular \n 5 - RG \n 0 - Sair");
+                    int alteraSwitch = Integer.parseInt(alterar);
+
+                    switch (alteraSwitch) {
+                        case 1:
+                            nome = JOptionPane.showInputDialog("Digite seu nome");
+                            break;
+                        case 2:
+                            email = JOptionPane.showInputDialog("Digite seu email");
+                            break;
+                        case 3:
+                            telefone = JOptionPane.showInputDialog("Digite seu telefone");
+                            break;
+                        case 4:
+                            celular = JOptionPane.showInputDialog("Digite seu celular");
+                            break;
+                        case 5:
+                            RG = JOptionPane.showInputDialog("Digite seu RG");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "Nome: " + nome + "\nEmail: " + email + "\nTelefone: " + telefone + "\nCelular: " + celular + "\nRG: " + RG);
+                    break;
+                case 4:
+                    nome = "";
+                    email = "";
+                    telefone = "";
+                    celular = "";
+                    RG = "";
+                    break;
+                case 5:
+                    menu = 0;
+                    break;
+                default:
+                    break; // Sai do loop se qualquer outra tecla for pressionada
+            }
+        menu = 1;
+        }
+   
+    }
+}
