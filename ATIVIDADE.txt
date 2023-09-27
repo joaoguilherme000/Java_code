@@ -1,0 +1,90 @@
+SPA QUER FAZER UM SITEMA DE CADASTRO E VENDA.
+
+PRODUTO - codigo*, nome*, quantidade, preço, localização,
+
+CLIENTE - codigo*, nome, endereço, tel, email, cpf, cel,
+
+AGENDAMENTO - codigo*, tipo de serviço, data do serviço, nome do cliente.
+
+NOTA - comprovante , data, forma de pagamento, quantidade de parcela, codigo*, quantidade de produto
+
+CAP - aluguel, agua, luz , salario dos funcionarios, imposto, produtos, data
+
+CAR - codigo da nota*, forma de pagamento da nota*, data,
+
+SERVIÇO - codigo*, nome*, data, quantidade, nome do cliente.
+
+
+
+CREATE TABLE PRODUTO (
+    codigo INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    quantidade INT,
+    preço DECIMAL(10, 2),
+    localização VARCHAR(255)
+);
+
+
+CREATE TABLE CLIENTE (
+    codigo INT PRIMARY KEY,
+    nome VARCHAR(255),
+    endereço VARCHAR(255),
+    tel VARCHAR(15),
+    email VARCHAR(255),
+    cpf VARCHAR(14),
+    cel VARCHAR(15)
+);
+
+
+CREATE TABLE AGENDAMENTO (
+    codigo INT PRIMARY KEY,
+    tipo_de_serviço VARCHAR(255),
+    data_do_serviço DATE,
+    nome_do_cliente VARCHAR(255),
+    FOREIGN KEY (nome_do_cliente) REFERENCES CLIENTE(nome)
+);
+
+
+CREATE TABLE NOTA (
+    comprovante VARCHAR(255),
+    data DATE,
+    forma_de_pagamento VARCHAR(255),
+    quantidade_de_parcela INT,
+    codigo INT PRIMARY KEY,
+    quantidade_de_produto INT,
+    FOREIGN KEY (codigo) REFERENCES PRODUTO(codigo)
+);
+
+
+CREATE TABLE CAP (
+    aluguel DECIMAL(10, 2),
+    agua DECIMAL(10, 2),
+    luz DECIMAL(10, 2),
+    salario_dos_funcionarios DECIMAL(10, 2),
+    imposto DECIMAL(10, 2),
+    produtos DECIMAL(10, 2),
+    data DATE
+);
+
+CREATE TABLE CAR (
+    codigo_da_nota INT PRIMARY KEY,
+    forma_de_pagamento_da_nota VARCHAR(255),
+    data DATE,
+    FOREIGN KEY (codigo_da_nota) REFERENCES NOTA(codigo)
+);
+
+CREATE TABLE SERVIÇO (
+    codigo INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    data DATE,
+    quantidade INT,
+    nome_do_cliente VARCHAR(255),
+    FOREIGN KEY (nome_do_cliente) REFERENCES CLIENTE(nome)
+);
+
+
+INSERT INTO CLIENTE (codigo, nome, endereço, tel, email, cpf, cel)
+VALUES
+    (2, 'Cliente 2', 'Rua B, 456', '(11) 5555-5555', 'cliente2@email.com', '987.654.321-00', '(11) 9999-9999'),
+    (3, 'Cliente 3', 'Rua C, 789', '(11) 7777-7777', 'cliente3@email.com', '111.222.333-44', '(11) 3333-3333'),
+    (4, 'Cliente 4', 'Rua D, 101', '(11) 8888-8888', 'cliente4@email.com', '222.333.444-55', '(11) 4444-4444');
