@@ -107,14 +107,19 @@ public class Main {
         System.out.println("\nNumeros no vetor:");
         for (int i = 0; i < 7; i++) {
             int numero = meuVetor[i];
-            if (numero % 2 == 0) {
-                System.out.println("\nElemento multiplo de 2 [" + (i + 1) + "] " + numero);
-            }
-            if (numero % 3 == 0) {
-                System.out.println("\nElemento multiplo de 3 [" + (i + 1) + "] " + numero);
-            }
-            if (numero % 3 == 0 && numero % 2 == 0) {
-                System.out.println("\nElemento multiplo de 2 e de 3 [" + (i + 1) + "] " + numero);
+            int saida = 1;
+
+            while(saida == 1){
+                if (numero % 2 == 0) {
+                    System.out.println("\nElemento multiplo de 2 [" + (i + 1) + "] " + numero);
+                }   
+                if (numero % 3 == 0) {
+                    System.out.println("\nElemento multiplo de 3 [" + (i + 1) + "] " + numero);
+                }
+                if (numero % 3 == 0 && numero % 2 == 0) {
+                    System.out.println("\nElemento multiplo de 2 e de 3 [" + (i + 1) + "] " + numero);
+                }
+            saida = 0;
             }
         }
     }
