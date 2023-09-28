@@ -41,7 +41,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio4();
+        exercicio6();
     }
 
     public static void exercicio1() {
@@ -125,6 +125,10 @@ public class Main {
     }
 
     public static void exercicio4() {
+        System.out.println("Exercicio 4: ");
+    }
+
+    public static void exercicio5() {
         Scanner scanner = new Scanner(System.in);
 
         double[] meuVetor = new double[5];
@@ -161,12 +165,45 @@ public class Main {
         System.out.println("Soma dos resultados: " + soma);
     }
 
-    public static void exercicio5() {
-        Scanner scanner = new Scanner(System.in);
-    }
-
     public static void exercicio6() {
         Scanner scanner = new Scanner(System.in);
+
+        double[] codigo = new double[5];
+        double[] preco = new double[5];
+
+        int produtoMenor = 0;
+
+        double cont = 0;
+        double use = 0;
+
+        for(int i =0 ; i < 5 ; i ++){
+
+            System.out.println("\ndigite o codigo do produto :");
+            codigo[i] = scanner.nextDouble();
+
+            System.out.println("\ndigite o preço do produto :");
+            preco[i] = scanner.nextDouble();
+
+            use = preco[i];
+            
+            if(use < 50){
+                System.out.println("\nproduto menor que R$50 :" + use);
+                produtoMenor ++;
+            }else if (use > 50 && use < 100){
+
+                System.out.println("\nproduto maior que R$50,\n\n codigo dele: " + codigo[i]);
+
+            }else if (use > 100){
+                cont ++;
+                use += use;
+            } else {
+                System.out.println("\nErro");
+
+            }
+        }
+        double divide = use / cont;
+        System.out.println("\nFeito : " + divide);
+        System.out.println("\nQuantidade de produtos menor que R$ 50 : " + produtoMenor);
     }
 
     public static void exercicio7() {
