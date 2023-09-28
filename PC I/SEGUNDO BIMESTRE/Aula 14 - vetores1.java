@@ -14,24 +14,27 @@ public class Main {
         double[] meuVetor = new double[10];
 
         int negativo = 0;
+        double positivo = 0.0;
 
         for (int i = 0; i < 10; i++) {
             System.out.print("Insira um numero real [" + (i + 1) + "] : ");
             meuVetor[i] = scanner.nextDouble();
         }
-
+        
         System.out.println("\nNumeros no vetor:");
         for (int i = 0; i < 10; i++) {
             Double numero = meuVetor[i];
             if (numero >= 0) {
                 System.out.println("\nElementos positivos [" + (i + 1) + "] " + numero);
+                positivo += numero;
+
             } else if (numero < 0) {
                 System.out.println("\nElementos negativos [" + (i + 1) + "] " + numero);
                 negativo++;
             }
         }
 
-        System.out.println("Quantidade de numeros negativos: "negativo);
-
+        System.out.println("\nQuantidade de numeros negativos: "+ negativo);
+        System.out.println("\nNumeros positivos somados: "+ positivo);
     }
 }
