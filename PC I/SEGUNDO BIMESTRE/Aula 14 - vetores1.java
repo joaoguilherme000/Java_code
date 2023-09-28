@@ -41,7 +41,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio3();
+        exercicio4();
     }
 
     public static void exercicio1() {
@@ -126,6 +126,39 @@ public class Main {
 
     public static void exercicio4() {
         Scanner scanner = new Scanner(System.in);
+
+        double[] meuVetor = new double[5];
+        double[] meuVetor2 = new double[5];
+        double[] resultado = new double[5];
+
+        meuVetor[0] = 50;
+        meuVetor[1] = 100;
+        meuVetor[2] = 150;
+        meuVetor[3] = 200;
+        meuVetor[4] = 250;
+
+        meuVetor2[0] = 25;
+        meuVetor2[1] = 50;
+        meuVetor2[2] = 75;
+        meuVetor2[3] = 100;
+        meuVetor2[4] = 125;
+
+        for (int i = 0; i < 5; i++) {
+            resultado[i] = meuVetor2[i] - meuVetor[i];
+        }
+
+        double soma = 0;
+
+        for (int i = 0; i < 5; i++) {
+            soma += resultado[i];
+        }
+
+        System.out.println("Números no vetor resultado:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Resultado[" + i + "]: " + resultado[i]);
+        }
+
+        System.out.println("Soma dos resultados: " + soma);
     }
 
     public static void exercicio5() {
