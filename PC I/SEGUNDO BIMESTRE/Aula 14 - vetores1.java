@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        inserir();
+        exercicio2();
     }
 
-    public static void inserir() {
+    public static void exercicio1() {
         Scanner scanner = new Scanner(System.in);
 
         double[] meuVetor = new double[10];
@@ -36,5 +36,45 @@ public class Main {
 
         System.out.println("\nQuantidade de numeros negativos: "+ negativo);
         System.out.println("\nNumeros positivos somados: "+ positivo);
+    }
+
+    public static void exercicio2() {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] meuVetor = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Insira o numero #" + (i + 1) + ": ");
+            meuVetor[i] = scanner.nextInt();
+        }
+
+        System.out.println("\nNumeros no vetor:");
+        for (int i = 0; i < 5; i++) {
+            int numero = meuVetor[i];
+            if (numero >= 0) {
+                System.out.println("\nElemento positivos [" + (i + 1) + "] " + numero);
+            }
+        }
+
+    }
+
+    public static void exercicio3() {
+        Scanner scanner = new Scanner(System.in);
+    }
+
+    public static void exercicio4() {
+        Scanner scanner = new Scanner(System.in);
+    }
+
+    public static void exercicio5() {
+        Scanner scanner = new Scanner(System.in);
+    }
+
+    public static void exercicio6() {
+        Scanner scanner = new Scanner(System.in);
+    }
+
+    public static void exercicio7() {
+        Scanner scanner = new Scanner(System.in);
     }
 }
