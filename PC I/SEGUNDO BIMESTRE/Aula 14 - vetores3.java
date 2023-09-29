@@ -34,7 +34,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio2();
+        exercicio3();
     }
 
     public static void exercicio1() {
@@ -71,7 +71,32 @@ public class Main {
     }
 
     public static void exercicio3() {
+        Scanner scanner = new Scanner(System.in);
 
+        // Defina um vetor
+        int[] vetor = {1, 2, 3, 4, 5};
+
+        // Mostra o vetor original
+        System.out.println("Vetor original:");
+        for (int valor : vetor) {
+            System.out.print(valor + " ");
+        }
+        
+        // Inverte o vetor
+        int tamanho = 5;
+
+        int[] vetorInvertido = new int[5]; // Cria um novo vetor para armazenar o resultado
+        
+        for (int i = 0; i < 5; i++) {
+            vetorInvertido[i] = vetor[5 - 1 - i]; // Copia os valores invertidos para o novo vetor
+        }
+        
+        // Mostra o vetor invertido
+        System.out.println("\nVetor invertido:");
+        for (int valor : vetorInvertido) {
+            System.out.print(valor + " ");
+        }
+        
     }
 
     public static void exercicio4() {
