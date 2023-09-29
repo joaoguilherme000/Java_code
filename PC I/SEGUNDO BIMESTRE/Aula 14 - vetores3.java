@@ -34,7 +34,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio4();
+        exercicio5();
     }
 
     public static void exercicio1() {
@@ -133,7 +133,31 @@ public class Main {
     }
 
     public static void exercicio5() {
+        Scanner scanner = new Scanner(System.in);
 
+        int[] vetor = new int[6];
+
+        int cont = 0;
+
+        double use = 0;
+
+        for (int i = 0; i < 6; i ++){
+            System.out.println("\nColoca o valor do [" + i+ "]");
+
+            vetor[i] = scanner.nextInt();
+
+            use = vetor[i];
+
+            System.out.println("\nvalor no vetor: "+vetor[i]);
+
+            if (use %2 == 0){   
+                cont++;
+                System.out.println("\nNumero par: " + use);
+            }
+
+        }
+
+        System.out.println("\nQuantidade de numeros pares: " + cont);
     }
 
     public static void exercicio6() {
