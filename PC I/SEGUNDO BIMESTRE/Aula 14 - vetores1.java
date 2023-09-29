@@ -175,6 +175,7 @@ public class Main {
 
         double cont = 0;
         double use = 0;
+        double maiorQueCem = 0;
 
         for(int i =0 ; i < 5 ; i ++){
 
@@ -195,15 +196,21 @@ public class Main {
 
             }else if (use > 100){
                 cont ++;
-                use += use;
+                maiorQueCem += use;
             } else {
                 System.out.println("\nErro");
 
             }
         }
-        double divide = use / cont;
-        System.out.println("\nFeito : " + divide);
-        System.out.println("\nQuantidade de produtos menor que R$ 50 : " + produtoMenor);
+
+        double divide = maiorQueCem / cont;
+
+        if(cont >= 1){
+            System.out.println("\nFeito : "+maiorQueCem + " / " + cont " = " + divide);
+        }
+        if(produtoMenor >= 1){
+            System.out.println("\nQuantidade de produtos menor que R$ 50 : " + produtoMenor);
+        }
     }
 
     public static void exercicio7() {
