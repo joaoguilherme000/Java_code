@@ -135,35 +135,57 @@ public class Main {
     public static void exercicio5() {
         Scanner scanner = new Scanner(System.in);
 
-        int[] vetor = new int[6];
+        double[] vetor = new double[6];
 
         int cont = 0;
         int cont2 = 0;
 
-        double use = 0;
-
         for (int i = 0; i < 6; i ++){
             System.out.println("\nColoca o valor do [" + i+ "]");
 
-            vetor[i] = scanner.nextInt();
-
-            use = vetor[i];
+            vetor[i] = scanner.nextDouble();
 
             System.out.println("\nvalor no vetor: "+vetor[i]);
 
-            if (use %2 == 0){   
+            if (vetor[i] %2 == 0){   
                 cont++;
-                System.out.println("\nNumero par: " + use);
+                System.out.println("\nNumero par: " + vetor[i]);
             }
 
-            if (use %2 != 0){   
+            if (vetor[i] %2 != 0){   
                 cont2 ++;
-                System.out.println("\nNumero impar: " + use);
+                System.out.println("\nNumero impar: " + vetor[i]);
             }
 
         }
 
-        System.out.println("\nQuantidade de numeros pares: " + cont);
+        if(cont > 0 ){
+            System.out.println("\nQuantidade de numeros pares: " + cont + "\n");
+        }
+        
+        if(cont2 > 0 ){
+            System.out.println("\nQuantidade de numeros impares: " + cont2 + "\n");
+        }
+        
+        for (int i = 0; i < 6; i ++){
+            if (vetor[i] %2 == 0){   
+                System.out.print(vetor[i]+ " ");
+            }
+        }
+        if(cont > 0){
+            System.out.println("\n^ Numeros pares em cima ^ \n");
+        }
+
+        for (int i = 0; i < 6; i ++){
+            if (vetor[i] %2 != 0){   
+                System.out.print(vetor[i] + " ");
+            }
+        }
+
+        if(cont2 > 0){
+            System.out.println("\n^ Numeros impares em cima ^");
+        }
+
     }
 
     public static void exercicio6() {
