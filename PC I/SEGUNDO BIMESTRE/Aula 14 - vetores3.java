@@ -138,6 +138,7 @@ public class Main {
         int[] vetor = new int[6];
 
         int cont = 0;
+        int cont2 = 0;
 
         double use = 0;
 
@@ -153,6 +154,11 @@ public class Main {
             if (use %2 == 0){   
                 cont++;
                 System.out.println("\nNumero par: " + use);
+            }
+
+            if (use %2 != 0){   
+                cont2 ++;
+                System.out.println("\nNumero impar: " + use);
             }
 
         }
