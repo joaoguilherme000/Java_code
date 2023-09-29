@@ -32,6 +32,7 @@ e assim por diante. Mostre o resultado da soma de todas as subtrações. */
 vetor. Receba também o percentual de comissão de cada vendedor a armazene-os em outro 
 vetor. Receba os códigos destes vendedores e armazene-os em um terceiro vetor. 
 Existem apenas 10 vendedores. Calcule e mostre:
+
     a) um relatório com os códigos dos vendedores e os valores a receber; 
     b) total das vendas de todos vendedores;
     c) maior valor a receber e o código de quem o receberá;
@@ -41,7 +42,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio6();
+        exercicio4();
     }
 
     public static void exercicio1() {
@@ -125,7 +126,27 @@ public class Main {
     }
 
     public static void exercicio4() {
-        System.out.println("Exercicio 4: ");
+        Scanner scanner = new Scanner(System.in);
+
+        double[] vendedor = new double[10];
+        double[] quantidade = new double[10];
+        double[] preco = new double[10];
+
+        int codigo = -1;
+
+        for (int i = 0; i < 10; i++) {
+            codigo++;
+
+            System.out.println("\nquantas peças o vendedor "+codigo +" vendeu ? \n");
+            quantidade[i] = scanner.nextDouble();
+
+            System.out.println("\nqual o preço da peça? \n");
+            preco[i] = scanner.nextDouble();
+
+            double resultado = quantidade[i] * preco[i];
+
+            System.out.println("\nValor da venda total do vendedor "+codigo+ " vendeu R$"+ resultado);
+        }
     }
 
     public static void exercicio5() {
@@ -206,7 +227,7 @@ public class Main {
         double divide = maiorQueCem / cont;
 
         if(cont >= 1){
-            System.out.println("\nFeito : "+maiorQueCem + " / " + cont " = " + divide);
+            System.out.println("\nFeito : "+maiorQueCem + " / " + cont + " = " + divide);
         }
         if(produtoMenor >= 1){
             System.out.println("\nQuantidade de produtos menor que R$ 50 : " + produtoMenor);
@@ -215,5 +236,57 @@ public class Main {
 
     public static void exercicio7() {
         Scanner scanner = new Scanner(System.in);
+
+        int numVendedores = 10;
+        int[] codigos = new int[numVendedores];
+        double[] vendas = new double[numVendedores];
+        double[] comissoes = new double[numVendedores];
+        double[] valoresReceber = new double[numVendedores];
+
+        double totalVendas = 0;
+        double maiorValorReceber = 0;
+        int codigoMaiorValor = 0;
+        double menorValorReceber = Double.MAX_VALUE;
+        int codigoMenorValor = 0;
+
+        // Entrada de dados
+        for (int i = 0; i < numVendedores; i++) {
+            System.out.print("Digite o código do vendedor " + (i + 1) + " : ");
+            codigos[i] = scanner.nextInt();
+
+            System.out.print("Digite o total de vendas do vendedor " + (i + 1) + " : ");
+            vendas[i] = scanner.nextDouble();
+
+            System.out.print("Digite o percentual de comissão do vendedor " + (i + 1) + " : ");
+            comissoes[i] = scanner.nextDouble();
+
+            // Cálculo do valor a receber
+            valoresReceber[i] = vendas[i] * (comissoes[i] / 100);
+
+            // Atualização das variáveis para o relatório
+            totalVendas += vendas[i];
+
+            if (valoresReceber[i] > maiorValorReceber) {
+                maiorValorReceber = valoresReceber[i];
+                codigoMaiorValor = codigos[i];
+            }
+
+            if (valoresReceber[i] < menorValorReceber) {
+                menorValorReceber = valoresReceber[i];
+                codigoMenorValor = codigos[i];
+            }
+        }
+
+        // Relatório
+        System.out.println("\nRelatório de valores a receber:");
+        for (int i = 0; i < numVendedores; i++) {
+            System.out.println("Código do vendedor: " + codigos[i]);
+            System.out.println("Valor a receber: R$ " + valoresReceber[i]);
+        }
+
+        System.out.println("\nTotal das vendas de todos vendedores: R$ " + totalVendas);
+        System.out.println("Maior valor a receber: R$ " + maiorValorReceber + " (Código do vendedor: " + codigoMaiorValor + ")");
+        System.out.println("Menor valor a receber: R$ " + menorValorReceber + " (Código do vendedor: " + codigoMenorValor + ")");
     }
+
 }
