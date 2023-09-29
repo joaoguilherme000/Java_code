@@ -34,7 +34,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio3();
+        exercicio4();
     }
 
     public static void exercicio1() {
@@ -100,6 +100,35 @@ public class Main {
     }
 
     public static void exercicio4() {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] vetor = new String[2];
+
+        for (int i = 0; i < 2; i++) {
+            System.out.println("\nColoque o valor do [" + i + "]");
+            vetor[i] = scanner.nextLine();
+        }
+
+        for (int i = 0; i < 2; i++) {
+            int vogais = 0;
+            int consoantes = 0;
+
+            for (int j = 0; j < vetor[i].length(); j++) {
+                char caractere = vetor[i].charAt(j);
+                if (Character.isLetter(caractere)) {
+                    char letra = Character.toLowerCase(caractere);
+                    if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                        vogais++;
+                    } else {
+                        consoantes++;
+                    }
+                }
+            }
+
+            System.out.println("\nPara o valor [" + i + "]:");
+            System.out.println("Quantidade de vogais: " + vogais);
+            System.out.println("Quantidade de consoantes: " + consoantes);
+        }
 
     }
 
