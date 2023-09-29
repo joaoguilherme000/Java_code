@@ -20,7 +20,7 @@ Crie um mecanismo para alimentar elementos os vetor e pesquisar por um valor exi
 ==== =MENU========
 1)Cadastar nome
 2)Pesquisar nome
-3)Listar todos os nome
+3)Listar todos os nomes
 0) Sair do programa
 
 7 -  Faça um programa  que dada uma sequência de n números, imprimi-la na ordem inversa à da leitura.
@@ -34,7 +34,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio5();
+        exercicio6();
     }
 
     public static void exercicio1() {
@@ -189,7 +189,43 @@ public class Main {
     }
 
     public static void exercicio6() {
+        Scanner scanner = new Scanner(System.in);
 
+        int menu = 1;
+
+        while (menu != 0) {
+            System.out.print("Qual tamanho do vetor? ");
+            int tamanho = scanner.nextInt();
+            scanner.nextLine();  // linha para não dar erro
+
+            String[] vetor = new String[tamanho];
+
+            System.out.println("Sistema de cadastro \n 1 - Cadastrar nome \n 2 - Pesquisar nomes \n 3 - Mostrar todos os nomes \n 4 - Sair \n");
+            int entrada = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (entrada) {
+                case 1:
+                    for (int i = 0; i < tamanho; i++) {
+                        System.out.println("Insira o nome #" + (i + 1) + ": ");
+                        vetor[i] = scanner.nextLine();
+                    }
+                    break;
+                case 2:
+                    System.out.println("\nQual nome ?\n");
+                    break;
+                case 3:
+                    for (int i = 0; i < tamanho; i ++){
+                        System.out.print(vetor[i]+ ", ");
+                    }
+                    break;
+                case 4:
+                    menu = 0;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     public static void exercicio7() {
