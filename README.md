@@ -1,12 +1,13 @@
 # Todos os codigos ate o final do ano
 
-Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona mas não esta certo.
+<h3>Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona mas eu quis mudar. <img height="70" width="90" src="https://github.com/joaoguilherme000/Java_code/blob/main/bleh.jpg">  </h3>
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="Joao-js" height="50" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg">
+<div style="display: inline">
+  <img style="display: inline;" align="center" alt="Joao-js" height="75" width="75" src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/java.svg">
 </div>
+  <p><br>é só java, espera oque</p>
 
-<h3>QUE TU QUER MAN?</h3>
+<h3>CLICARIA NO LINK ABAIXO?</h3>
 
 <picture><img src="https://github.com/joaoguilherme000/Java_code/blob/main/a.jpg" /></picture>
 
