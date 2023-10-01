@@ -30,6 +30,7 @@ final mostre quantas respostas foram certas e quantas respostas foram erradas.
 Obs : As perguntas serão criadas por você
 */
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -194,42 +195,92 @@ public class Main {
         int tamanho = 5;
 
         String[] vetor = null;
+        int cont = 0;
 
         while (true) {
             System.out.println("\nSistema de cadastro \n 1 - Cadastrar nome \n 2 - Pesquisar nomes \n 3 - Mostrar todos os nomes \n 4 - Sair \n");
-            int entrada = scanner.nextInt();
-            scanner.nextLine();
+            int entrada = 0;
+            boolean entradaValida = false; 
+
+            while (!entradaValida) {
+                try {
+                    System.out.print("Escolha uma opcao: ");
+                    entrada = scanner.nextInt();
+                    scanner.nextLine();
+                    entradaValida = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Entrada inválida. Insira um número inteiro.\n");
+                    scanner.nextLine();
+                }
+            }
 
             switch (entrada) {
                 case 1:
-                    System.out.print("Quer colocar o tamanho do vetor?\n digite: \n 1 - sim\n 2- nao \n\n padrao = 5 \n");
-                    int opcao = scanner.nextInt();
+                    do {
+                        System.out.print("Insira o tamanho do vetor: ");
+                        if (scanner.hasNextInt()) {
+                            tamanho = scanner.nextInt();
+                            scanner.nextLine();
+                            if (tamanho <= 0) {
+                                System.out.println("Tamanho inválido. O tamanho deve ser maior que zero.");
+                            }
+                        } else {
+                            System.out.println("Invalido, deve ser um numero inteiro");
+                            scanner.nextLine(); // pra nao dar erro
+                            tamanho = 0;
+                        }
 
-                    if (opcao == 1){
-                        System.out.print("Qual tamanho do vetor? ");
-                        tamanho = scanner.nextInt();
-                        scanner.nextLine(); // linha para não dar erro
-                        vetor = new String[tamanho];
-                    }else{
-                        tamanho = 5;
-                        vetor = new String[tamanho];
-                    }
+                    } while (tamanho <= 0);
+
+                    vetor = new String[tamanho];
 
                     for (int i = 0; i < tamanho; i++) {
-                        System.out.println("Insira o nome #" + (i + 1) + ": ");
+                        if (vetor == null) {
+                            vetor = new String[tamanho]; // Cria o vetor apenas se for a primeira vez
+                        }
+                        System.out.print("Insira o nome #" + (i + 1) + ": ");
                         vetor[i] = scanner.nextLine();
                     }
                     break;
                 case 2:
-                    System.out.println("\nQual nome ?\n");
-                    break;
-                case 3:
-                    for (int i = 0; i < tamanho; i ++){
-                        System.out.print(vetor[i]+ ", ");
+                     if (vetor != null) {
+                        System.out.print("Qual nome você deseja pesquisar? ");
+                        String nomePesquisado = scanner.nextLine();
+                        boolean encontrado = false;
+                        System.out.print("\n");
+
+                        for (String nome : vetor) {
+                            if (nome != null && nome.equalsIgnoreCase(nomePesquisado)) {
+                                encontrado = true;
+                                cont ++;
+                                System.out.println("Nome encontrado! no local #" + cont);
+                            }else{
+                                cont ++;
+                                System.out.println("Nome não encontrado no local #"+ cont);
+                            }
+                        }
+                        cont = 0;
+                    } else {
+                        System.out.println("O vetor está vazio. Cadastre nomes primeiro.");
                     }
                     break;
-                default:
+                case 3:
+                    if (vetor != null){
+                        System.out.println("\nNomes no vetor: \n");
+                        for (int i = 0; i < tamanho; i ++){
+                            System.out.print(vetor[i]+ "");
+                            System.out.print(" | ");
+                        }
+                        System.out.println("\n");
+                    }else {
+                        System.out.println("\nNenhum nome cadastrado");
+                    }
                     break;
+                case 4:
+                    System.out.println("Saindo do programa...");
+                    return; // Sai do método e encerra o programa
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
             }
         }
     }
