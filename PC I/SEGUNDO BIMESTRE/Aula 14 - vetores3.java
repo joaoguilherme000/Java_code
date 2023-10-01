@@ -35,7 +35,67 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        exercicio6();
+        Scanner scanner = new Scanner(System.in);
+        int escolha = 0;
+
+        while(true){
+            System.out.println("\nEscolha um exercicio: \n 1 - exercicio 1 \n 2 - exercicio 2 \n 3 - exercicio 3\n 4 - exercicio 4\n 5 - exercicio 5\n 6 - exercicio 6\n 7 - exercicio 7\n 8 - exercicio 8 \n ou sair - 9");
+            do {
+                if (scanner.hasNextInt()) {
+                    escolha = scanner.nextInt();
+                    scanner.nextLine();
+                    if (escolha <= 0) {
+                        System.out.println("Escolha somente os numeros que aparecem no me.");
+                    }
+                } else {
+                    System.out.println("Invalido, deve ser um numero inteiro");
+                    scanner.nextLine(); // pra nao dar erro
+                    escolha = 0;
+                }
+
+            } while (escolha <= 0);
+            
+            
+            switch(escolha){
+                case 1:
+                    System.out.println("Calcular a soma dos valores inteiros contidos em um vetor qualquer.\n");
+                    exercicio1();
+                    break;
+                case 2:
+                    System.out.println("Localizar, em um vetor qualquer de valores inteiros, um certo elemento deste, dado o seu valor.\n");
+                    exercicio2();
+                    break;
+                case 3:
+                    System.out.println("Inverter os elementos de um vetor de valores do tipo String: \nA)Criando uma cópia do vetor original.\nB)Mudando os elementos do vetor original. \n");
+                    exercicio3();
+                    break;
+                case 4:
+                    System.out.println("Determinar a quantidade de vogais e de consoantes em um vetor de valores do tipo char");
+                    exercicio4();
+                    break;
+                case 5:
+                    System.out.println("Faça um programa que carregue um vetor de seis elementos numericos inteiros, calcule e mostre:\na. A quantidade de numeros pares;\nb. Quais os numeros pares;\nc. A quantidade de numeros impares;\nd. Quais os numeros impares.\n");
+                    exercicio5();
+                    break;
+                case 6:
+                    System.out.println("Faça um programa que alimente um vetor, com um número de posições definidas pelo usuário. \nEste vetor deverá armazenar um conjunto de nomes em diferentes posições. \nCrie um mecanismo para alimentar elementos os vetor e pesquisar por um valor existente. \n==== =MENU========\n1)Cadastar nome\n2)Pesquisar nome\n 3)Listar todos os nomes\n 0) Sair do programa\n");
+                    exercicio6();
+                    break;
+                case 7:
+                    System.out.println("Faça um programa  que dada uma sequencia de n números, imprimi-la na ordem inversa a da leitura.\n");
+                    exercicio7();
+                    break;
+                case 8:
+                    System.out.println("Crie um questionario , utilizando um vetor do tipo char , armazene as respostas e ao final mostre quantas respostas foram certas e quantas respostas foram erradas. Obs : As perguntas serao criadas por voce\n");
+                    exercicio8();
+                    break;
+                case 9:
+                    System.out.println("Saindo do programa...");
+                    return; // Sai do método e encerra o programa
+                default:
+                        System.out.println("Opção inválida. Tente novamente.");
+            }
+        }
     }
 
     public static void exercicio1() {
@@ -52,9 +112,11 @@ public class Main {
 
             use += vetor[i];
 
-            System.out.println("\nvalor no vetor: "+vetor[i]);
-
         }
+        for (int i = 0; i < 5; i ++){
+            System.out.print(" + "+vetor[i]);
+        }
+        System.out.print(" =");
 
         System.out.println("\nValor somado dos vetores: "+use);
      }
@@ -67,6 +129,10 @@ public class Main {
         Vetor[2] = 150;
         Vetor[3] = 200;
         Vetor[4] = 250;
+
+        for (int i = 0; i < 5; i ++){
+            System.out.print(Vetor[i]+ " | ");
+        }
 
         System.out.println("\nValor especifico no vetor: "+Vetor[2]);
     }
@@ -146,16 +212,12 @@ public class Main {
 
             vetor[i] = scanner.nextDouble();
 
-            System.out.println("\nvalor no vetor: "+vetor[i]);
-
             if (vetor[i] %2 == 0){   
                 cont++;
-                System.out.println("\nNumero par: " + vetor[i]);
             }
 
             if (vetor[i] %2 != 0){   
                 cont2 ++;
-                System.out.println("\nNumero impar: " + vetor[i]);
             }
 
         }
@@ -286,7 +348,30 @@ public class Main {
     }
 
     public static void exercicio7() {
+        Scanner scanner = new Scanner(System.in);
 
+        // Defina um vetor
+        System.out.print("Quantos numeros voce deseja inserir no vetor? ");
+        int tamanho = scanner.nextInt();
+
+        int[] vetor = new int[tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("Insira o numero #" + (i + 1) + ": ");
+            vetor[i] = scanner.nextInt();
+        }
+        
+        for (int i = 0; i < tamanho / 2; i++) {
+            int temp = vetor[i];
+            vetor[i] = vetor[tamanho - 1 - i]; // a famosa triade
+            vetor[tamanho - 1 - i] = temp;
+        }
+
+        // Imprimir o vetor invertido
+        System.out.println("Vetor invertido:");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print(vetor[i] + " ");
+        }
     }
 
     public static void exercicio8() {
