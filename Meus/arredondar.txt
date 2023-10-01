@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double x = scanner.nextDouble();
+        
+        System.out.println("valor antes da raiz " + x);
+        
+        double a = Math.floor(x); // arredonda pra baixo numero quebrado
+        
+        System.out.println("valor depois da raiz " + a);
+        
+        scanner.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double x = scanner.nextDouble();
+        
+        System.out.println("valor antes da raiz " + x);
+        
+        double a = Math.ceil(x); // arredonda pra cima
+        
+        System.out.println("valor depois da raiz " + a);
+        
+        scanner.close();
+    }
+}
