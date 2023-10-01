@@ -147,8 +147,6 @@ public class Main {
         for (int valor : vetor) {
             System.out.print(valor + " ");
         }
-        
-        int tamanho = 5;
 
         int[] vetorInvertido = new int[5]; // Cria um novo vetor para armazenar o resultado
         
