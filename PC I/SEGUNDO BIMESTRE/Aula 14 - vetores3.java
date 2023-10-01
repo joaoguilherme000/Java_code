@@ -55,7 +55,6 @@ public class Main {
 
             } while (escolha <= 0);
             
-            
             switch(escolha){
                 case 1:
                     System.out.println("Calcular a soma dos valores inteiros contidos em um vetor qualquer.\n");
@@ -90,7 +89,7 @@ public class Main {
                     exercicio8();
                     break;
                 case 9:
-                    System.out.println("Saindo do programa...");
+                    System.out.println("\nSaindo do programa...");
                     return; // Sai do método e encerra o programa
                 default:
                         System.out.println("Opção inválida. Tente novamente.");
@@ -140,7 +139,7 @@ public class Main {
     public static void exercicio3() {
         Scanner scanner = new Scanner(System.in);
 
-        // Defina um vetor
+        // Define um vetor
         int[] vetor = {1, 2, 3, 4, 5};
 
         // Mostra o vetor original
@@ -149,7 +148,6 @@ public class Main {
             System.out.print(valor + " ");
         }
         
-        // Inverte o vetor
         int tamanho = 5;
 
         int[] vetorInvertido = new int[5]; // Cria um novo vetor para armazenar o resultado
@@ -350,7 +348,6 @@ public class Main {
     public static void exercicio7() {
         Scanner scanner = new Scanner(System.in);
 
-        // Defina um vetor
         System.out.print("Quantos numeros voce deseja inserir no vetor? ");
         int tamanho = scanner.nextInt();
 
@@ -375,7 +372,35 @@ public class Main {
     }
 
     public static void exercicio8() {
+        final int numPerguntas = 3;
+        char[] respostasCorretas = {'a', 'b', 'c'};
+        char[] respostasUsuario = new char[numPerguntas];
+        int certas = 0, erradas = 0;
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Pergunta 1: Qual a capital do Brasil?");
+        System.out.println("a) Brasilia\nb) Rio de Janeiro\nc) Sao Paulo");
+        respostasUsuario[0] = scanner.next().charAt(0);
+
+        System.out.println("\nPergunta 2: Qual é o maior planeta do sistema solar?");
+        System.out.println("a) Terra\nb) Marte\nc) Jupiter");
+        respostasUsuario[1] = scanner.next().charAt(0);
+
+        System.out.println("\nPergunta 3: Qual e o numero atomico do carbono?");
+        System.out.println("a) 6\nb) 7\nc) 8");
+        respostasUsuario[2] = scanner.next().charAt(0);
+
+        for (int i = 0; i < numPerguntas; i++) {
+            if (respostasUsuario[i] == respostasCorretas[i]) {
+                certas++;
+            } else {
+                erradas++;
+            }
+        }
+
+        System.out.println("Respostas Certas: " + certas);
+        System.out.println("Respostas Erradas: " + erradas);
     }
 
 }
