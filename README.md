@@ -5,7 +5,7 @@
 <div style="display: inline">
   <img style="display: inline;" align="center" alt="Joao-js" height="75" width="75" src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/java.svg">
 </div>
-  <p><br>é só java, espera oque</p>
+  <p><br>é só java, esperava oque</p>
 
 <h3>CLICARIA NO LINK ABAIXO?</h3>
 
