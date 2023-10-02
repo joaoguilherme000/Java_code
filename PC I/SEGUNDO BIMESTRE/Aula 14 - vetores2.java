@@ -87,6 +87,33 @@ public class Main {
     }
 
     public static void exercicio1() {
+        Scanner scanner = new Scanner(System.in);
+        int vetor[] = new int[5];
+        int vetor2[] = new int[5];
+        int cont = 0;
+        int cont2 = 0;
+
+        for (int i = 0; i < 30; i ++){
+            System.out.println("\nDigite um valor ");
+
+            int use = scanner.nextInt();
+
+            for(i = 0; i < 5; i++){
+                if(use %2 == 0){
+                    vetor[i] = use;
+                    cont++;
+                }
+            }
+
+            else if(use %2 != 0){
+                vetor2[i] = use;
+                cont2++;
+            }else {
+                System.out.println("\nVetor Cheio ");
+            }
+
+        }
+
     }
 
     public static void exercicio2() {
