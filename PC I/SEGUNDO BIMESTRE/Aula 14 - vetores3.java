@@ -45,7 +45,7 @@ public class Main {
                     escolha = scanner.nextInt();
                     scanner.nextLine();
                     if (escolha <= 0) {
-                        System.out.println("Escolha somente os numeros que aparecem no me.");
+                        System.out.println("Escolha somente os numeros que aparecem no menu.");
                     }
                 } else {
                     System.out.println("Invalido, deve ser um numero inteiro");
