@@ -8,7 +8,7 @@ public class Main {
         int escolha = 0;
 
         while(true){
-            System.out.println("\nEscolha um exercicio: \n 1 - exercicio 1 \n 2 - exercicio 2 \n 3 - exercicio 3\n 4 - exercicio 4\n 5 - exercicio 5\n 6 - exercicio 6\n 7 - exercicio 7\n 8 - exercicio 8 \n 9 - exercicio 9 \n 10 - exercicio 10 \n 11 - exercicio 11 \n 12 - exercicio 12 \n 13 - exercicio 13\n ou sair - 9");
+            System.out.println("\n\nEscolha um exercicio: \n 1 - exercicio 1 \n 2 - exercicio 2 \n 3 - exercicio 3\n 4 - exercicio 4\n 5 - exercicio 5\n 6 - exercicio 6\n 7 - exercicio 7\n 8 - exercicio 8 \n 9 - exercicio 9 \n 10 - exercicio 10 \n 11 - exercicio 11 \n 12 - exercicio 12 \n 13 - exercicio 13\n ou sair - 14");
             do {
                 if (scanner.hasNextInt()) {
                     escolha = scanner.nextInt();
@@ -90,30 +90,43 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int vetor[] = new int[5];
         int vetor2[] = new int[5];
-        int cont = 0;
-        int cont2 = 0;
 
-        for (int i = 0; i < 30; i ++){
+        int contPar = 0;
+        int contImpar = 0;
+
+        for (int i = 0; i < 30; i++) {
             System.out.println("\nDigite um valor ");
 
             int use = scanner.nextInt();
 
-            for(i = 0; i < 5; i++){
-                if(use %2 == 0){
-                    vetor[i] = use;
-                    cont++;
+            if (use % 2 == 0) {
+                if (contPar < 5) {
+                    vetor[contPar] = use;
+                    contPar++;
+                } else {
+                    System.out.println("\nVetor Par cheio");
                 }
+            } else if (use % 2 != 0) {
+                if (contImpar < 5) {
+                    vetor2[contImpar] = use;
+                    contImpar++;
+                } else {
+                    System.out.println("\nVetor impar cheio");
+                }
+            } else {
+                System.out.println("\nErro ");
             }
-
-            else if(use %2 != 0){
-                vetor2[i] = use;
-                cont2++;
-            }else {
-                System.out.println("\nVetor Cheio ");
-            }
-
         }
 
+        for(int i=0; i < 5; i++){
+            System.out.print(vetor[i]+ " ");
+        }
+        System.out.print("    Vetor par");
+        System.out.println("\n");
+        for(int i=0; i < 5; i++){
+            System.out.print(vetor2[i]+ " ");
+        }
+        System.out.print("   Vetor impar");
     }
 
     public static void exercicio2() {
