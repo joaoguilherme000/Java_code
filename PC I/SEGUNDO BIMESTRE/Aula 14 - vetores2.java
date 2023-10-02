@@ -148,7 +148,26 @@ public class Main {
     }
 
     public static void exercicio3() {
+        Scanner scanner = new Scanner(System.in);
+        int vetor[] = new int[20];
 
+        System.out.println("Coloque os numeros no vetor");
+
+        for(int i=0; i < 20; i++){
+            vetor[i] = scanner.nextInt();
+        }
+        System.out.println("Numeros no vetor: ");
+        for(int i=0; i < 20; i++){
+            System.out.print(vetor[i]+ " ");
+        }
+        System.out.println("\n");
+        
+        System.out.println("Numeros pares: ");
+        for(int i=0; i < 20; i++){
+            if (vetor[i] %2 ==0){
+                System.out.print(vetor[i]+ " ");
+            }
+        }
     }
 
     public static void exercicio4() {
