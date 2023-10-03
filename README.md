@@ -9,7 +9,7 @@
 
 <h3>CLICARIA NO LINK ABAIXO?</h3>
 
-<picture><img src="https://github.com/joaoguilherme000/Java_code/blob/main/a.jpg" /></picture>
+<picture><img src="https://github.com/joaoguilherme000/meme/blob/master/a.jpg" /></picture>
 
 
 ## [ NAO CLIQUE](https://media.tenor.com/qN6KhHtzLQwAAAAC/we-live-we-love-we-lie-my-honest-reaction.gif)
