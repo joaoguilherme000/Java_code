@@ -156,6 +156,7 @@ public class Main {
         for(int i=0; i < 20; i++){
             vetor[i] = scanner.nextInt();
         }
+
         System.out.println("Numeros no vetor: ");
         for(int i=0; i < 20; i++){
             System.out.print(vetor[i]+ " ");
@@ -171,7 +172,38 @@ public class Main {
     }
 
     public static void exercicio4() {
+        Scanner scanner = new Scanner(System.in);
 
+        int tamanho = 10;
+        int vetor[] = new int[tamanho];
+
+        System.out.println("Coloque os numeros no vetor");
+
+        for(int i=0; i < tamanho; i++){
+            vetor[i] = scanner.nextInt();
+        }
+
+        System.out.println("Vetor antes da ordenação:");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+        System.out.println();
+
+        // Bubble Sort para ordenação crescente
+        for (int i = 0; i < tamanho - 1; i++) {
+            for (int j = 0; j < tamanho - 1 - i; j++) {
+                if (vetor[j] > vetor[j + 1]) {
+                    int temp = vetor[j];
+                    vetor[j] = vetor[j + 1];
+                    vetor[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("\nVetor depois a ordenação em ordem crescente:");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print(vetor[i] + " ");
+        }
     }
 
     public static void exercicio5() {
