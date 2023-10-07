@@ -42,7 +42,7 @@ public class Main {
                     exercicio4();
                     break;
                 case 5:
-                    System.out.println("5.Escreva um algoritmo que leia um vetor de 13 elementos inteiros, que é o Gabarito de um teste da loteria esportiva, de forma sequencial coloque armazenado o valores 1,2,3 . Crie um outro vetor de 13 posições que é o vetor do apostador , armazena as 13 respostas , informando ao usuario que somente serão digitados os numeros 1 , 2, 3 . Verifique se os numeros digitados pelo apostador conferem com os numeros ja armazenados , sem sim , mostre a mensagem Você ganhou.  \n");
+                    System.out.println("5.Escreva um algoritmo que leia um vetor de 13 elementos inteiros, que é o Gabarito de um teste da loteria esportiva, de forma sequencial coloque armazenado os valores 1,2,3 . Crie um outro vetor de 13 posições que é o vetor do apostador , armazena as 13 respostas , informando ao usuario que somente serão digitados os numeros 1 , 2, 3 . Verifique se os numeros digitados pelo apostador conferem com os numeros ja armazenados , se sim , mostre a mensagem Você ganhou.  \n");
                     exercicio5();
                     break;
                 case 6:
@@ -129,7 +129,6 @@ public class Main {
             System.out.print(vetor2[i]+ " ");
         }
         System.out.print("   Vetor impar");
-        scanner.close();
     }
 
     public static void exercicio2() {
@@ -172,7 +171,6 @@ public class Main {
                 System.out.print(vetor[i]+ " ");
             }
         }
-        scanner.close();
     }
 
     public static void exercicio4() {
@@ -208,11 +206,34 @@ public class Main {
         for (int i = 0; i < tamanho; i++) {
             System.out.print(vetor[i] + " ");
         }
-        scanner.close();
     }
 
     public static void exercicio5() {
-
+		Scanner scanner = new Scanner(System.in);
+		
+		int[] loteria = {8,2,34,11,17,23,27,61,99,49,57,72,88};
+		int[] aposta = new int[13];
+		int cont =0;
+		
+		System.out.println("Quais numeros você vai jogar?");
+		for(int i=0; i < 13; i++){
+            aposta[i] = scanner.nextInt();
+            if(aposta[i] == loteria[i]){
+            	cont++;
+            }
+        }
+        
+        if (cont == 13){
+        	System.out.println("Você ganhou!!!\n");
+        }else {
+        	System.out.println("Você perdeu!!!\n");
+        }
+        
+        System.out.println("Numeros sorteados\n");
+        
+        for(int a : loteria){
+        	System.out.print(a+" ");
+        }
     }
 
     public static void exercicio6() {
