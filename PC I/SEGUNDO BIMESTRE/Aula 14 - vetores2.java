@@ -117,7 +117,9 @@ public class Main {
                 System.out.println("\nErro ");
             }
         }
-
+        
+		System.out.println("\n");
+		
         for(int i=0; i < 5; i++){
             System.out.print(vetor[i]+ " ");
         }
@@ -127,6 +129,7 @@ public class Main {
             System.out.print(vetor2[i]+ " ");
         }
         System.out.print("   Vetor impar");
+        scanner.close();
     }
 
     public static void exercicio2() {
@@ -169,6 +172,7 @@ public class Main {
                 System.out.print(vetor[i]+ " ");
             }
         }
+        scanner.close();
     }
 
     public static void exercicio4() {
@@ -204,6 +208,7 @@ public class Main {
         for (int i = 0; i < tamanho; i++) {
             System.out.print(vetor[i] + " ");
         }
+        scanner.close();
     }
 
     public static void exercicio5() {
