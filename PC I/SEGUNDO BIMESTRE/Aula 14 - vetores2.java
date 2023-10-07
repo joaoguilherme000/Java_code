@@ -136,13 +136,19 @@ public class Main {
         double vetor2[] = new double [10];
         double vetorResultado[] = new double[10];
 
-        // Inicialize os vetores vetor e vetor2 com valores
+        System.out.println("\n\nVetor 1\n");
         for (int i = 0; i < 10; i++) {
-            vetor[i] = i + 1; // Exemplo: preenchendo com valores de 1 a 10
-            vetor2[i] = 2 * (i + 1); // Exemplo: preenchendo com valores de 2 a 20
+            vetor[i] = i + 1; // valores de 1 a 10
+            vetor2[i] = 2 * (i + 1); //  valores de 2 a 20
+            System.out.print(vetor[i]+" ");
         }
 
-
+		System.out.println("\n\nVetor 2\n");
+		
+		for(double a : vetor2){
+			System.out.print(a+" ");
+		}
+		System.out.print("\n");
         for (int i = 0; i < 10; i++){
             vetorResultado[i] = vetor[i] * vetor2[i];
             System.out.println("\n Numero multiplicado #[" + i + "] :" +vetorResultado[i] );
@@ -252,7 +258,7 @@ public class Main {
     }
 
     public static void exercicio6() {
-
+		
     }
 
     public static void exercicio7() {
