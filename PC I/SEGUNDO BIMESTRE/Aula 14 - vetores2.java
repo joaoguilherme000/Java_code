@@ -1,5 +1,5 @@
 
-import java.util.InputMismatchException;
+/*import java.util.Random;*/
 import java.util.Scanner;
 
 public class Main {
@@ -214,6 +214,21 @@ public class Main {
 		int[] loteria = {8,2,34,11,17,23,27,61,99,49,57,72,88};
 		int[] aposta = new int[13];
 		int cont =0;
+		
+		/*caso queira randomizar
+		
+		Random random = new Random();
+    
+    	int[] loteria = new int[13];
+    	int[] aposta = new int[13];
+    	int cont = 0;
+
+    	System.out.println("Numeros sorteados\n");
+    	for (int i = 0; i < 13; i++) {
+        	loteria[i] = random.nextInt(100); // Gera números aleatórios entre 0 e 99
+        	System.out.print(loteria[i] + " ");
+    	}*/
+		
 		
 		System.out.println("Quais numeros você vai jogar?");
 		for(int i=0; i < 13; i++){
