@@ -258,7 +258,24 @@ public class Main {
     }
 
     public static void exercicio6() {
+		int[] vetor = new int[20];
 		
+		for(int i =0; i < 20; i++){
+		  vetor[i] = i *2+2;
+		  System.out.print(vetor[i]+" ");
+		}
+		
+		for (int i = 0; i < 20 / 2; i++) {
+            int temp = vetor[i];
+            vetor[i] = vetor[20 - 1 - i]; // a famosa triade
+            vetor[20 - 1 - i] = temp;
+        }
+
+        // Imprimir o vetor invertido
+        System.out.println("\n\nVetor invertido:\n");
+        for (int i = 0; i < 20; i++) {
+            System.out.print(vetor[i] + " ");
+        }
     }
 
     public static void exercicio7() {
