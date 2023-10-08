@@ -288,7 +288,7 @@ public class Main {
 		  vetor[i] = random.nextInt(201)-100;
 		  System.out.print(vetor[i]+" ");
 		}
-		System.out.println("\n\nVetor positivo: \n");
+		System.out.println("\n\nVetor positivos: \n");
 		
 		for(int i =0; i < 50; i++){
 		  if (vetor[i]> -1){
@@ -298,7 +298,39 @@ public class Main {
     }
 
     public static void exercicio8() {
-
+		Random random = new Random();
+		int[] vetor = new int[80];
+		int menor = 0;
+		int posMenor = 0;
+		int posMaior = 0;
+		int maior = 0;
+		
+		System.out.println("Vetor normal: \n");
+		
+		for(int i =0; i < 80; i++){
+		  vetor[i] = random.nextInt(201)-100;
+		  System.out.print(vetor[i]+" ");
+		
+			if (i == 0) {
+	            menor = vetor[i];
+	            maior = vetor[i];
+	        } else {
+	            if (vetor[i] < menor) {
+	                menor = vetor[i];
+	                posMenor = i;
+	            }
+	            if (vetor[i] > maior) {
+	                maior = vetor[i];
+	                posMaior = i;
+	            }
+	        }
+  	  }
+	
+	    System.out.println("\n\nO menor numero: \n");
+	    System.out.println(menor + " sua posicao " + posMenor);
+	
+	    System.out.println("\nO maior numero: \n");
+	    System.out.println(maior + " sua posicao " + posMaior);
     }
 
     public static void exercicio9() {
