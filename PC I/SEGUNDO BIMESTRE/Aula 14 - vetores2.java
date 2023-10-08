@@ -356,7 +356,42 @@ public class Main {
     }
 
     public static void exercicio10() {
-		
+		Random random = new Random();
+
+        // Defina o gabarito com as respostas corretas
+        char[] gabarito = {'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B','C', 'D', 'A', 'B', 'C', 'D', 'A', 'B', 'C','A'};
+
+        // Número de alunos
+        int numAlunos = 50;
+
+        for (int aluno = 1; aluno <= numAlunos; aluno++) {
+            System.out.println("Respostas do aluno " + aluno + ":");
+            char[] respostasAluno = new char[20];
+
+            // Gera respostas aleatórias para o aluno
+            for (int i = 0; i < 20; i++) {
+                char respostaAleatoria = (char) (random.nextInt(4) + 'A'); // Gera 'A', 'B', 'C' ou 'D'
+                respostasAluno[i] = respostaAleatoria;
+                System.out.print("Questão " + (i + 1) + ": " + respostaAleatoria + "| ");
+            }
+
+            // Contagem de acertos
+            int acertos = 0;
+            for (int i = 0; i < 20; i++) {
+                if (respostasAluno[i] == gabarito[i]) {
+                    acertos++;
+                }
+            }
+
+            // Verifica se o aluno foi aprovado ou reprovado
+            if (acertos >= 6) {
+                System.out.println("\nNúmero de acertos: " + acertos);
+                System.out.println("APROVADO\n");
+            } else {
+                System.out.println("\nNúmero de acertos: " + acertos);
+                System.out.println("REPROVADO\n");
+            }
+        }
     }
 
     public static void exercicio11() {
