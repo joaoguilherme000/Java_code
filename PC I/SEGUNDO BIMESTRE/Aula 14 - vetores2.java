@@ -1,5 +1,5 @@
 
-/*import java.util.Random;*/
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
         int escolha = 0;
 
         while(true){
-            System.out.println("\n\nEscolha um exercicio: \n 1 - exercicio 1 \n 2 - exercicio 2 \n 3 - exercicio 3\n 4 - exercicio 4\n 5 - exercicio 5\n 6 - exercicio 6\n 7 - exercicio 7\n 8 - exercicio 8 \n 9 - exercicio 9 \n 10 - exercicio 10 \n 11 - exercicio 11 \n 12 - exercicio 12 \n 13 - exercicio 13\n ou sair - 14");
+            System.out.println("\nEscolha um exercicio: \n 1 - exercicio 1 \n 2 - exercicio 2 \n 3 - exercicio 3\n 4 - exercicio 4\n 5 - exercicio 5\n 6 - exercicio 6\n 7 - exercicio 7\n 8 - exercicio 8 \n 9 - exercicio 9 \n 10 - exercicio 10 \n 11 - exercicio 11 \n 12 - exercicio 12 \n 13 - exercicio 13\n ou sair - 14");
             do {
                 if (scanner.hasNextInt()) {
                     escolha = scanner.nextInt();
@@ -279,7 +279,22 @@ public class Main {
     }
 
     public static void exercicio7() {
-
+    	Random random = new Random();
+		int[] vetor = new int[50];
+		
+		System.out.println("\nVetor normal: \n");
+		
+		for(int i =0; i < 50; i++){
+		  vetor[i] = random.nextInt(201)-100;
+		  System.out.print(vetor[i]+" ");
+		}
+		System.out.println("\n\nVetor positivo: \n");
+		
+		for(int i =0; i < 50; i++){
+		  if (vetor[i]> -1){
+		  	System.out.print(vetor[i]+" ");
+		  }
+		}
     }
 
     public static void exercicio8() {
