@@ -393,7 +393,53 @@ public class Main {
     }
 
     public static void exercicio12() {
-
+		Random random = new Random();
+		int[] x = new int[10];
+		int[] y = new int[10];
+		int[] junto = new int[20];
+		
+		System.out.println("Vetor x: \n");
+		
+		for(int i =0; i < 10; i++){
+		  x[i] = random.nextInt(201)-100;
+		  System.out.print(x[i]+" ");
+		}
+		
+		System.out.println("\n\nVetor y: \n");
+		
+		for(int i =0; i < 10; i++){
+		  y[i] = random.nextInt(201)-100;
+		  System.out.print(y[i]+" ");
+		}
+		
+		System.out.println("\n\nVetor junto: \n");
+		
+		for(int i =0; i < 10; i++){
+		  junto[i] = x[i];
+		  System.out.print(junto[i]+" ");
+		}
+		
+		for (int i = 10; i < 20 ; i++){
+			junto[i] = y[(i-10)];
+			System.out.print(junto[i]+" ");
+		}
+		
+		// Bubble Sort para ordenação crescente
+        for (int i = 0; i < 20 - 1; i++) {
+            for (int j = 0; j < 20 - 1 - i; j++) {
+                if (junto[j] > junto[j + 1]) {
+                    int temp = junto[j];
+                    junto[j] = junto[j + 1];
+                    junto[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("\n\nVetor ordenad0: \n");
+        
+        for(int i =0; i < 20; i++){
+		  System.out.print(junto[i]+" ");
+		}
+		
     }
 
     public static void exercicio13() {
