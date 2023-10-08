@@ -70,11 +70,11 @@ public class Main {
                     exercicio11();
                     break;
                 case 12:
-                    System.out.println("\n");
+                    System.out.println("12. Escrever um algoritmo que le 2 vetores de tamanho 10 e os escreve. Crie, a seguir, um vetor de 20 posicoes que contenha os elementos dos outros 2 vetores em ordem crescente.   \n");
                     exercicio12();
                     break;
                 case 13:
-                    System.out.println("12. Escrever um algoritmo que lê 2 vetores de tamanho 10 e os escreve. Crie, a seguir, um vetor de 20 posições que contenha os elementos dos outros 2 vetores em ordem crescente. \n");
+                    System.out.println("13. Escrever um algoritmo que le 2 vetores X(10) e Y(10) e os escreve. Crie, a seguir, um vetor Z que seja a) a uniao de X com Y; b) a diferenca entre X e Y; c) a soma entre X e Y; d) o produto entre X e Y;  \n");
                     exercicio13();
                     break;
                 case 14:
@@ -356,11 +356,40 @@ public class Main {
     }
 
     public static void exercicio10() {
-
+		
     }
 
     public static void exercicio11() {
+		int[] vetorX = new int[10]; // Vetor para armazenar os números primos
+        int numero = 101; // Começamos em 101, o primeiro número primo acima de 100
+        int encontrados = 0; // Contador de números primos encontrados
 
+        while (encontrados < 10) {
+            if (Primo(numero)) {
+                vetorX[encontrados] = numero;
+                encontrados++;
+            }
+            numero++;
+        }
+
+        // Mostrar o vetor com os números primos
+        System.out.println("Os 10 primeiros números primos acima de 100:");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(vetorX[i]);
+        }
+    }
+
+    // Função para verificar se um número é primo
+    public static boolean Primo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void exercicio12() {
