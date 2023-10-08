@@ -434,7 +434,7 @@ public class Main {
                 }
             }
         }
-        System.out.println("\n\nVetor ordenad0: \n");
+        System.out.println("\n\nVetor ordenado: \n");
         
         for(int i =0; i < 20; i++){
 		  System.out.print(junto[i]+" ");
@@ -443,7 +443,58 @@ public class Main {
     }
 
     public static void exercicio13() {
-
+		Random random = new Random();
+		int[] x = new int[10];
+		int[] y = new int[10];
+		int[] z = new int[20];
+		
+		System.out.println("Vetor x: \n");
+		
+		for(int i =0; i < 10; i++){
+		  x[i] = random.nextInt(201)-100;
+		  System.out.print(x[i]+" ");
+		}
+		
+		System.out.println("\n\nVetor y: \n");
+		
+		for(int i =0; i < 10; i++){
+		  y[i] = random.nextInt(201)-100;
+		  System.out.print(y[i]+" ");
+		}
+		
+		System.out.println("\n\nVetor junto: \n");
+		
+		for(int i =0; i < 10; i++){
+		  z[i] = x[i];
+		  System.out.print(z[i]+" ");
+		}
+		
+		for (int i = 10; i < 20 ; i++){
+			z[i] = y[i-10];
+			System.out.print(z[i]+" ");
+		}
+		
+		System.out.println("\n\nDiferença entre x e y: \n");
+		
+		for(int i =0; i < 10; i++){
+		  z[i] = y[i] - x[i];
+		  System.out.println(x[i]+" - "+y[i]+ " = "+z[i] );
+		}
+		
+		System.out.println("\n\nSoma entre x e y: \n");
+		
+		for(int i =0; i < 10; i++){
+		  z[i] = y[i] + x[i];
+		  System.out.println(x[i]+" + "+y[i]+ " = "+z[i] );
+		}
+		
+		System.out.println("\n\nProduto entre x e y: \n");
+		
+		for(int i =0; i < 10; i++){
+		  z[i] = y[i] * x[i];
+		  System.out.println(x[i]+" * "+y[i]+ " = "+z[i] );
+		}
+		
     }
 
 }
