@@ -334,7 +334,25 @@ public class Main {
     }
 
     public static void exercicio9() {
-
+		Random random = new Random();
+		int[] vetor = new int[30];
+		int[] substituido = new int[30];
+		
+		System.out.println("Vetor normal: \n");
+		
+		for(int i =0; i < 30; i++){
+		  vetor[i] = random.nextInt(201)-100;
+		  System.out.print(vetor[i]+" ");
+		  if(vetor[i] == 0){
+		  	substituido[i] = 1;
+			}else{
+				substituido[i] = vetor[i];
+			}
+		}
+		System.out.println("\n\nVetor substituido: \n");
+		for(int i =0; i < 30; i++){
+		  System.out.print(substituido[i]+" ");
+		}
     }
 
     public static void exercicio10() {
