@@ -21,14 +21,17 @@
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca9.gif">
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca10.gif">
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca11.gif">
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca12.gif">
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca13.gif">
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca14.gif">
-<h1 align="center">100 Commits aeeeeeeee!!!🎉🎉🎉</h1>
 
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca16.gif">
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca17.gif">
-<img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca18.gif">
+<h1 align="center">
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca12.gif"></picture>
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca13.gif"></picture>
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca14.gif"></picture>
+  100 Commits aeeeeeeee!!!🎉🎉🎉
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca16.gif"></picture>
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca17.gif"></picture>
+<picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca18.gif"></picture>
+</h1>
+
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca19.gif">
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca20.gif">
 <img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca21.gif">
