@@ -2,10 +2,10 @@
 
 <h3>Esse repositorio atualiza muitas vezes entao talvez eu tire algo que funciona mas eu quis mudar. <img height="110" width="110" src="https://github.com/joaoguilherme000/meme/blob/master/bleh.jpg">  </h3>
 
-<div style="display: inline">
+<div align="center" style="display: inline">
   <img style="display: inline;" align="center" alt="Joao-js" height="75" width="75" src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/java.svg">
 </div>
-  <p><br>é só java, esperava oque</p>
+  <p align="center"><br>é só java, esperava oque</p>
 
 <div style="display: block"><br>
   <div style="display: block" align="center">
