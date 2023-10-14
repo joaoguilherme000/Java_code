@@ -13,9 +13,9 @@ minhaMatriz = new int[3][4]; // Cria uma matriz 3x4 de inteiros
 int[][] minhaMatriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; // Cria e inicializa uma matriz
 ```
 ## 4. Acesso a Elementos de uma Matriz: Os elementos de uma matriz são acessados por meio de índices, especificando primeiro a linha e depois a coluna. Por exemplo, 
-
-minhaMatriz[0][1] acessaria o elemento na primeira linha e segunda coluna.
-
+```
+System.out.println(minhaMatriz[0][1]); // acessaria o elemento na primeira linha e segunda coluna.
+```
 ## 5.Tamanho de uma Matriz: Você pode obter o número de linhas e colunas de uma matriz usando as propriedades length. Por exemplo:
 ```
 int linhas = minhaMatriz.length; // Obtém o número de linhas
