@@ -1,47 +1,35 @@
-/*Uma declaração de vetor pode ser feito de varios jeitos*/
+# Uma declaração de vetor pode ser feito de varios jeitos
 
-package main;
+## 1. Declare o vetor: Você deve declarar o vetor, especificando o tipo de elementos que ele conterá. Por exemplo, se você deseja criar um vetor de inteiros, você pode declará-lo da seguinte forma:
+```
+int[] meuVetor;
+```
+## 2. Aloque memória para o vetor: Você precisa especificar o tamanho do vetor e alocar memória para ele. Por exemplo, para criar um vetor de tamanho 10, você pode fazer o seguinte:
+```
+meuVetor = new int[10];
+```
+## 3. Inicialize o vetor (opcional): Você pode inicializar os elementos do vetor com valores iniciais se desejar. Por exemplo:
+```
+meuVetor[0] = 1;
+meuVetor[1] = 2;
+meuVetor[2] = 3;
 
-import javax.swing.JOptionPane;
-import java.util.Scanner;
+System.out.println("Segundo elemento no vetor: " + meuVetor[1]);
+```
 
-public class Main {
-    public static void main(String[] args) {
-        inserirNumerosEmVetor();
-    }
+ <h3>E assim por diante...</h3>
+ 
+## 4. Ou você pode inicializar o vetor durante a declaração:
+```
+int[] meuVetor2 = {1,2,3,4,5};
+System.out.println("Quarto elemento no vetor: " + meuVetor2[3]);
+```
 
-    public static void vetor(){
+Isso cria e inicializa o vetor com os valores especificados.
 
-        // Declare o vetor: Você deve declarar o vetor, especificando o tipo de elementos que ele conterá. Por exemplo, se você deseja criar um vetor de inteiros, você pode declará-lo da seguinte forma:
-
-        int[] meuVetor;
-
-        // Isso declara um vetor chamado meuVetor que pode armazenar inteiros.
-
-        // Aloque memória para o vetor: Você precisa especificar o tamanho do vetor e alocar memória para ele. Por exemplo, para criar um vetor de tamanho 10, você pode fazer o seguinte:
-
-        meuVetor = new int[10];
-
-        // Agora, o vetor meuVetor tem espaço para armazenar 10 inteiros.
-
-        // Inicialize o vetor (opcional): Você pode inicializar os elementos do vetor com valores iniciais se desejar. Por exemplo:
-
-        meuVetor[0] = 1;
-        meuVetor[1] = 2;
-        meuVetor[2] = 3;
-
-        System.out.println("Segundo elemento no vetor: " + meuVetor[1]);
-
-        // E assim por diante...
-        // Ou você pode inicializar o vetor durante a declaração:
-
-        int[] meuVetor2 = {1, 2, 3, 4, 5};
-        //Isso cria e inicializa o vetor com os valores especificados.
-        System.out.println("Quarto elemento no vetor: " + meuVetor2[3]);
-    }
-
-
-    public static void ExemploDeVetor() {
+## Exemplo de vetor
+```
+public static void ExemploDeVetor() {
             // Declarar e alocar memória para um vetor de inteiros com tamanho 5
             int[] meuVetor = new int[5];
             
@@ -59,8 +47,10 @@ public class Main {
             System.out.println("Elemento 3: " + meuVetor[3]);
             System.out.println("Elemento 4: " + meuVetor[4]);
     }
-
-    public static void inserirEpositivoNegativo() {
+```
+## Função que mostra os números negativos e positivos em um vetor 
+```
+public static void inserirEpositivoNegativo() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Quantos numeros voce deseja inserir no vetor? ");
@@ -84,8 +74,12 @@ public class Main {
         }
 
     }
+```
 
-    public static void vetorOrdemCrescente() {
+## Função para ordenar o vetor
+
+```
+public static void vetorOrdemCrescente() {
         Scanner scanner = new Scanner(System.in);
 
         int tamanho = 10;
@@ -119,4 +113,6 @@ public class Main {
             System.out.print(vetor[i] + " ");
         }
     }
-}
+```
+
+Esses são os conceitos básicos sobre vetores em Java.
