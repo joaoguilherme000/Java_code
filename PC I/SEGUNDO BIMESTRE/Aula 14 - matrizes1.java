@@ -6,11 +6,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int escolha = 0;
-		int exe =0;
+		int exe =1;
 		
 		System.out.println("\nEscolha um exercicio:");
 		
         while(true){
+            exe =1;
             while(exe < 13){
             	System.out.println(" "+exe+ " - exercicio " + exe);
             	exe++;
@@ -90,7 +91,57 @@ public class Main {
     }
 
     public static void exercicio1() {
+        double [][] m = {{1, 2}, {4, 5}};  // Cria e inicializa uma matriz
+        double [][] n = {{3,6}, {7,8}};
+        double [][] resultado = new double [2][2];
         
+        System.out.println("Vetor1 original: \n");
+        
+        for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nVetor2 original: \n");
+		
+		for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	System.out.print(n[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nVetor Resultado produto: \n");
+		
+		for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	resultado[i][j] = m[i][j] * n[i][j];
+        	System.out.println(m[i][j]+" * "+n[i][j]+ " = "+resultado[i][j]);
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nVetor Resultado soma: \n");
+		
+		for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	resultado[i][j] = m[i][j] + n[i][j];
+        	System.out.println(m[i][j]+" + "+n[i][j]+ " = "+resultado[i][j]);
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nVetor Resultado diferença: \n");
+		
+		for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	resultado[i][j] = m[i][j] - n[i][j];
+        	System.out.println(m[i][j]+" - "+n[i][j]+ " = "+resultado[i][j]);
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
     }
 
     public static void exercicio2() {
@@ -136,4 +187,4 @@ public class Main {
 
     }
 
-                      }
+			}
