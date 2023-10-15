@@ -148,6 +148,7 @@ public class Main {
         Random random = new Random();
         
         int [][] m = {{1,9,1},{9,9,9},{3,3,3}};
+        // int [][] n = new int[3][3];
         
         System.out.println("Matriz original: \n");
         
@@ -158,10 +159,11 @@ public class Main {
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
 		// Troca a linha 0 com a linha 2
-    		int[] temp = m[0];
+		if(true){
+		  int[] temp = m[0];
     		m[0] = m[2];
-    		m[2] = temp;
-    		
+    		m[2] = temp;	
+		}
 		System.out.println("\nMatriz linha e coluna: \n");
     	
         for (int l = 0; l < 3; l++) {
@@ -174,6 +176,39 @@ public class Main {
     		
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
+		
+		/*
+		for (int i = 0; i < 3; i++) {
+    		for (int j = 0; j < 3; j++) {
+        	n[i][j] = random.nextInt(201);
+    		}
+		}
+		
+		System.out.println("Matriz original n: \n");
+        
+        for (int i = 0; i < 3; i++) {
+    		for (int j = 0; j < 3; j++) {
+        	System.out.print(n[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		// Troca a linha 0 com a linha 2
+    		int[] temp = n[0];
+    		n[0] = n[2];
+    		n[2] = temp;
+    		
+		System.out.println("\nMatriz linha e coluna n: \n");
+    	
+        for (int l = 0; l < 3; l++) {
+        	int tempValue = n[l][0];
+        	n[l][0] = n[l][1];
+        	n[l][1] = tempValue;
+    		for (int c = 0; c < 3; c++) {
+        		System.out.print(n[l][c] + " ");
+    		}
+    		
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}*/
     }
 
     public static void exercicio3() {
@@ -215,4 +250,4 @@ public class Main {
 
     }
 
-		     }
+				 }
