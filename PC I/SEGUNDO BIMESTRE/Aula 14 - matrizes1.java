@@ -95,7 +95,7 @@ public class Main {
         double [][] n = {{3,6}, {7,8}};
         double [][] resultado = new double [2][2];
         
-        System.out.println("Vetor1 original: \n");
+        System.out.println("Matriz original: \n");
         
         for (int i = 0; i < 2; i++) {
     		for (int j = 0; j < 2; j++) {
@@ -104,7 +104,7 @@ public class Main {
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
 		
-		System.out.println("\nVetor2 original: \n");
+		System.out.println("\nMatriz2 original: \n");
 		
 		for (int i = 0; i < 2; i++) {
     		for (int j = 0; j < 2; j++) {
@@ -113,7 +113,7 @@ public class Main {
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
 		
-		System.out.println("\nVetor Resultado produto: \n");
+		System.out.println("\nMatriz Resultado produto: \n");
 		
 		for (int i = 0; i < 2; i++) {
     		for (int j = 0; j < 2; j++) {
@@ -123,7 +123,7 @@ public class Main {
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
 		
-		System.out.println("\nVetor Resultado soma: \n");
+		System.out.println("\nMatriz Resultado soma: \n");
 		
 		for (int i = 0; i < 2; i++) {
     		for (int j = 0; j < 2; j++) {
@@ -145,6 +145,18 @@ public class Main {
     }
 
     public static void exercicio2() {
+        Random random = new Random();
+        
+        double [][] m = {{1,2,3},{1,2,3},{1,2,3}};
+        
+        System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 2; i++) {
+    		for (int j = 0; j < 2; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
         
     }
 
