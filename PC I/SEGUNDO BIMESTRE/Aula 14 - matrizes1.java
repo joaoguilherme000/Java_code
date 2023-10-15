@@ -147,17 +147,33 @@ public class Main {
     public static void exercicio2() {
         Random random = new Random();
         
-        double [][] m = {{1,2,3},{1,2,3},{1,2,3}};
+        int [][] m = {{1,9,1},{9,9,9},{3,3,3}};
         
         System.out.println("Matriz original: \n");
         
-        for (int i = 0; i < 2; i++) {
-    		for (int j = 0; j < 2; j++) {
+        for (int i = 0; i < 3; i++) {
+    		for (int j = 0; j < 3; j++) {
         	System.out.print(m[i][j] + " ");
     		}
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
-        
+		// Troca a linha 0 com a linha 2
+    		int[] temp = m[0];
+    		m[0] = m[2];
+    		m[2] = temp;
+    		
+		System.out.println("\nMatriz linha e coluna: \n");
+    	
+        for (int l = 0; l < 3; l++) {
+        	int tempValue = m[l][0];
+        	m[l][0] = m[l][1];
+        	m[l][1] = tempValue;
+    		for (int c = 0; c < 3; c++) {
+        		System.out.print(m[l][c] + " ");
+    		}
+    		
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
     }
 
     public static void exercicio3() {
@@ -199,4 +215,4 @@ public class Main {
 
     }
 
-			}
+		     }
