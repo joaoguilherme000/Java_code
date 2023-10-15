@@ -212,7 +212,79 @@ public class Main {
     }
 
     public static void exercicio3() {
+         Random random =new Random();
+         int [][] m = new int[10][10];
+         
+         for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	m[i][j] = random.nextInt(3);
+    		}
+		}
         
+        System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 10; i++) {
+        	System.out.print(m[i][i] +" ");
+    	}
+    	System.out.println();
+
+    	System.out.println("\nDiagonal Secundária: ");
+    	
+    	for (int i = 0; i < 10; i++) {
+        	System.out.print(m[i][10 - i - 1]+" ");
+    	}
+    	System.out.println();
+    	
+    	for (int i = 0; i < 10; i++) {
+        	int temp = m[i][i];
+        	m[i][i] = m[i][10 -i - 1];
+        	m[i][10 -i - 1] = temp;
+    	}
+    	
+    	System.out.println();
+    	System.out.println("Matriz diagonal: \n");
+        
+        for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println();
+		}
+		
+		System.out.println("\nlinha 5: ");
+		for (int i = 0; i < 10; i++) {
+    		System.out.print(m[4][i] + " ");
+		}
+		
+		System.out.println("\n\nColuna 10: ");
+		for (int i = 0; i < 10; i++) {
+    		System.out.print(m[i][9] + " ");
+		}
+		
+		for (int i = 0; i < 10; i++) {
+    		int temp = m[4][i];
+    		m[4][i] = m[i][9];
+    		m[i][9] = temp;
+		}
+		System.out.println();
+		System.out.println("\nMatriz diagonal e linha 5 com coluna 10: \n");
+
+		for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        		System.out.print(m[i][j] + " ");
+   		 }
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		System.out.println();
     }
 
     public static void exercicio4() {
@@ -250,4 +322,4 @@ public class Main {
 
     }
 
-				 }
+	    }
