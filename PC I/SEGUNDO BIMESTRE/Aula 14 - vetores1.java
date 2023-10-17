@@ -1,3 +1,5 @@
+package main;
+
 /*  1) Faça um programa que carregue um vetor com 10 números reais. Calcule e mostre a 
 quantidade de números negativos e a soma dos números positivos deste vetor.*/
 
