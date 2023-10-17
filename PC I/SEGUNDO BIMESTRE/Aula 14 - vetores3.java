@@ -1,3 +1,5 @@
+package main;
+
 /* 1 - Calcular a soma dos valores inteiros contidos em um vetor qualquer.
 
 2 - Localizar, em um vetor qualquer de valores inteiros, um certo elemento deste, dado o seu valor.
