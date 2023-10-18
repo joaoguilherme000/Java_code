@@ -25,7 +25,7 @@ public class Main {
                     Menu.lotofacil();
                     break;
                 case 5:
-                    JOptionPane.showMessageDialog(null, "Saindo...6");
+                    JOptionPane.showMessageDialog(null, "Saindo...");
                     return; // Sai do método e encerra o programa
                 default:
                     JOptionPane.showMessageDialog(null, "Escolha uma opção valida !");
