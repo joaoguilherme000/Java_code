@@ -74,33 +74,42 @@ public class Menu {
     }
     
     public static void duplasena(){
-        String mensagem = "";
         Random random = new Random();
-        int[] vetor = new int[6];
+        int[] vetor = new int[12]; // 12 números no total
 
-        for(int i =0; i < 6; i++){
-          vetor[i] = random.nextInt(50) + 1; 
-          mensagem += vetor[i] + " | ";
+        for (int i = 0; i < 12; i++) {
+            vetor[i] = random.nextInt(50) + 1;
         }
-        
-        JOptionPane.showMessageDialog(null, "Seu jogo: \n" + mensagem);
+
+        String mensagem = "Seu jogo:\n";
+        for (int i = 0; i < 12; i++) {
+            mensagem += vetor[i] + " | ";
+            if (i == 5) {
+                mensagem += "\n"; // Quebra a linha após cada conjunto de 6 números
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, mensagem);
     }
     
     public static void lotofacil(){
-        String mensagem = "";
         Random random = new Random();
         int[] vetor = new int[15];
-        int[] vetor2 = new int[15];
-        String mensagem2 = "";
-
-        for(int i =0; i < 15; i++){
-          vetor[i] = random.nextInt(25) + 1; 
-          mensagem += vetor[i] + " | ";
-          vetor2[i] = random.nextInt(25) + 1; 
-          mensagem2 += vetor2[i] + " | ";
-        }
         
-        JOptionPane.showMessageDialog(null, "Seu jogo: \n\n" + mensagem +"\n" + mensagem2);
+        for (int i = 0; i < 15; i++) {
+            vetor[i] = random.nextInt(25) + 1; // O sorteio é de 1 a 25 para a Lotofácil
+        }
+
+        String mensagem = "";
+
+        for (int i = 0; i < 15; i++) {
+            mensagem += vetor[i] + " | ";
+            if ((i + 1) % 15 == 0) {
+                mensagem += "\n"; // Quebra a linha após cada conjunto de 5 números
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "Seu jogo:\n" + mensagem);
     }
     
 }
