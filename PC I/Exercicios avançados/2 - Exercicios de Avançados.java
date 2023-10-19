@@ -1,41 +1,3 @@
-
-
-package main;
-
-import javax.swing.JOptionPane;
-
-public class Main {
-    public static void main(String[] args) {
-
-        while(true){
-            String x = JOptionPane.showInputDialog(null, "Escolha \n 1 - Cem vezes \n 2 - Expoente \n 5 - Sair");
-            int escolhaInt = Integer.parseInt(x);
-            
-            switch(escolhaInt){
-                case 1:
-                    Menu.primeiro();
-                    break;
-                case 2:
-                    Menu.segundo();
-                    break;
-                case 3:
-                    Menu.terceiro();
-                    break;
-                case 4:
-                    Menu.quarto();
-                    break;
-                case 5:
-                    JOptionPane.showMessageDialog(null, "Saindo...");
-                    return; // Sai do método e encerra o programa
-                default:
-                    JOptionPane.showMessageDialog(null, "Escolha uma opção valida !");
-            }
-        }
-    }
-}
-
-// A OUTRA CLASSE
-
 package main;
 
 import java.util.Random;
@@ -90,12 +52,15 @@ public class Menu {
             switch(escolhaInt){
                 case 1:
                     while(true){
-                        double base = 2.0;
-                        double expoente = 3.0;
+                        String entradaNumero = JOptionPane.showInputDialog(null, "Numero :");
+                        double numero = Integer.parseInt(entradaNumero);
+                        
+                        String entradaExpoente = JOptionPane.showInputDialog(null, "Expoente :");
+                        double expoente = Integer.parseInt(entradaExpoente);
 
-                        double resultado = Math.pow(base, expoente);
+                        double resultado = Math.pow(numero, expoente);
 
-                        JOptionPane.showMessageDialog(null, base + " elevado a " + expoente + " é igual a " + resultado);
+                        JOptionPane.showMessageDialog(null, numero + " elevado a " + expoente + " é igual a " + resultado);
                         break;
                     }
                     break;
@@ -105,7 +70,7 @@ public class Menu {
                         int numero = Integer.parseInt(entradaNumero);
                         
                         String entradaExpoente = JOptionPane.showInputDialog(null, "Expoente :");
-                        int expoente = Integer.parseInt(entradaExpoente);;
+                        int expoente = Integer.parseInt(entradaExpoente);
 
                         double resultado = Math.pow(numero, expoente);
 
@@ -138,7 +103,20 @@ public class Menu {
     }
     
     public static void terceiro(){
+        String entrada = JOptionPane.showInputDialog(null, "Digite sua mensagem");
+        String mensagem = "";
         
+        for (int i = 0; i < entrada.length(); i++) { // o for pega o tamanho do que a pessoa escreveu
+            char caractere = entrada.charAt(i);  // coloca numa variavel que foi criada
+
+            if (caractere == ' ') { // se ele receber nada
+                mensagem += "\n";
+            } else {
+                mensagem += caractere;
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null,"Sua mensagem: " + mensagem);
     }
     
     public static void quarto(){
