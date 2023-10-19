@@ -116,7 +116,7 @@ public class Menu {
             }
         }
         
-        JOptionPane.showMessageDialog(null,"Sua mensagem: " + mensagem);
+        JOptionPane.showMessageDialog(null,"Sua mensagem: \n" + mensagem);
     }
     
     public static void quarto(){
