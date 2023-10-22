@@ -46,10 +46,3 @@
 <picture><img align="center" height="60" width="60" src="https://github.com/joaoguilherme000/meme/blob/master/danca30.gif"></picture>
 </h1>
 </div>
-
-<h3>CLICARIA NO LINK ABAIXO?</h3>
-
-<picture><img src="https://github.com/joaoguilherme000/meme/blob/master/a.jpg" /></picture>
-
-
-## [ NAO CLIQUE](https://media.tenor.com/qN6KhHtzLQwAAAAC/we-live-we-love-we-lie-my-honest-reaction.gif)
