@@ -289,7 +289,18 @@ public class Main {
     }
 
     public static void exercicio4() {
+      Random random =new Random();
+      int [][] m = new int[12][13];
       
+      System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 12; i++) {
+    		for (int j = 0; j < 13; j++) {
+    		m[i][j] = random.nextInt(3);
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
     }
 
     public static void exercicio5() {
