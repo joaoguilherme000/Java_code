@@ -316,7 +316,7 @@ public class Main {
     		m[i][j] = random.nextInt(2);
         	System.out.print(m[i][j] + " ");
         	sl[i] += m[i][j];
-        	sc[i] += m[i][i];
+        	sc[j] += m[i][j];
     		}
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
 		}
