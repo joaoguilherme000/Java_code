@@ -337,7 +337,29 @@ public class Main {
     }
 
     public static void exercicio6() {
+	Random random =new Random();
+    	int [][] m = new int[5][5];
+    	
+    	System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++) {
+    		m[i][j] = random.nextInt(11)-6;
+        	System.out.print(m[i][j] + " ");
+        	if(m[i][j] < 0){
+        		m[i][j] = m[i][j] - m[i][j]  - m[i][j];
+    		}
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
 		
+		System.out.println("Matriz trocada: \n");
+		for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++) {
+        	System.out.print(m[i][j] + " ");
+    	        }
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+	}
     }
 
     public static void exercicio7() {
