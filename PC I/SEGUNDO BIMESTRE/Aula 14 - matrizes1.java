@@ -304,7 +304,36 @@ public class Main {
     }
 
     public static void exercicio5() {
-	
+		Random random =new Random();
+    	int [][] m = new int[5][5];
+    	int [] sl = new int [5];
+    	int [] sc = new int [5];
+      
+      System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++) {
+    		m[i][j] = random.nextInt(2);
+        	System.out.print(m[i][j] + " ");
+        	sl[i] += m[i][j];
+        	sc[i] += m[i][i];
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("\nVetor SL\n");
+		
+		for (int i = 0; i < 5; i++) {
+        	System.out.println(m[i][0] + " + " +m[i][1] + " + " +m[i][2] + " + " +m[i][3]+ " + " +m[i][4]  + " = "+ sl[i] + " ");
+		}
+		System.out.println();
+		
+		System.out.println("\nVetor SC\n");
+		
+		for (int i = 0; i < 5; i++) {
+        	System.out.println(m[0][i] + " + " +m[1][i] + " + " +m[2][i] + " + " +m[3][i]+ " + " +m[4][i]  + " = "+ sc[i] + " ");
+		}
+		System.out.println();
     }
 
     public static void exercicio6() {
@@ -333,5 +362,4 @@ public class Main {
     public static void exercicio12() {
 
     }
-
-	    }
+    }
