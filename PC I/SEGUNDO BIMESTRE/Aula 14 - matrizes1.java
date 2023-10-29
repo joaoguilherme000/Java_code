@@ -1,26 +1,3 @@
-xercicio7() {
-    	
-    }
-
-    public static void exercicio8() {
-    }
-
-    public static void exercicio9() {
-		
-    }
-
-    public static void exercicio10() {
-		
-    }
-
-    public static void exercicio11() {
-		
-    }
-
-    public static void exercicio12() {
-
-    }
-    }
 package main;
 
 import java.util.Random;
@@ -422,7 +399,37 @@ public class Main {
     }
 
     public static void exercicio8() {
+    	Random random =new Random();
+    	int [][] m = new int[6][6];
+    	int [][] n = new int [6][6];
     	
+    	System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 6; i++) {
+    		for (int j = 0; j < 6; j++) {
+    			m[i][j] = random.nextInt(3);
+        		System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("Matriz trocada: \n");
+        
+        for (int i = 0; i < 6; i++) {
+        	n[0][i] = m[1][i];
+        	n[1][i] = m[0][i];
+    		n[2][i] = m[3][i];
+    		n[3][i] = m[2][i];
+    		n[4][i] = m[5][i];
+    		n[5][i] = m[4][i];
+		}
+		
+		for (int i = 0; i < 6; i++) {
+    		for (int j = 0; j < 6; j++) {
+        		System.out.print(n[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
     }
 
     public static void exercicio9() {
@@ -440,4 +447,4 @@ public class Main {
     public static void exercicio12() {
 
     }
-			    }
+    }
