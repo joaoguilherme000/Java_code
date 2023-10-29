@@ -1,3 +1,26 @@
+xercicio7() {
+    	
+    }
+
+    public static void exercicio8() {
+    }
+
+    public static void exercicio9() {
+		
+    }
+
+    public static void exercicio10() {
+		
+    }
+
+    public static void exercicio11() {
+		
+    }
+
+    public static void exercicio12() {
+
+    }
+    }
 package main;
 
 import java.util.Random;
@@ -146,7 +169,7 @@ public class Main {
     }
 
     public static void exercicio2() {
-        Random random = new Random();
+        // Random random = new Random();
         
         int [][] m = {{1,9,1},{9,9,9},{3,3,3}};
         // int [][] n = new int[3][3];
@@ -337,7 +360,7 @@ public class Main {
     }
 
     public static void exercicio6() {
-	Random random =new Random();
+		Random random =new Random();
     	int [][] m = new int[5][5];
     	
     	System.out.println("Matriz original: \n");
@@ -357,16 +380,49 @@ public class Main {
 		for (int i = 0; i < 5; i++) {
     		for (int j = 0; j < 5; j++) {
         	System.out.print(m[i][j] + " ");
-    	        }
+    		}
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
-	}
+		}
     }
 
     public static void exercicio7() {
+    	Random random =new Random();
+    	int [][] m = new int[6][6];
+    	int [][] n = new int [6][6];
     	
+    	System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 6; i++) {
+    		for (int j = 0; j < 6; j++) {
+    			m[i][j] = random.nextInt(3);
+        		System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
+		System.out.println("Matriz trocada: \n");
+        
+        for (int i = 0; i < 6; i++) {
+        	n[i][0] = m[i][1];
+        	n[i][1] = m[i][0];
+        	n[i][2] = m[i][3];
+        	n[i][3] = m[i][2];
+        	n[i][4] = m[i][5];
+        	n[i][5] = m[i][4];
+    	
+		}
+		
+		for (int i = 0; i < 6; i++) {
+    		for (int j = 0; j < 6; j++) {
+        		System.out.print(n[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+		
     }
 
     public static void exercicio8() {
+    	
     }
 
     public static void exercicio9() {
@@ -384,4 +440,4 @@ public class Main {
     public static void exercicio12() {
 
     }
-    }
+			    }
