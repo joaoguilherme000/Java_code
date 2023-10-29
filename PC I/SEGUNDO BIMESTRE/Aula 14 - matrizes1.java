@@ -433,7 +433,42 @@ public class Main {
     }
 
     public static void exercicio9() {
-		
+    	Random random =new Random();
+    	int [][] m = new int[5][5];
+    	
+    	System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++) {
+    			m[i][j] = random.nextInt(3);
+        		System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+    	
+		// Ordenar a matriz bidimensional (matriz) em ordem crescente
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5 - 1; j++) {
+                for (int k = 0; k < 5 - j - 1; k++) {
+                    if (m[i][k] > m[i][k + 1]) {
+                        // Trocar os elementos se estiverem fora de ordem
+                        int temp = m[i][k];
+                        m[i][k] = m[i][k + 1];
+                        m[i][k + 1] = temp;
+                    }
+                }
+            }
+        }
+        
+        System.out.println("Matriz ordenada: \n");
+        
+        for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++){
+        		System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
     }
 
     public static void exercicio10() {
@@ -447,4 +482,4 @@ public class Main {
     public static void exercicio12() {
 
     }
-    }
+		}
