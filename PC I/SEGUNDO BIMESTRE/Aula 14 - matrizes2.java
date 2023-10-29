@@ -49,11 +49,11 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("4. Faça um algoritmo que leia uma matriz 50x50 de números reais e encontre o maior valor da matriz. A seguir, multiplique cada elemento da diagonal principal pelo maior valor. Mostre a matriz após as multiplicações. \n");
-                    exercicio3();
+                    exercicio4();
                     break;
                 case 5:
                     System.out.println("5. Faça um algoritmo que leia uma matriz 50x50 de números reais. A seguir, multiplique cada linha pelo elemento da diagonal principal daquela linha. Mostre a matriz após as multiplicações. \n");
-                    exercicio3();
+                    exercicio5();
                     break;
                 case 6:
                     System.out.println("\nSaindo do programa...");
@@ -65,15 +65,103 @@ public class Main {
     }
 
     public static void exercicio1() {
-        
+        Random random =new Random();
+         int [][] m = new int[15][15];
+         double soma = 0;
+         
+         System.out.println("Matriz original: \n");
+         for (int i = 0; i < 15; i++) {
+    		for (int j = 0; j < 15; j++) {
+        	m[i][j] = random.nextInt(19) -10;
+        	System.out.print(m[i][j] + " ");
+    		}
+    		System.out.println();
+         }
+
+    	System.out.println("\nDiagonal Secundária: ");
+    	
+    	for (int i = 0; i < 15; i++) {
+        	System.out.print(m[i][15 - i - 1]+" ");
+    	}
+    	
+    	System.out.println();
+    	
+    	System.out.println("\nTotal: ");
+    	
+    	for (int i = 0; i < 15; i++) {
+    	   soma += m[i][15 - i - 1];
+        	System.out.print(" +"+ m[i][15 - i - 1]);
+    	}
+    	System.out.print(" = " + soma +" / 15 " +"\n média = " + soma / 15 +"\n") ;
     }
 
     public static void exercicio2() {
-        
+        Random random =new Random();
+         int [][] m = new int[20][15];
+         double soma = 0;
+         
+         System.out.println("Matriz original: \n");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 15; j++) {
+        	m[i][j] = random.nextInt(3)+1;
+        	System.out.print(m[i][j] + " ");
+    		}
+    		System.out.println();
+		}
+		
+		System.out.println("\nTotal: ");
+		
+		for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 15; j++) {
+    			if (i %2 ==0){
+    			soma += m[i][j];
+				System.out.print(" +"+ m[i][j]);
+    			}
+    		}
+    		System.out.println();
+		}
+		
+		System.out.print(" = " + soma +" / 20 " +"\n média = " + soma / 20 +"\n") ;
     }
 
     public static void exercicio3() {
+         Random random =new Random();
+         int [][] m = new int[20][20];
+         int [][] n = new int [20][20];
+         int soma = 0;
+         int[] resultado = new int [20];
          
+         System.out.println("Matriz original: \n");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 20; j++) {
+        	m[i][j] = random.nextInt(3)+1;
+        	System.out.print(m[i][j] + " ");
+        	soma += m[i][j];
+        	resultado[i] = soma;
+    		}
+    		soma = 0;
+    		System.out.println();
+		}
+		
+		System.out.println("\nVetor resultado:");
+		
+		for (int i = 0; i < 20; i++) {
+    		System.out.print(resultado[i] + " ");
+		}
+		System.out.println();
+		
+		System.out.println("\nMatriz resultado:");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 20; j++) {
+        	n[i][j] = m[i][j] * resultado[i];
+        	System.out.print(n[i][j] + " ");
+    		}
+    		System.out.println();
+		}
+		
     }
 
     public static void exercicio4() {
@@ -83,5 +171,4 @@ public class Main {
     public static void exercicio5() {
 		
     }
-    
-  }
+}
