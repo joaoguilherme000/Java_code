@@ -1,3 +1,28 @@
+            }
+        }
+        
+        System.out.println("Matriz ordenada: \n");
+        
+        for (int i = 0; i < 5; i++) {
+    		for (int j = 0; j < 5; j++){
+        		System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+    }
+
+    public static void exercicio10() {
+		
+    }
+
+    public static void exercicio11() {
+		
+    }
+
+    public static void exercicio12() {
+
+    }
+		}
 package main;
 
 import java.util.Random;
@@ -440,7 +465,7 @@ public class Main {
         
         for (int i = 0; i < 5; i++) {
     		for (int j = 0; j < 5; j++) {
-    			m[i][j] = random.nextInt(3);
+    			m[i][j] = random.nextInt(5);
         		System.out.print(m[i][j] + " ");
     		}
     	System.out.println(); // Pular para a próxima linha após cada linha da matriz
@@ -472,14 +497,90 @@ public class Main {
     }
 
     public static void exercicio10() {
+		Random random =new Random();
+         int [][] m = new int[10][10];
+         int soma = 0;
+         
+         for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	m[i][j] = random.nextInt(9)+1;
+    		}
+		}
+        
+        System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
 		
+		System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 10; i++) {
+        	System.out.print(m[i][i] +" ");
+        	
+    	}
+    	System.out.println();
+    	
+    	for (int i = 0; i < 10; i++) {
+        	soma += m[i][i];
+        	
+    	}
+    	System.out.println();
+    	
+    	System.out.println("média: " + soma /10) ;
+
     }
 
     public static void exercicio11() {
-		
+		Random random =new Random();
+         int [][] m = new int[10][10];
+         int soma = 0;
+         
+         for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	m[i][j] = random.nextInt(9) +1;
+    		}
+		}
+        
+        System.out.println("Matriz original: \n");
+        
+        for (int i = 0; i < 10; i++) {
+    		for (int j = 0; j < 10; j++) {
+        	System.out.print(m[i][j] + " ");
+    		}
+    	System.out.println(); // Pular para a próxima linha após cada linha da matriz
+		}
+
+    	System.out.println("\nDiagonal Secundária: ");
+    	
+    	for (int i = 0; i < 10; i++) {
+        	System.out.print(m[i][10 - i - 1]+" ");
+        	
+    	}
+    	System.out.println();
+    	
+    	for (int i = 0; i < 10; i++) {
+        	soma += m[i][10 - i - 1];
+    	}
+    	System.out.println();
+    	
+    	System.out.println("média: " + soma / 10) ;
     }
 
     public static void exercicio12() {
+        int[][] matriz = new int[6][6];
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                matriz[i][j] = Math.min(Math.min(i, j), Math.min(6 - 1 - i, 6 - 1 - j)) + 1;
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println(); 
+        }
+        System.out.println();
 
     }
-		}
+			    }
