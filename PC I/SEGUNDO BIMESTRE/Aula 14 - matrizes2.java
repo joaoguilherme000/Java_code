@@ -166,13 +166,13 @@ public class Main {
 
     public static void exercicio4() {
       Random random =new Random();
-      int [][] m = new int[5][5];
+      int [][] m = new int[50][50];
       int maiorValor = m[0][0];
       
       System.out.println("\nMatriz original:");
       
-      for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+      for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
                 m[i][j] = random.nextInt(21)-10;
         		System.out.print(m[i][j] + " ");
             }
@@ -181,13 +181,13 @@ public class Main {
         
         System.out.println("\nDiagonal Principal: ");
 		
-    	for (int i = 0; i < 5; i++) {
+    	for (int i = 0; i < 50; i++) {
         	System.out.print(m[i][i] +" ");
     	}
     	System.out.println();
     	
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
                 if (m[i][j] > maiorValor) {
                     maiorValor = m[i][j];
                 }
@@ -197,12 +197,12 @@ public class Main {
        
         System.out.println("\nMatriz trocada: ");
         
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 50; i++) {
         	m[i][i] = m[i][i] * maiorValor;
     	}
         
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
         		System.out.print(m[i][j] + " ");
             }
             System.out.println();
@@ -210,7 +210,35 @@ public class Main {
     }
 
     public static void exercicio5() {
+    	Random random =new Random();
+    	int [][] m = new int[50][50];
+    	int diagonalPrincipal;
     	
+    	System.out.println("\nMatriz original:");
+      
+     	for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                m[i][j] = random.nextInt(20)-10;
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 50; i++) {
+        	System.out.print(m[i][i] +" ");
+    	}
+    	System.out.println();
+        
+        System.out.println("\nMatriz após multiplicação:");
+    	for (int i = 0; i < 50; i++) {
+        	diagonalPrincipal = m[i][i];
+        	for (int j = 0; j < 50; j++) {
+            	m[i][j] = diagonalPrincipal * m[i][j];
+            	System.out.print(m[i][j] + " ");
+        	}
+        System.out.println();
+    	}
     }
-    
-}
+  }
