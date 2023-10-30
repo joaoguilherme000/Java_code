@@ -165,10 +165,52 @@ public class Main {
     }
 
     public static void exercicio4() {
+      Random random =new Random();
+      int [][] m = new int[5][5];
+      int maiorValor = m[0][0];
       
+      System.out.println("\nMatriz original:");
+      
+      for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                m[i][j] = random.nextInt(21)-10;
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 5; i++) {
+        	System.out.print(m[i][i] +" ");
+    	}
+    	System.out.println();
+    	
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (m[i][j] > maiorValor) {
+                    maiorValor = m[i][j];
+                }
+            }
+        }
+        System.out.println("\nO maior valor na matriz é: " + maiorValor);
+       
+        System.out.println("\nMatriz trocada: ");
+        
+        for (int i = 0; i < 5; i++) {
+        	m[i][i] = m[i][i] * maiorValor;
+    	}
+        
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void exercicio5() {
-		
+    	
     }
+    
 }
