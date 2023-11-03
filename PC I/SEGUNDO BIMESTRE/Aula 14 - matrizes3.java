@@ -115,16 +115,16 @@ public class Main {
 
     public static void exercicio2() {
         Random random =new Random();
-    	int [][] m = new int[5][4];
-    	double [][] impostos = new double [5][4];
-    	int [] transporte = new int [5];
+    	int [][] m = new int[4][5];
+    	double [][] impostos = new double [4][5];
+    	int [] transporte = new int [4];
     	
     	// colocando os produtos
     	    	
-    	for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 4; j++) {
+    	for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
                 m[i][j] = random.nextInt(200) +1;
-        		System.out.print(m[i][j] + " ");
+        		System.out.printf("%3d ",m[i][j]);
             }
             System.out.println();
         }
@@ -133,8 +133,8 @@ public class Main {
         
         // colocando os impostos
     	
-    	for (int i = 0; i < 5; i++) {
-    	      for (int j = 0; j < 4; j++) {
+    	for (int i = 0; i < 4; i++) {
+    	      for (int j = 0; j < 5; j++) {
                 if(m[i][j] <= 50){
     	       	impostos[i][j] = 0.05;
     	       }else if(m[i][j] >= 51 && m[i][j] <= 100){
@@ -144,18 +144,18 @@ public class Main {
     	       }else {
     	       	impostos[i][j] = 666; // invocando o diabo
     	       }
-        		System.out.print(impostos[i][j] + " ");
+        		System.out.printf("%.2f ",impostos[i][j]);
             }
             System.out.println();
         }
         System.out.println();
         
         // colocando o transporte
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
                 transporte[i] += m[i][j] ;
             }
-            System.out.print(transporte[i] + " ");
+            System.out.print("Valor do transporte: R$"+transporte[i] + " ");
             System.out.println();
         }
         
@@ -167,7 +167,67 @@ public class Main {
     }
     
     public static void exercicio3() {
+        Random random =new Random();
+    	int [][] matriz1 = new int[3][5];
+    	int [][] matriz2 = new int[3][5];
+    	int [][] soma = new int [3][5];
+    	int [] venda = new int [3];
+    	
+    	System.out.println(" Mês 1: ");
+    	for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                matriz1[i][j] = random.nextInt(200) +1;
+        		System.out.printf("%3d ", matriz1[i][j]);
+            }
+            System.out.println("  Loja: "+ (i+1));
+        }
         
+        System.out.println("        +");
+     
+        System.out.println(" Mês 2: ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                matriz2[i][j] = random.nextInt(200) +1;
+        		System.out.printf("%3d ",matriz2[i][j]);
+            }
+            System.out.println("  Loja: "+ (i+1));
+        }
+        
+        System.out.println();
+        
+        System.out.println(" SOMA: ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                soma[i][j] = matriz1[i][j] + matriz2[i][j];
+        		System.out.printf("%3d ",soma[i][j]);
+            }
+            System.out.println("  Loja: "+ (i+1));
+        }
+        
+        System.out.println();
+        
+        int maiorValor = soma[0][0]; // Inicializa com o primeiro valor da matriz
+
+        for (int i = 0; i < soma.length; i++) {
+            for (int j = 0; j < soma[i].length; j++) {
+                if (soma[i][j] > maiorValor) {
+                    maiorValor = soma[i][j];
+                }
+            }
+        }
+
+        System.out.println("O maior venda do bimestre: R$" + maiorValor);
+        
+        System.out.println("\nTotal de vendas das lojas: ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                venda[i] += soma[i][j] ;
+            }
+            System.out.printf("R$ %3d ",venda[i]);
+            System.out.println("  Loja: "+ (i+1));
+        }
+        
+        System.out.println();
     }
     
     public static void exercicio4() {
@@ -195,8 +255,8 @@ public class Main {
     }
     
     public static void buscarAleatorio(int[][] m, double [][] impostos, int[] transporte, Random random) {
-        int linhaAleatoria = random.nextInt(5);
-        int colunaAleatoria = random.nextInt(4);
+        int linhaAleatoria = random.nextInt(4);
+        int colunaAleatoria = random.nextInt(5);
         int valorAleatorio = m[linhaAleatoria][colunaAleatoria];
 
         System.out.println("Numero do produto: " + (colunaAleatoria +1));
@@ -206,5 +266,4 @@ public class Main {
         System.out.println("Custo do produto: R$"+m[linhaAleatoria][colunaAleatoria]);
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
-    
 }
