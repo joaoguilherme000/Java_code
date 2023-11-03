@@ -81,7 +81,36 @@ public class Main {
     }
 
     public static void exercicio1() {
+        Random random =new Random();
+    	int [][] m = new int[5][5];
+    	int diagonalPrincipal;
+    	
+    	System.out.println("\nMatriz original:");
+      
+     	for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                m[i][j] = random.nextInt(20)-10;
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
         
+        System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 5; i++) {
+        	System.out.print(m[i][i] +" ");
+    	}
+    	System.out.println();
+        
+        System.out.println("\nMatriz após multiplicação:");
+    	for (int i = 0; i < 5; i++) {
+        	diagonalPrincipal = m[i][i];
+        	for (int j = 0; j < 5; j++) {
+            	m[i][j] = diagonalPrincipal * m[i][j];
+            	System.out.print(m[i][j] + " ");
+        	}
+        System.out.println();
+    	}
     }
 
     public static void exercicio2() {
@@ -115,4 +144,4 @@ public class Main {
     public static void exercicio9() {
         
     }
-  }
+				}
