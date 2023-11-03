@@ -231,8 +231,40 @@ public class Main {
     }
     
     public static void exercicio4() {
-        
-    }
+    	Random random = new Random();
+    	int[][] m = new int[4][7];
+    	int[] linhaMaior = new int[4];
+
+    	int menorValor = 9999;
+
+    	System.out.println(" Matriz: ");
+    	for (int i = 0; i < 4; i++) {
+        	linhaMaior[i] = m[i][0]; // Inicialize com o primeiro valor da linha
+        	for (int j = 0; j < 7; j++) {
+            	m[i][j] = random.nextInt(200) + 1;
+            	System.out.printf("%3d ", m[i][j]);
+        	}
+        	System.out.println("  Linha: "+ (i+1));
+    	}
+
+    	System.out.println();
+    
+    	for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 7; j++) {
+            	if (m[i][j] < menorValor) {
+                	menorValor = m[i][j];
+            	}
+            	if (m[i][j] > linhaMaior[i]) {
+                	linhaMaior[i] = m[i][j];
+            	}
+        	}
+        	System.out.printf("Menor | Maior  " + "%3d | %d\n", menorValor,linhaMaior[i]);
+        	menorValor = 9999;
+    	}
+
+    	System.out.println();
+
+	}
     
     public static void exercicio5() {
         
@@ -266,4 +298,5 @@ public class Main {
         System.out.println("Custo do produto: R$"+m[linhaAleatoria][colunaAleatoria]);
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
+    
 }
