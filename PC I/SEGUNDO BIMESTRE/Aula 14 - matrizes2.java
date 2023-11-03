@@ -13,7 +13,7 @@ public class Main {
 		
         while(true){
             exe = 1;
-            while(exe < 10){
+            while(exe < 6){
             	System.out.println(" "+exe+ " - exercicio " + exe);
             	exe++;
             }
@@ -36,42 +36,26 @@ public class Main {
             
             switch(escolha){
                 case 1:
-                    System.out.println("1. Faça um programa que carregue uma matriz 5 X 5 de números reais. A seguir, multiplique cada linha pelo elemento da diagonal principal daquela linha. Mostre a matriz após as multiplicações. \n");
+                    System.out.println("1. Faça um algoritmo que leia uma matriz 15 X 15 de reais e calcule a soma dos elementos da diagonal secundária. \n");
                     exercicio1();
                     break;
                 case 2:
-                    System.out.println("2. Faça um programa que carregue: \numa matriz 5 X 4 com os preços dos cinco produtos em 4 lojas diferentes \n um outro vetor com o custo do transporte dos 5 produtos \nCalcule uma segunda matriz 5 X 4 com os valores dos impostos de cada produto, sendo que estes obedecem a tabela abaixo:\n\n Preço % de imposto \n até 50 5\n entre 50 e 100 (inclusive) 10 \n Acima de 100 15\n \n Imprima um relatório com o número do produto, o número da loja onde o produto se encontra, o valor do imposto a pagar, o custo de transporte, o preço e o preço final (preço mais imposto mais custo do transporte) \n");
+                    System.out.println("2. Faça um algoritmo que leia uma matriz 20x15 de inteiros. calcule e mostre a soma das linhas pares da matriz. \n");
                     exercicio2();
                     break;
                 case 3:
-                    System.out.println("3. Faça um programa que receba as vendas de 5 produtos, em 3 lojas diferentes e em dois meses consecutivos, armazenar estas vendas em duas matrizes 5 x 3. O bimestre é uma matriz 5 x 3, resultado a soma das duas matrizes anteriores. Calcule e imprima:\n \n • as vendas de cada produto em cada loja no bimestre; \n• a maior venda do bimestre; \n• o total vendido por cada loja no bimestre; \n • o total vendido de cada produto no bimestre. \n");
+                    System.out.println("3. Faça um algoritmo que leia uma matriz 20x20 de reais e some cada uma das linhas, armazenando o resultado da soma em um vetor. A seguir,  multiplique cada elemento pela soma da sua linha. Mostre a matriz resultante. \n");
                     exercicio3();
                     break;
                 case 4:
-                    System.out.println("4. Na teoria dos sistemas define-se como elemento MAXMIN de uma matriz como sendo o maior elemento da linha onde se encontra o menor elemento da matriz. Faça um programa que carregue uma matriz 4 X 7 com números reais, calcule e imprima seu MAXMIN e sua posição. \n");
+                    System.out.println("4. Faça um algoritmo que leia uma matriz 50x50 de números reais e encontre o maior valor da matriz. A seguir, multiplique cada elemento da diagonal principal pelo maior valor. Mostre a matriz após as multiplicações. \n");
                     exercicio4();
                     break;
                 case 5:
-                    System.out.println("5. Faça um programa que carregue uma matriz 5 X 3 com as notas de 5 alunos em 3 provas. Mostre um relatório com o número do aluno (número da linha) e a prova que cada aluno obteve menor nota. Ao final do relatório mostrar quantos alunos tiveram menor nota na prova 1, quantos alunos tiveram menor nota na prova 2 e quantos alunos tiveram menor nota na prova 3.  \n");
+                    System.out.println("5. Faça um algoritmo que leia uma matriz 50x50 de números reais. A seguir, multiplique cada linha pelo elemento da diagonal principal daquela linha. Mostre a matriz após as multiplicações. \n");
                     exercicio5();
                     break;
                 case 6:
-                	System.out.print("Faça um programa que carregue uma matriz 4 X 3 com números inteiros e some cada uma das linhas, armazenando o resultado da soma em um vetor. A seguir, multiplique cada elemento da matriz pela soma da linha e mostre a matriz resultante. \n");
-                	exercicio6();
-                	break;
-               case 7:
-                	System.out.print("Faça um programa que carregue: \nUm vetor com 5 números inteiros; \nUm outro vetor com 10 números inteiros;\nUma matriz 4 X 3, também com números inteiros;\n \nCalcule e imprima:\n\n O maior elemento do primeiro vetor multiplicado pelo menor elemento do segundo vetor e o resultado desta multiplicação vai gerar uma segunda matriz, onde cada elemento da matriz digitada será somado ao resultado da multiplicação; \n A soma dos elementos pares de cada linha da matriz resultante;\n A quantidade de elementos entre 1 e 5 em cada coluna da matriz resultante.\n");
-                	exercicio7();
-                	break;
-                case 8:
-                	System.out.print(" Faça um programa que receba o estoque atual de 3 produtos que estão armazenados em 4 armazéns o coloque estes dados em uma matriz 5 x 3. Sendo que a última linha da matriz contém o custo de cada produto. Calcule e imprima: \n \n a quantidade de itens armazenados em cada armazém;\n •a quantidade de cada produto armazenado;\n •qual o armazém que possui maior estoque do produto 2;\n •qual o armazém que possui menor estoque, todos os produtos juntos;\n• qual o custo total de cada produto;\n•qual o custo total de cada armazém.\n \nDesconsiderar empates.\n");
-                	exercicio8();
-                	break;
-                case 9:
-                	System.out.print("Faça um programa que receba as vendas semanais (de um mês) de 5 vendedores de uma loja e armazene essas vendas em uma matriz. Calcule e imprima:\n  \n• total de vendas do mês de cada vendedor;\n • total de vendas de cada semana (todos os vendedores juntos); \n • total de vendas do mês.\n");
-                	exercicio9();
-                	break;
-                case 10:
                     System.out.println("\nSaindo do programa...");
                     return; // Sai do método e encerra o programa
                 default:
@@ -82,13 +66,158 @@ public class Main {
 
     public static void exercicio1() {
         Random random =new Random();
-    	int [][] m = new int[5][5];
+         int [][] m = new int[15][15];
+         double soma = 0;
+         
+         System.out.println("Matriz original: \n");
+         for (int i = 0; i < 15; i++) {
+    		for (int j = 0; j < 15; j++) {
+        	m[i][j] = random.nextInt(19) -10;
+        	System.out.print(m[i][j] + " ");
+    		}
+    		System.out.println();
+         }
+
+    	System.out.println("\nDiagonal Secundária: ");
+    	
+    	for (int i = 0; i < 15; i++) {
+        	System.out.print(m[i][15 - i - 1]+" ");
+    	}
+    	
+    	System.out.println();
+    	
+    	System.out.println("\nTotal: ");
+    	
+    	for (int i = 0; i < 15; i++) {
+    	   soma += m[i][15 - i - 1];
+        	System.out.print(" +"+ m[i][15 - i - 1]);
+    	}
+    	System.out.print(" = " + soma +" / 15 " +"\n média = " + soma / 15 +"\n") ;
+    }
+
+    public static void exercicio2() {
+        Random random =new Random();
+         int [][] m = new int[20][15];
+         double soma = 0;
+         
+         System.out.println("Matriz original: \n");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 15; j++) {
+        	m[i][j] = random.nextInt(3)+1;
+        	System.out.print(m[i][j] + " ");
+    		}
+    		System.out.println();
+		}
+		
+		System.out.println("\nTotal: ");
+		
+		for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 15; j++) {
+    			if (i %2 ==0){
+    			soma += m[i][j];
+				System.out.print(" +"+ m[i][j]);
+    			}
+    		}
+    		System.out.println();
+		}
+		
+		System.out.print(" = " + soma +" / 20 " +"\n média = " + soma / 20 +"\n") ;
+    }
+
+    public static void exercicio3() {
+         Random random =new Random();
+         int [][] m = new int[20][20];
+         int [][] n = new int [20][20];
+         int soma = 0;
+         int[] resultado = new int [20];
+         
+         System.out.println("Matriz original: \n");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 20; j++) {
+        	m[i][j] = random.nextInt(3)+1;
+        	System.out.print(m[i][j] + " ");
+        	soma += m[i][j];
+        	resultado[i] = soma;
+    		}
+    		soma = 0;
+    		System.out.println();
+		}
+		
+		System.out.println("\nVetor resultado:");
+		
+		for (int i = 0; i < 20; i++) {
+    		System.out.print(resultado[i] + " ");
+		}
+		System.out.println();
+		
+		System.out.println("\nMatriz resultado:");
+         
+         for (int i = 0; i < 20; i++) {
+    		for (int j = 0; j < 20; j++) {
+        	n[i][j] = m[i][j] * resultado[i];
+        	System.out.print(n[i][j] + " ");
+    		}
+    		System.out.println();
+		}
+		
+    }
+
+    public static void exercicio4() {
+      Random random =new Random();
+      int [][] m = new int[50][50];
+      int maiorValor = m[0][0];
+      
+      System.out.println("\nMatriz original:");
+      
+      for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                m[i][j] = random.nextInt(21)-10;
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\nDiagonal Principal: ");
+		
+    	for (int i = 0; i < 50; i++) {
+        	System.out.print(m[i][i] +" ");
+    	}
+    	System.out.println();
+    	
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+                if (m[i][j] > maiorValor) {
+                    maiorValor = m[i][j];
+                }
+            }
+        }
+        System.out.println("\nO maior valor na matriz é: " + maiorValor);
+       
+        System.out.println("\nMatriz trocada: ");
+        
+        for (int i = 0; i < 50; i++) {
+        	m[i][i] = m[i][i] * maiorValor;
+    	}
+        
+        for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void exercicio5() {
+    	Random random =new Random();
+    	int [][] m = new int[50][50];
     	int diagonalPrincipal;
     	
     	System.out.println("\nMatriz original:");
       
-     	for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+     	for (int i = 0; i < 50; i++) {
+            for (int j = 0; j < 50; j++) {
                 m[i][j] = random.nextInt(20)-10;
         		System.out.print(m[i][j] + " ");
             }
@@ -97,51 +226,19 @@ public class Main {
         
         System.out.println("\nDiagonal Principal: ");
 		
-    	for (int i = 0; i < 5; i++) {
+    	for (int i = 0; i < 50; i++) {
         	System.out.print(m[i][i] +" ");
     	}
     	System.out.println();
         
         System.out.println("\nMatriz após multiplicação:");
-    	for (int i = 0; i < 5; i++) {
+    	for (int i = 0; i < 50; i++) {
         	diagonalPrincipal = m[i][i];
-        	for (int j = 0; j < 5; j++) {
+        	for (int j = 0; j < 50; j++) {
             	m[i][j] = diagonalPrincipal * m[i][j];
             	System.out.print(m[i][j] + " ");
         	}
         System.out.println();
     	}
     }
-
-    public static void exercicio2() {
-        
-    }
-    
-    public static void exercicio3() {
-        
-    }
-    
-    public static void exercicio4() {
-        
-    }
-    
-    public static void exercicio5() {
-        
-    }
-    
-    public static void exercicio6() {
-        
-    }
-    
-    public static void exercicio7() {
-        
-    }
-    
-    public static void exercicio8() {
-        
-    }
-    
-    public static void exercicio9() {
-        
-    }
-}
+		 }
