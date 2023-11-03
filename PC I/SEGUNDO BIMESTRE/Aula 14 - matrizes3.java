@@ -116,7 +116,7 @@ public class Main {
     public static void exercicio2() {
         Random random =new Random();
     	int [][] m = new int[5][4];
-    	int [][] impostos = new int [5][4];
+    	double [][] impostos = new double [5][4];
     	int [] transporte = new int [5];
     	
     	// colocando os produtos
@@ -136,13 +136,13 @@ public class Main {
     	for (int i = 0; i < 5; i++) {
     	      for (int j = 0; j < 4; j++) {
                 if(m[i][j] <= 50){
-    	       	impostos[i][j] = 5;
+    	       	impostos[i][j] = 0.05;
     	       }else if(m[i][j] >= 51 && m[i][j] <= 100){
-    	       	impostos[i][j] = 10;
+    	       	impostos[i][j] = 0.10;
     	       }else  if(m[i][j] > 100){
-    	       	impostos[i][j] = 15;
+    	       	impostos[i][j] = 0.15;
     	       }else {
-    	       	impostos[i][j] = 0;
+    	       	impostos[i][j] = 666; // invocando o diabo
     	       }
         		System.out.print(impostos[i][j] + " ");
             }
@@ -153,21 +153,17 @@ public class Main {
         // colocando o transporte
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 4; j++) {
-                transporte[i] += m[i][j] *2 ;
+                transporte[i] += m[i][j] ;
             }
             System.out.print(transporte[i] + " ");
             System.out.println();
         }
         
-        public static void buscarAleatorio (){
-        int linhaAleatoria = random.nextInt(5);
-        int colunaAleatoria = random.nextInt(4);
-        int valorAleatorio = m[linhaAleatoria][colunaAleatoria];
+        System.out.println();
         
-        System.out.println("Valor aleatório: " + valorAleatorio);
-        System.out.println("Posição na matriz: m[" + linhaAleatoria + "][" + colunaAleatoria + "]");
-        }
-    
+        // Chama função buscarAleatorio
+        buscarAleatorio(m, impostos, transporte, random);
+        System.out.println();
     }
     
     public static void exercicio3() {
@@ -197,4 +193,18 @@ public class Main {
     public static void exercicio9() {
         
     }
-				}
+    
+    public static void buscarAleatorio(int[][] m, double [][] impostos, int[] transporte, Random random) {
+        int linhaAleatoria = random.nextInt(5);
+        int colunaAleatoria = random.nextInt(4);
+        int valorAleatorio = m[linhaAleatoria][colunaAleatoria];
+
+        System.out.println("Numero do produto: " + (colunaAleatoria +1));
+        System.out.println("Loja: " + (linhaAleatoria + 1));
+        System.out.printf("Valor do Imposto: R$%d * %.2f = R$%.2f%n", valorAleatorio, impostos[linhaAleatoria][colunaAleatoria], m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria]);
+        System.out.println("Custo do transporte: R$"+transporte[linhaAleatoria]);
+        System.out.println("Custo do produto: R$"+m[linhaAleatoria][colunaAleatoria]);
+        System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
+    }
+    
+}
