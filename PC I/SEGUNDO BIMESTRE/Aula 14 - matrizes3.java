@@ -114,7 +114,60 @@ public class Main {
     }
 
     public static void exercicio2() {
+        Random random =new Random();
+    	int [][] m = new int[5][4];
+    	int [][] impostos = new int [5][4];
+    	int [] transporte = new int [5];
+    	
+    	// colocando os produtos
+    	    	
+    	for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                m[i][j] = random.nextInt(200) +1;
+        		System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
         
+        System.out.println();
+        
+        // colocando os impostos
+    	
+    	for (int i = 0; i < 5; i++) {
+    	      for (int j = 0; j < 4; j++) {
+                if(m[i][j] <= 50){
+    	       	impostos[i][j] = 5;
+    	       }else if(m[i][j] >= 51 && m[i][j] <= 100){
+    	       	impostos[i][j] = 10;
+    	       }else  if(m[i][j] > 100){
+    	       	impostos[i][j] = 15;
+    	       }else {
+    	       	impostos[i][j] = 0;
+    	       }
+        		System.out.print(impostos[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        
+        // colocando o transporte
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                transporte[i] += m[i][j] *2 ;
+            }
+            System.out.print(transporte[i] + " ");
+            System.out.println();
+        }
+        
+        public static void buscarAleatorio (){
+        int linhaAleatoria = random.nextInt(5);
+        int colunaAleatoria = random.nextInt(4);
+        int valorAleatorio = m[linhaAleatoria][colunaAleatoria];
+        
+        System.out.println("Valor aleatório: " + valorAleatorio);
+        System.out.println("Posição na matriz: m[" + linhaAleatoria + "][" + colunaAleatoria + "]");
+        }
+    
     }
     
     public static void exercicio3() {
