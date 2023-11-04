@@ -56,19 +56,19 @@ public class Main {
                     exercicio5();
                     break;
                 case 6:
-                	System.out.print("Faça um programa que carregue uma matriz 4 X 3 com números inteiros e some cada uma das linhas, armazenando o resultado da soma em um vetor. A seguir, multiplique cada elemento da matriz pela soma da linha e mostre a matriz resultante. \n");
+                	System.out.print("6. Faça um programa que carregue uma matriz 4 X 3 com números inteiros e some cada uma das linhas, armazenando o resultado da soma em um vetor. A seguir, multiplique cada elemento da matriz pela soma da linha e mostre a matriz resultante. \n");
                 	exercicio6();
                 	break;
                case 7:
-                	System.out.print("Faça um programa que carregue: \nUm vetor com 5 números inteiros; \nUm outro vetor com 10 números inteiros;\nUma matriz 4 X 3, também com números inteiros;\n \nCalcule e imprima:\n\n O maior elemento do primeiro vetor multiplicado pelo menor elemento do segundo vetor e o resultado desta multiplicação vai gerar uma segunda matriz, onde cada elemento da matriz digitada será somado ao resultado da multiplicação; \n A soma dos elementos pares de cada linha da matriz resultante;\n A quantidade de elementos entre 1 e 5 em cada coluna da matriz resultante.\n");
+                	System.out.print("7. Faça um programa que carregue: \nUm vetor com 5 números inteiros; \nUm outro vetor com 10 números inteiros;\nUma matriz 4 X 3, também com números inteiros;\n \nCalcule e imprima:\n\n O maior elemento do primeiro vetor multiplicado pelo menor elemento do segundo vetor e o resultado desta multiplicação vai gerar uma segunda matriz, onde cada elemento da matriz digitada será somado ao resultado da multiplicação; \n A soma dos elementos pares de cada linha da matriz resultante;\n A quantidade de elementos entre 1 e 5 em cada coluna da matriz resultante.\n");
                 	exercicio7();
                 	break;
                 case 8:
-                	System.out.print(" Faça um programa que receba o estoque atual de 3 produtos que estão armazenados em 4 armazéns o coloque estes dados em uma matriz 5 x 3. Sendo que a última linha da matriz contém o custo de cada produto. Calcule e imprima: \n \n a quantidade de itens armazenados em cada armazém;\n •a quantidade de cada produto armazenado;\n •qual o armazém que possui maior estoque do produto 2;\n •qual o armazém que possui menor estoque, todos os produtos juntos;\n• qual o custo total de cada produto;\n•qual o custo total de cada armazém.\n \nDesconsiderar empates.\n");
+                	System.out.print(" 8. Faça um programa que receba o estoque atual de 3 produtos que estão armazenados em 4 armazéns o coloque estes dados em uma matriz 5 x 3. Sendo que a última linha da matriz contém o custo de cada produto. Calcule e imprima: \n \n a quantidade de itens armazenados em cada armazém;\n •a quantidade de cada produto armazenado;\n •qual o armazém que possui maior estoque do produto 2;\n •qual o armazém que possui menor estoque, todos os produtos juntos;\n• qual o custo total de cada produto;\n•qual o custo total de cada armazém.\n \nDesconsiderar empates.\n");
                 	exercicio8();
                 	break;
                 case 9:
-                	System.out.print("Faça um programa que receba as vendas semanais (de um mês) de 5 vendedores de uma loja e armazene essas vendas em uma matriz. Calcule e imprima:\n  \n• total de vendas do mês de cada vendedor;\n • total de vendas de cada semana (todos os vendedores juntos); \n • total de vendas do mês.\n");
+                	System.out.print("9. Faça um programa que receba as vendas semanais (de um mês) de 5 vendedores de uma loja e armazene essas vendas em uma matriz. Calcule e imprima:\n  \n• total de vendas do mês de cada vendedor;\n • total de vendas de cada semana (todos os vendedores juntos); \n • total de vendas do mês.\n");
                 	exercicio9();
                 	break;
                 case 10:
@@ -226,6 +226,16 @@ public class Main {
             System.out.printf("R$ %3d ",venda[i]);
             System.out.println("  Loja: "+ (i+1));
         }
+       
+        int total = 0;
+        
+        System.out.println("\nTotal de todos os produtos: ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                total += soma[i][j] ;
+            }
+        }
+        System.out.println("R$" + total);
         
         System.out.println();
     }
@@ -235,7 +245,6 @@ public class Main {
     	int[][] m = new int[4][7];
     	int[] linhaMaior = new int[4];
 
-    	int menorValor = 9999;
 
     	System.out.println(" Matriz: ");
     	for (int i = 0; i < 4; i++) {
@@ -248,6 +257,8 @@ public class Main {
     	}
 
     	System.out.println();
+    	
+    	int menorValor = m[0][0];
     
     	for (int i = 0; i < 4; i++) {
         	for (int j = 0; j < 7; j++) {
@@ -259,7 +270,7 @@ public class Main {
             	}
         	}
         	System.out.printf("Menor | Maior  " + "%3d | %d\n", menorValor,linhaMaior[i]);
-        	menorValor = 9999;
+        	menorValor = 999999;
     	}
 
     	System.out.println();
@@ -267,8 +278,48 @@ public class Main {
 	}
     
     public static void exercicio5() {
-        
-    }
+    	Random random = new Random(); 
+    	int[][] m = new int[5][3];
+    	
+    	System.out.println(" Prova: ");
+		for (int i = 0; i < 5; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	m[i][j] = random.nextInt(11);
+    			System.out.printf("%3d", m[i][j]);
+        	}
+        	System.out.println("    Aluno: "+ (i+1));
+    	}
+    
+    	int menorValor = m[0][0];
+    	int prova = 0;
+    
+    	System.out.println("\nCada prova que cada aluno tirou a menor nota");
+    
+    	System.out.println();
+		for (int i = 0; i < 5; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	if (m[i][j] < menorValor) {
+            		menorValor = m[i][j];
+            		prova = j;
+            	}
+        	}
+        	System.out.printf("Prova: " +(prova+1)+ "  Menor: "+ "%3d", menorValor);
+        	System.out.println("    Aluno: "+ (i+1));
+        	menorValor = 99999;
+    	}
+    
+    	System.out.println();
+    
+    	System.out.println("\nCada Aluno que tirou a menor nota na prova 1");
+    
+    	System.out.println();
+		for (int i = 0; i < 5; i++) {
+        	for (int j = 0; j < 3; j++) {
+           	
+        	}
+    	}
+	}
+
     
     public static void exercicio6() {
         
@@ -299,4 +350,4 @@ public class Main {
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
     
-}
+			}
