@@ -280,7 +280,8 @@ public class Main {
     public static void exercicio5() {
     	Random random = new Random(); 
     	int[][] m = new int[5][3];
-    	
+    	int [] provas = new int [3];
+     	
     	System.out.println(" Prova: ");
 		for (int i = 0; i < 5; i++) {
         	for (int j = 0; j < 3; j++) {
@@ -305,19 +306,13 @@ public class Main {
         	}
         	System.out.printf("Prova: " +(prova+1)+ "  Menor: "+ "%3d", menorValor);
         	System.out.println("    Aluno: "+ (i+1));
-        	menorValor = 99999;
+        	menorValor = 9999;
+        	provas[prova]++; // Incrementa a contagem de alunos com nota baixa na prova correspondente.
     	}
-    
-    	System.out.println();
-    
-    	System.out.println("\nCada Aluno que tirou a menor nota na prova 1");
-    
-    	System.out.println();
-		for (int i = 0; i < 5; i++) {
-        	for (int j = 0; j < 3; j++) {
-           	
-        	}
-    	}
+
+    	System.out.println("\nQuantidade de alunos da prova 1: " + provas[0]);
+    	System.out.println("Quantidade de alunos da prova 2: " + provas[1]);
+    	System.out.println("Quantidade de alunos da prova 3: " + provas[2]);
 	}
 
     
