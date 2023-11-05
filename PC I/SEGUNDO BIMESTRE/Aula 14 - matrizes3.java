@@ -317,7 +317,34 @@ public class Main {
 
     
     public static void exercicio6() {
+        Random random = new Random();
+        int [][] m = new int [4][3];
+        int [] soma = new int[4];
         
+        System.out.println("\n Matriz: 1");
+		for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	m[i][j] = random.nextInt(3)+1;
+    			System.out.printf("%3d", m[i][j]);
+    			soma[i] += m[i][j];
+        	}
+        	System.out.println();
+    	}
+    	
+    	System.out.println("\n Vetor Soma: ");
+		for (int i = 0; i < 4; i++) {
+		    System.out.printf(" %2d",soma[i]);
+        	System.out.println();
+    	}
+    	
+    	System.out.println("\n Resultado: ");
+		for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	m[i][j] *= soma[i];
+    			System.out.printf("%3d", m[i][j]);
+        	}
+        	System.out.println();
+    	}
     }
     
     public static void exercicio7() {
