@@ -410,7 +410,54 @@ public class Main {
     }
     
     public static void exercicio8() {
+        Random random = new Random();
+        int [][] m = new int [5][3];
+        int [] quantidade = new int [4];
+        int [] use = new int [4];
+        int valor = 0;
         
+        for (int j = 0; j < 3; j++) {
+    		m[4][j] = 25 +(25 * j);
+        }
+        	
+        System.out.println("\n Matriz: 1");
+		for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	m[i][j] = random.nextInt(3)+1;
+            	quantidade[i] += m[i][j];
+            	if(m[i][j] == 2){
+        			use[i] += m[i][j];
+        		}
+        	}
+    	}
+    	
+    	System.out.println();
+    	
+    	for (int i = 0; i < 5; i++) {
+        	for (int j = 0; j < 3; j++){
+        		System.out.printf("%4d", m[i][j]);
+        	}
+        	System.out.println();
+    	}
+    	System.out.println();
+    	
+    	System.out.println("Quantidade nos armarios");
+    	
+    	for (int j = 0; j < 4; j++){
+        	System.out.printf("%4d \n", quantidade[j]);
+        }
+        System.out.println();
+        
+        System.out.println("Quantidade maior de produto 2 no maior");
+        
+        for (int i = 0; i < 4; i++) {
+        	if (use[i] > valor) {
+            	valor = i;
+    		}
+    	}
+    	System.out.printf(" %3d \n", valor);
+    	
+    	System.out.println();
     }
     
     public static void exercicio9() {
@@ -430,4 +477,4 @@ public class Main {
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
     
-}
+			}
