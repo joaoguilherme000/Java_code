@@ -348,7 +348,65 @@ public class Main {
     }
     
     public static void exercicio7() {
+        Random random = new Random();
+        int [] vetor = new int [5];
+        int [] outroVetor = new int[10];
+        int [][] m = new int [4][3];
+        int valor = 0;
+        int use = 0;
         
+        System.out.println("\n Vetor: ");
+		for (int i = 0; i < 4; i++) {
+        	vetor[i] = random.nextInt(51)+1;
+    		System.out.printf(" %2d", vetor[i]);
+    		if (vetor[i] > valor) {
+            	valor = vetor[i];
+        	}
+    	}
+    	
+    	System.out.println();
+    	
+    	System.out.printf(" \n Maior: "+ "%3d \n", valor);
+    	use = valor;
+    	valor = 999;
+    	
+    	System.out.println("\n Outro vetor: ");
+		for (int i = 0; i < 4; i++) {
+		    outroVetor[i] = random.nextInt(51)+1;
+    		System.out.printf(" %2d", outroVetor[i]);
+    		if (outroVetor[i] < valor) {
+            	valor = outroVetor[i];
+    		}
+    	}
+    	System.out.println();
+    	
+    	System.out.printf(" \n Menor: "+ "%3d", valor);
+    	use *= valor;
+    	
+    	System.out.println();
+    	
+    	System.out.println("\n Matriz: ");
+		for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 3; j++) {
+            	m[i][j] = random.nextInt(3)+1;
+    			System.out.printf("%3d", m[i][j]);
+    			use += m[i][j];
+        	}
+        	System.out.println();
+    	}
+    	System.out.println();
+    	
+    	System.out.println(use);
+    	
+    	System.out.println("\n Resultado: ");
+		for (int i = 0; i < 4; i++) {
+        	for (int j = 0; j < 3; j++) {
+				m[i][j] += use;
+    			System.out.printf("%4d", m[i][j]);
+        	}
+        	System.out.println();
+    	}
+    	System.out.println();
     }
     
     public static void exercicio8() {
@@ -372,4 +430,4 @@ public class Main {
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
     
-			}
+}
