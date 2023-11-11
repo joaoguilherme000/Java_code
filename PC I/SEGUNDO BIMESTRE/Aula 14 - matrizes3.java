@@ -90,7 +90,7 @@ public class Main {
      	for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 m[i][j] = random.nextInt(20)-10;
-        		System.out.print(m[i][j] + " ");
+        		System.out.printf("%3d",m[i][j]);
             }
             System.out.println();
         }
@@ -107,7 +107,7 @@ public class Main {
         	diagonalPrincipal = m[i][i];
         	for (int j = 0; j < 5; j++) {
             	m[i][j] = diagonalPrincipal * m[i][j];
-            	System.out.print(m[i][j] + " ");
+            	System.out.printf("%4d",m[i][j]);
         	}
         System.out.println();
     	}
@@ -467,26 +467,68 @@ public class Main {
         int [][] vendedor3 = new int [5][7];
         int [][] vendedor4 = new int [5][7];
         int [][] vendedor5 = new int [5][7];
-        int x = 0; int use =0;
+        int x = 0; int use =0; int use2 = 0;
+        int [] semana = new int [25];
         
-        for (x = 0; x < 5;x++){
-        
-        System.out.println("\n Vendendor "+ (x+1) +": ");
-		for (int i = 0; i < 6; i++) {
+        for (x = 0; x < 5; x++) {
+
+    	System.out.println("\n Vendendor " + (x + 1) + ": ");
+    	int[][] currentVendedor;
+    
+   	 switch (x) {
+        case 0:
+            currentVendedor = vendedor1;
+            break;
+        case 1:
+            currentVendedor = vendedor2;
+            break;
+        case 2:
+            currentVendedor = vendedor3;
+            break;
+        case 3:
+            currentVendedor = vendedor4;
+            break;
+        case 4:
+            currentVendedor = vendedor5;
+            break;
+        default:
+            System.out.println("Erro");
+            return;
+    	}
+
+   	for (int i = 0; i < 5; i++) {
         	for (int j = 0; j < 7; j++) {
-            	vendedor1[i][j] = random.nextInt(100)+1;
-            	vendedor2[i][j] = random.nextInt(100)+1;
-            	vendedor3[i][j] = random.nextInt(100)+1;
-            	vendedor4[i][j] = random.nextInt(100)+1;
-            	vendedor5[i][j] = random.nextInt(100)+1;
-    			if(x == 0){
-    				use += vendedor1[i][j];
-    			}else if(x == 1){
-    				use += vendedor2[i][j];
-    			}
-    			System.out.printf("%4d", (x == 0 ? vendedor1 : (x == 1 ? vendedor2 : (x == 2 ? vendedor3 : (x == 3 ? vendedor4 : vendedor5))))[i][j]);
+            	currentVendedor[i][j] = random.nextInt(100) + 1;
+            	semana[i] += currentVendedor[i][j];
+            	use2 += currentVendedor[i][j];
+            	System.out.printf("%4d", currentVendedor[i][j]);
         	}
-        	System.out.println();
+        	System.out.printf("%6d",semana[i]);
+       	 System.out.println();
+       	 use += semana[i];
+       	 semana[i] =0;
+    	}
+    	System.out.println("\n Total do mes : R$" + use);
+    	use = 0;
+     }
+  
+        System.out.println("\n Total de venda final : R$" +use2);
+    }
+    
+    public static void buscarAleatorio(int[][] m, double [][] impostos, int[] transporte, Random random) {
+        int linhaAleatoria = random.nextInt(4);
+        int colunaAleatoria = random.nextInt(5);
+        int valorAleatorio = m[linhaAleatoria][colunaAleatoria];
+
+        System.out.println("Numero do produto: " + (colunaAleatoria +1));
+        System.out.println("Loja: " + (linhaAleatoria + 1));
+        System.out.printf("Valor do Imposto: R$%d * %.2f = R$%.2f%n", valorAleatorio, impostos[linhaAleatoria][colunaAleatoria], m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria]);
+        System.out.println("Custo do transporte: R$"+transporte[linhaAleatoria]);
+        System.out.println("Custo do produto: R$"+m[linhaAleatoria][colunaAleatoria]);
+        System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
+    }
+    
+    }ut.println();
     	}
     	System.out.println(use);
         }
