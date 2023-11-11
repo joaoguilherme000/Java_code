@@ -461,7 +461,41 @@ public class Main {
     }
     
     public static void exercicio9() {
+        Random random = new Random();
+        int [][] vendedor1 = new int [5][7];
+        int [][] vendedor2 = new int [5][7];
+        int [][] vendedor3 = new int [5][7];
+        int [][] vendedor4 = new int [5][7];
+        int [][] vendedor5 = new int [5][7];
+        int x = 0; int use =0;
         
+        for (x = 0; x < 5;x++){
+        
+        System.out.println("\n Vendendor "+ (x+1) +": ");
+		for (int i = 0; i < 6; i++) {
+        	for (int j = 0; j < 7; j++) {
+            	vendedor1[i][j] = random.nextInt(100)+1;
+            	vendedor2[i][j] = random.nextInt(100)+1;
+            	vendedor3[i][j] = random.nextInt(100)+1;
+            	vendedor4[i][j] = random.nextInt(100)+1;
+            	vendedor5[i][j] = random.nextInt(100)+1;
+    			if(x == 0){
+    				use += vendedor1[i][j];
+    			}else if(x == 1){
+    				use += vendedor2[i][j];
+    			}
+    			System.out.printf("%4d", (x == 0 ? vendedor1 : (x == 1 ? vendedor2 : (x == 2 ? vendedor3 : (x == 3 ? vendedor4 : vendedor5))))[i][j]);
+        	}
+        	System.out.println();
+    	}
+    	System.out.println(use);
+        }
+        
+        for (int i = 0; i < 6; i++) {
+        	for (int j = 0; j < 7; j++) {
+            	use += vendedor1[i][j];
+        	}
+    	}
     }
     
     public static void buscarAleatorio(int[][] m, double [][] impostos, int[] transporte, Random random) {
@@ -477,4 +511,4 @@ public class Main {
         System.out.println("Preço Final: R$"+(transporte[linhaAleatoria]+m[linhaAleatoria][colunaAleatoria]+ (m[linhaAleatoria][colunaAleatoria] * impostos[linhaAleatoria][colunaAleatoria])));
     }
     
-			}
+					 }
