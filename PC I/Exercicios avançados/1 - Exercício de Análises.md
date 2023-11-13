@@ -42,3 +42,35 @@ public class Principal {
 ```
 
 `R: Sei não`
+
+# Exercício 3
+
+<h4>Analise o código abaixo e descubra os erros :</h4>
+
+```
+public class exer4 {
+
+	
+	public static void main(String[] args) {
+	double altura=0;
+	double diametro=0;
+	double volume = 0;
+	double area=0;
+	
+	scanner gravar = new scanner(System.inin);
+    	System.out.println("Digite o diametro");
+	diametro = gravar.nextDouble();
+		
+	System.out.println("Digite a altura");
+	altura = gravar.nextInt();
+	área+- diametro*diametro;  // área com acento agudo e com +- o que nao funciona.
+	volume = area/altura;
+	System.out.println("A area é de " + area)  // falta o ponto e virgula.
+	System.out.println("O Volume é de " + volume);
+	
+	}
+
+}
+```
+
+`R: resposta comentada no código`
