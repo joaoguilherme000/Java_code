@@ -194,3 +194,30 @@ public class exerMaster {
 ```
 
 `R: não entendi direito essa merda, como sempre falta importar o JOptionPane, talvez a logica esteja certa mas nao vai acontecer nada`
+
+# Exercício 7
+
+<h4>Analise o código abaixo e descubra os erros :</h4>
+
+```
+public class Atribuicao {
+
+	// falta importação do JOptionPane
+	public static void main(String[] args) {
+	
+		
+	String A = JOptionPane.showInputDialog(null, "Digite um valor ?" );
+int b = Double.parseInt(A); // a variável é int não double
+	
+	StringA1 = JOptionPane.showInputDialog(null, "Digite outro valor?" );
+       // String ta junto da variavel da erro
+int b2 = Integer.parseDouble(A1); // não tem Double a variavel é int
+	
+	int c = b + b1;  // b1 nao existe
+	
+	JOptionPane.showInternalDialog(null, "O resultado armazenado é : " + c);
+	
+	}
+```
+
+`R: ta comentado no codigo`
