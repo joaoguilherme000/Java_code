@@ -7,6 +7,8 @@ roadmap
 - [Exercício 3](#exercício3)
 - [Exercício 4](#exercício4)
 - [Exercício 5](#exercício5)
+- [Exercício 6](#exercício6)
+- [Exercício 7](#exercício7)
 
 
 # Exercício 1
@@ -75,7 +77,7 @@ public class exer4 {
 
 `R: resposta comentada no código`
 
-#Exercício 4
+# Exercício 4
 
 <h4>Analise o código abaixo e descubra os erros :</h4>
 
@@ -122,3 +124,24 @@ JOptionPane.showMessageDialog(null, valores2[0]+ " " +valores2[1]+ " " +valores2
 ```
 
 `R: Primeiro de tudo esse código ta todo idiota, segunda que a resposta ta comentada no código divirta-se.`
+
+# Exercício 5
+
+<h4>Analise o código abaixo e descubra os erros :</h4>
+
+```
+public class aleatorios {
+
+	
+	public static void main(String[] args) {
+		
+		
+		for(int i =1000 ; i>=1999 ; i--){
+	
+			double valor = Math.random();
+
+			System.out.println(valor);
+		} 
+```
+
+`R: falta 3 }, o for nunca é verdadeiro então nunca vai mostrar`
