@@ -1,6 +1,6 @@
 ## Exercícios de análise
 
-roadmap
+<h5>roadmap</h5>
 
 - [Exercício 1](#exercício1)
 - [Exercício 2](#exercício2)
@@ -221,3 +221,7 @@ int b2 = Integer.parseDouble(A1); // não tem Double a variavel é int
 ```
 
 `R: ta comentado no codigo`
+
+Eu tentando achar a porcaria do erro
+
+<picture><img src="https://media.tenor.com/A8ZJlvGLBUcAAAAC/mario-mario64.gif"></picture>
