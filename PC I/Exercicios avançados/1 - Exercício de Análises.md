@@ -145,3 +145,52 @@ public class aleatorios {
 ```
 
 `R: falta 3 }, o for nunca é verdadeiro então nunca vai mostrar`
+
+# Exercício 6
+
+<h4>Analise o código abaixo e descubra os erros :</h4>
+
+```
+public class exerMaster {
+  
+	
+	public static void main(String[] args) {
+		
+		int valor, valor2;
+		
+		
+		do {
+			
+			Object  [] Menu = {"Executar", "Sair"};
+		    valor = JOptionPane.showOptionDialog(null, "Selecione", "Menu de Opções", JOptionPane.YES_NO_CANCEL_OPTION,3,null, Menu, "Executar");
+
+		    if (valor == 0){
+		    
+		    Object  [] Menu2 = {"Exercicio 1", "Exercicio 2", "Exercicio 3", "Exercicio 4"};
+		    valor2 = JOptionPane.showOptionDialog(null, "Selecione", "Menu de Opções", JOptionPane.YES_NO_CANCEL_OPTION,3,null, Menu2, "Exercicio 1");
+
+		    switch(valor){
+		    
+		    case 1:
+		    	
+		    case 2:
+		    	
+		    case 3:
+		    	
+		    case 4 : 	
+		    
+		    
+		    }
+		    
+		    }
+					
+			
+		}while(valor2 != 1);   
+				
+		
+	}
+
+}
+```
+
+`R: não entendi direito essa merda, como sempre falta importar o JOptionPane, talvez a logica esteja certa mas nao vai acontecer nada`
