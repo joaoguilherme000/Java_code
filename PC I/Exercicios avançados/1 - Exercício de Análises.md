@@ -2,11 +2,11 @@
 
 roadmap
 
-- [Exercício 1](#exercicio1)
-- [Exercício 2](#exercicio2)
-- [Exercício 3](#exercicio3)
-- [Exercício 4](#exercicio4)
-- [Exercício 5](#exercicio5)
+- [Exercício 1](#exercício1)
+- [Exercício 2](#exercício2)
+- [Exercício 3](#exercício3)
+- [Exercício 4](#exercício4)
+- [Exercício 5](#exercício5)
 
 
 # Exercício 1
@@ -74,3 +74,51 @@ public class exer4 {
 ```
 
 `R: resposta comentada no código`
+
+#Exercício 4
+
+<h4>Analise o código abaixo e descubra os erros :</h4>
+
+```
+public class Mudar {
+
+	// falta a importação do JOptionPane
+	public static void main(String[] args) {
+
+		int i=0;
+		int j=9;
+		int a=0;
+		int b=0;  // variavel a e b nao precisa ser criada
+		
+		int [] valores = new int[10];
+		int [] valores2 = new int[10];
+		
+		for(i=0;i>10;i--){  // esse for nao executa porque o i nunca é > 10
+			
+		String tmp = JOptionPane.showInputDialog("Digite o valor numero" + (i+1));
+		valores[i] = Integer.parseInt(tmp);
+				
+		}
+		
+		for(i=0;i<10;i--){  // aqui ele executa pra sempre porque sempre é < 10.
+			
+			a = valores[i];
+			b = valores[j]; 
+			// mais facil fazer isso => valores[i] = valores2[i] 
+			valores2[i] = b;
+			valores2[j] = a;
+			j--;  // pra que?
+			
+		}
+		
+		JOptionPane.showMessageDialog(null, valores[0]+ " "+valores[1]+" " +valores[2]+ " " +valores[3]+ " " +valores[4]+ " " +valores[5]+ " " +valores[6]+ " " +valores[7]+ " " +valores[i]+ " " +valores[i]); // valores[i] ???? vai dar erro
+
+JOptionPane.showMessageDialog(null, valores2[0]+ " " +valores2[1]+ " " +valores2[i]+ " " +valores2[3]+ " " +valores2[4]+ " " +valores2[i]+ " " +valores2[6]+ " " +valores2[7]+ " " +valores2[8]+ " " +valores2[9]);  // de nova vai dar erro 
+		
+		
+	}
+
+}
+```
+
+`R: Primeiro de tudo esse código ta todo idiota, segunda que a resposta ta comentada no código divirta-se.`
