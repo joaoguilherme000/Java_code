@@ -43,7 +43,7 @@ public class Principal {
 }
 ```
 
-`R: Sei não`
+`R: Nada de errado pode ser a função mes antes da main que pode dar erro mas é um erro idiota.`
 
 # Exercício 3
 
