@@ -5,11 +5,15 @@
  */
 package View;
 
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LAB3M3
  */
 public class Tela1_GUI extends javax.swing.JFrame {
+    public static String total;
 
     /**
      * Creates new form Tela1_GUI
@@ -28,106 +32,129 @@ public class Tela1_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Senha = new javax.swing.JTextField();
-        primeiro = new javax.swing.JButton();
-        primeiro1 = new javax.swing.JButton();
-        primeiro2 = new javax.swing.JButton();
-        primeiro3 = new javax.swing.JButton();
-        primeiro4 = new javax.swing.JButton();
-        primeiro5 = new javax.swing.JButton();
-        ir = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        preferencial = new javax.swing.JTextField();
+        normal = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        imprime = new javax.swing.JButton();
+        senha = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        normalButton = new javax.swing.JButton();
+        preferencialButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(null);
 
-        Senha.setBackground(new java.awt.Color(51, 51, 255));
-        Senha.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        Senha.setForeground(new java.awt.Color(51, 51, 255));
-        Senha.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Senha.addActionListener(new java.awt.event.ActionListener() {
+        preferencial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SenhaActionPerformed(evt);
+                preferencialActionPerformed(evt);
             }
         });
-        jPanel1.add(Senha);
-        Senha.setBounds(280, 180, 310, 70);
+        jPanel1.add(preferencial);
+        preferencial.setBounds(560, 130, 200, 430);
 
-        primeiro.setText("Primeiro");
-        primeiro.setBorderPainted(false);
-        primeiro.setContentAreaFilled(false);
-        jPanel1.add(primeiro);
-        primeiro.setBounds(20, 310, 380, 80);
-
-        primeiro1.setText("quinto");
-        primeiro1.setBorderPainted(false);
-        primeiro1.setContentAreaFilled(false);
-        jPanel1.add(primeiro1);
-        primeiro1.setBounds(470, 540, 380, 80);
-
-        primeiro2.setText("Segundo");
-        primeiro2.setBorderPainted(false);
-        primeiro2.setContentAreaFilled(false);
-        jPanel1.add(primeiro2);
-        primeiro2.setBounds(20, 420, 380, 80);
-
-        primeiro3.setText("Sair");
-        primeiro3.setBorderPainted(false);
-        primeiro3.setContentAreaFilled(false);
-        jPanel1.add(primeiro3);
-        primeiro3.setBounds(20, 540, 380, 80);
-
-        primeiro4.setText("Terceiro");
-        primeiro4.setBorderPainted(false);
-        primeiro4.setContentAreaFilled(false);
-        jPanel1.add(primeiro4);
-        primeiro4.setBounds(470, 310, 380, 80);
-
-        primeiro5.setText("Quarto");
-        primeiro5.setBorderPainted(false);
-        primeiro5.setContentAreaFilled(false);
-        jPanel1.add(primeiro5);
-        primeiro5.setBounds(470, 420, 380, 80);
-
-        ir.setText("IR");
-        ir.setBorderPainted(false);
-        ir.setContentAreaFilled(false);
-        ir.addActionListener(new java.awt.event.ActionListener() {
+        normal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                irActionPerformed(evt);
+                normalActionPerformed(evt);
             }
         });
-        jPanel1.add(ir);
-        ir.setBounds(770, 190, 80, 80);
+        jPanel1.add(normal);
+        normal.setBounds(330, 130, 200, 430);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/tela_04.png"))); // NOI18N
-        jPanel1.add(jButton1);
-        jButton1.setBounds(0, 0, 870, 667);
+        jLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("ATENDIMENTO");
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(320, 20, 430, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
-        );
+        jLabel3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("NORMAL");
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(330, 100, 200, 23);
 
-        setSize(new java.awt.Dimension(885, 706));
+        jLabel4.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("PREFERENCIAL");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(560, 99, 200, 23);
+
+        imprime.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Placa-Retire-Sua-Senha-Verde.png"))); // NOI18N
+        imprime.setBorderPainted(false);
+        imprime.setContentAreaFilled(false);
+        imprime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imprimeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(imprime);
+        imprime.setBounds(490, 570, 100, 60);
+
+        senha.setFont(new java.awt.Font("Perpetua Titling MT", 1, 36)); // NOI18N
+        senha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        senha.setText("A 16");
+        jPanel1.add(senha);
+        senha.setBounds(80, 250, 150, 80);
+
+        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("SENHA");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(80, 130, 150, 60);
+
+        normalButton.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        normalButton.setText("Senha normal");
+        normalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                normalButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(normalButton);
+        normalButton.setBounds(10, 460, 300, 70);
+
+        preferencialButton.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        preferencialButton.setText("Senha preferencial");
+        preferencialButton.setMaximumSize(new java.awt.Dimension(117, 23));
+        preferencialButton.setMinimumSize(new java.awt.Dimension(117, 23));
+        jPanel1.add(preferencialButton);
+        preferencialButton.setBounds(10, 550, 300, 70);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 770, 630);
+
+        setSize(new java.awt.Dimension(789, 671));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaActionPerformed
+    private void preferencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preferencialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SenhaActionPerformed
+    }//GEN-LAST:event_preferencialActionPerformed
 
-    private void irActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_irActionPerformed
-        new Tela2_GUI().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_irActionPerformed
+    private void imprimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_imprimeActionPerformed
+
+    private void normalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_normalActionPerformed
+
+    private void normalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalButtonActionPerformed
+        Random random = new Random();
+   
+        for(int c = 0 ; c < 5 ; c++){
+            int valor = random.nextInt(1000);
+   
+            total = total + "A" +valor +"\n";
+            JOptionPane.showMessageDialog(null, total + "SENHAS GERADAS");
+        }
+    }//GEN-LAST:event_normalButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,15 +192,16 @@ public class Tela1_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Senha;
-    private javax.swing.JButton ir;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton imprime;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton primeiro;
-    private javax.swing.JButton primeiro1;
-    private javax.swing.JButton primeiro2;
-    private javax.swing.JButton primeiro3;
-    private javax.swing.JButton primeiro4;
-    private javax.swing.JButton primeiro5;
+    private javax.swing.JTextField normal;
+    private javax.swing.JButton normalButton;
+    private javax.swing.JTextField preferencial;
+    private javax.swing.JButton preferencialButton;
+    private javax.swing.JTextField senha;
     // End of variables declaration//GEN-END:variables
 }
